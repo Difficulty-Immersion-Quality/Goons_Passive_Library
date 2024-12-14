@@ -249,12 +249,12 @@
 	<content contentuid="h425a3dbagec42g4a3cg9810ga1598a60de97" version="1">Ignore Thunder Immunity</content>
 	<content contentuid="h483ea15fg172bg4af9g85d7g4754a65d01c7" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
 
-	<content contentuid="h45bdc878g3c3bg45c7g88bfg04af046e6c23" version="1">An omnipotent force allows this creature's melee and weapon &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; to deal an additional [1].</content>
+	<content contentuid="h45bdc878g3c3bg45c7g88bfg04af046e6c23" version="1">An omnipotent force allows this creature's weapon and unarmed &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; to deal an additional [1].</content>
 	<content contentuid="hc4c65557ge9bag4a3bg9aa8gcada0f972dbd" version="1">An omnipotent force allows this creature's melee and ranged spell &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; to deal an additional [1].</content>
 	<content contentuid="h71b79740gd23dg4d1dgb6b3gcb6f1d0b083f" version="1">An omnipotent force allows this creature's spells to deal an additional [1].</content>
 
-	<content contentuid="h3025cc0egeb05g4ae3gb20fg46161d9f527b" version="1">Melee and Weapon Attacks Damage Bonus</content>
-	<content contentuid="hc21050e9g5d73g4dbbgab10gc907411bc1d1" version="1">Melee and Ranged Spell Attacks Damage Bonus</content>
+	<content contentuid="h3025cc0egeb05g4ae3gb20fg46161d9f527b" version="1">Attack Damage Bonus</content>
+	<content contentuid="hc21050e9g5d73g4dbbgab10gc907411bc1d1" version="1">Spell Attack Damage Bonus</content>
 	<content contentuid="hb075868dg6954g48b7gb23cg3a2c93d39a66" version="1">Spells Damage Bonus</content>
 
 	<content contentuid="hd701ed72gc3e9g4162g957fg513c16f91234" version="1">Potions of Healing</content>
