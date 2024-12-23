@@ -130,6 +130,7 @@ data "StatusType" "BOOST"
 data "Boosts" "IF(IsSpell()):DamageBonus(1d4,Acid)"
 data "RemoveConditions" "HasDamageEffectFlag(DamageFlags.Hit)"
 data "RemoveEvents" "OnDamage"
+data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableCombatlog"
 
 new entry "Goon_Damage_Acid_d6_Spells"
 type "PassiveData"

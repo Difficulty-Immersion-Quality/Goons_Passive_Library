@@ -107,147 +107,147 @@
 	<content contentuid="h462ef6ceg81afg47ffg90dcg1fd33a70d46b" version="1">An omnipotent force has increased this creature's &lt;LSTag Tooltip="MovementSpeed"&gt;Movement Speed&lt;/LSTag&gt; by [1].</content>
 
 	<content contentuid="he2bee4e2geda6g4611g9a13gcfbdc4f70f4e" version="1">Acid Vulnerability</content>
-	<content contentuid="h740ba49eg60c0g447bgb752g95811a55d60c" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h740ba49eg60c0g447bgb752g95811a55d60c" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Acid damage.</content>
 	<content contentuid="h4eee642aga288g4bf0gbae1ge2aad87d739d" version="1">Acid Resistance</content>
-	<content contentuid="hb12d20b1g8633g4489gab88g5e246913000f" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hb12d20b1g8633g4489gab88g5e246913000f" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Acid damage.</content>
 	<content contentuid="ha858cdfcgdd4bg4308gbe6eg261d5b379261" version="1">Acid Immunity</content>
-	<content contentuid="h18c10822g33e8g4f96g9448g9ab90cffb65f" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h18c10822g33e8g4f96g9448g9ab90cffb65f" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Acid damage.</content>
 	<content contentuid="h846f6ed6g2467g4cdbga724ge641872ff1b5" version="1">Ignore Acid Resistance</content>
-	<content contentuid="hcb590bf8gd271g4e33g8941g50e394d2fd32" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hcb590bf8gd271g4e33g8941g50e394d2fd32" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Acid damage.</content>
 	<content contentuid="hc068cd33gc90fg4a6dga9f8g4f610d56b451" version="1">Ignore Acid Immunity</content>
-	<content contentuid="hdbcdded3gc690g4961gbdb3g40d059e085c0" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hdbcdded3gc690g4961gbdb3g40d059e085c0" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Acid damage.</content>
 
 	<content contentuid="h5c59dee1g9848g4295g87b0g00b9263c997b" version="1">Bludgeoning Vulnerability</content>
-	<content contentuid="h24238893ge17eg4974g901fg1c5695d4f2cd" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h24238893ge17eg4974g901fg1c5695d4f2cd" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Bludgeoning damage.</content>
 	<content contentuid="h04330ff9g4df5g4c96g8610g4e65710a8283" version="1">Bludgeoning Resistance</content>
-	<content contentuid="hee907a26g89c1g41dfg8ff6g66703c5a8579" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hee907a26g89c1g41dfg8ff6g66703c5a8579" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Bludgeoning damage.</content>
 	<content contentuid="h674c6ad5gc8eeg43c8ga42bged361cc66a4e" version="1">Bludgeoning Immunity</content>
-	<content contentuid="hb281f3e9g7659g4b04g88fbgea3055722d24" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hb281f3e9g7659g4b04g88fbgea3055722d24" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Bludgeoning damage.</content>
 	<content contentuid="h030e0585ge454g4e41g99c9g02fd9591c6fb" version="1">Ignore Bludgeoning Resistance</content>
-	<content contentuid="h4c687cfegf0f6g41bag8ae6g67bbf90722e1" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h4c687cfegf0f6g41bag8ae6g67bbf90722e1" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Bludgeoning damage.</content>
 	<content contentuid="hc5ec9567g7146g4206gb03ag27abeab59103" version="1">Ignore Bludgeoning Immunity</content>
-	<content contentuid="hefcaae6eg1834g4e3agbb87g892a376c7b4a" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hefcaae6eg1834g4e3agbb87g892a376c7b4a" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Bludgeoning damage.</content>
 
 	<content contentuid="h607fb0acg3183g400dgb608g2f6495b24bec" version="1">Cold Vulnerability</content>
-	<content contentuid="hfb7fac96g4468g4b49gbbefg184e95cbc707" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hfb7fac96g4468g4b49gbbefg184e95cbc707" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Cold damage.</content>
 	<content contentuid="h1ec8b4ffg101cg43e6gb941g7dc0178c97e7" version="1">Cold Resistance</content>
-	<content contentuid="ha3a7cd63gbb99g4813gba66g9e3cbaaa74e8" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="ha3a7cd63gbb99g4813gba66g9e3cbaaa74e8" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Cold damage.</content>
 	<content contentuid="hc39c9909gf382g404fgbc23g6882a1c77e9b" version="1">Cold Immunity</content>
-	<content contentuid="h2ff9994dgb7adg4b9aga3dagbd6ac0a50e75" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h2ff9994dgb7adg4b9aga3dagbd6ac0a50e75" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Cold damage.</content>
 	<content contentuid="hc46a6761g9866g4034g863cg664cd4a03fc0" version="1">Ignore Cold Resistance</content>
-	<content contentuid="h8c9ab0ecg2134g493egbfe6g449d76576576" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h8c9ab0ecg2134g493egbfe6g449d76576576" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Cold damage.</content>
 	<content contentuid="hed000cefgd591g42e7g988dg6f51a284f992" version="1">Ignore Cold Immunity</content>
-	<content contentuid="h551c1bb5g7f7fg4587g815cg379b76bc1224" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h551c1bb5g7f7fg4587g815cg379b76bc1224" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Cold damage.</content>
 
 	<content contentuid="hda52767ag572cg4a83g846cge57ed8f99c17" version="1">Fire Vulnerability</content>
-	<content contentuid="h02ead78ag895cg4204ga555g68ea4ef875fc" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h02ead78ag895cg4204ga555g68ea4ef875fc" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Fire damage.</content>
 	<content contentuid="h704d4718gf6f4g45c2gb827gf557a0d7a5b6" version="1">Fire Resistance</content>
-	<content contentuid="hc11a3688g1b39g4db4g9d00g02aca51426dc" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hc11a3688g1b39g4db4g9d00g02aca51426dc" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Fire damage.</content>
 	<content contentuid="h16761e93gdb06g4328g85a0g7fb390c59a00" version="1">Fire Immunity</content>
-	<content contentuid="h10c64c1ag8cc6g49cbg98c0g8d94766f405f" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h10c64c1ag8cc6g49cbg98c0g8d94766f405f" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Fire damage.</content>
 	<content contentuid="hcf4f69b8g7aa3g4872g9249g7ed482c74401" version="1">Ignore Fire Resistance</content>
-	<content contentuid="h32897683gd9b8g4f1cg9d6cg033d4f8978f9" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h32897683gd9b8g4f1cg9d6cg033d4f8978f9" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Fire damage.</content>
 	<content contentuid="h4bcc9de0g972fg4c89g9871gc7a2c100a87f" version="1">Ignore Fire Immunity</content>
-	<content contentuid="hea7e8245g4aeeg47deg8df2ga40aec06f364" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hea7e8245g4aeeg47deg8df2ga40aec06f364" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Fire damage.</content>
 
 	<content contentuid="h74bbbf37ga6cag4df7g9c5eg8f2dcd8389a7" version="1">Force Vulnerability</content>
-	<content contentuid="h050fe946gcdfeg463ag8806g247148af68b3" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h050fe946gcdfeg463ag8806g247148af68b3" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Force damage.</content>
 	<content contentuid="hd4a225d2g0c9fg41d7ga2fdg4252f55293fd" version="1">Force Resistance</content>
-	<content contentuid="hf7939702g1916g4107gaeafg623f746c9ae2" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hf7939702g1916g4107gaeafg623f746c9ae2" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Force damage.</content>
 	<content contentuid="h4195dfffg61aeg4dafg8ce2g073cbac302ad" version="1">Force Immunity</content>
-	<content contentuid="h1e44f40fg62acg422fg95cfgab36afea9e4d" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h1e44f40fg62acg422fg95cfgab36afea9e4d" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Force damage.</content>
 	<content contentuid="h865152d2gacd6g4043g9cf3g5bfb504d12e9" version="1">Ignore Force Resistance</content>
-	<content contentuid="h00766f3dg4d8ag433dg98e1gad07981ea04f" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h00766f3dg4d8ag433dg98e1gad07981ea04f" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Force damage.</content>
 	<content contentuid="ha2c14953gf142g429eg8475g79543d5d7b52" version="1">Ignore Force Immunity</content>
-	<content contentuid="h0fceed61g439ag4c49g9208gc2fd912bea25" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h0fceed61g439ag4c49g9208gc2fd912bea25" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Force damage.</content>
 
 	<content contentuid="hb8f758f3g5dd7g4843ga482g440796645ddc" version="1">Lightning Vulnerability</content>
-	<content contentuid="hf3bf85f5g6df5g4432g9fc6g1ec20ce5cdfb" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hf3bf85f5g6df5g4432g9fc6g1ec20ce5cdfb" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Lightning damage.</content>
 	<content contentuid="ha2a5746dgdacag472bga2e8g933576256a8b" version="1">Lightning Resistance</content>
-	<content contentuid="hd81f8ca9g4d46g4477ga906g20d6902fd051" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hd81f8ca9g4d46g4477ga906g20d6902fd051" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Lightning damage.</content>
 	<content contentuid="hee9e5287g0aabg4267g9429g135ff2433fc3" version="1">Lightning Immunity</content>
-	<content contentuid="h7b7a3372gb320g4660g92f2gc9faa32bd44c" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h7b7a3372gb320g4660g92f2gc9faa32bd44c" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Lightning damage.</content>
 	<content contentuid="h11a9acdcga165g4bfdga3acgbf22c72d5542" version="1">Ignore Lightning Resistance</content>
-	<content contentuid="h00766f3dg4d8ag433dg98e1gad07981ea04f" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h00766f3dg4d8ag433dg98e1gad07981ea04f" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Lightning damage.</content>
 	<content contentuid="h11a9acdcga165g4bfdga3acgbf22c72d5542" version="1">Ignore Lightning Immunity</content>
-	<content contentuid="hcaa9e405g3a7bg425cgb426g571f6cb0588d" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hcaa9e405g3a7bg425cgb426g571f6cb0588d" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Lightning damage.</content>
 
 	<content contentuid="hba16677age413g4872g98e2ge33d08dc4c37" version="1">Necrotic Vulnerability</content>
-	<content contentuid="habd68809gec05g4a90ga199g90f8e201d421" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="habd68809gec05g4a90ga199g90f8e201d421" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Necrotic damage.</content>
 	<content contentuid="h289633cegf41fg4baag8232gac357be0c3ab" version="1">Necrotic Resistance</content>
-	<content contentuid="h38beb9fcg09b6g4e54g88fbg4020a4dcbdfa" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h38beb9fcg09b6g4e54g88fbg4020a4dcbdfa" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Necrotic damage.</content>
 	<content contentuid="h75e0b427g202fg453ega7bage7c90806514b" version="1">Necrotic Immunity</content>
-	<content contentuid="ha5867d53g8a25g4ea8gbc85gf710726e745a" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="ha5867d53g8a25g4ea8gbc85gf710726e745a" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Necrotic damage.</content>
 	<content contentuid="hb4764dd7g54a5g4af7gaae7gb9a7f6c67b75" version="1">Ignore Necrotic Resistance</content>
-	<content contentuid="h66acf886g9e9cg43afgbd37g6b14d2174b4c" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h66acf886g9e9cg43afgbd37g6b14d2174b4c" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Necrotic damage.</content>
 	<content contentuid="h8b0c3685g41d4g4c71gb931g0907da517cab" version="1">Ignore Necrotic Immunity</content>
-	<content contentuid="h0b6254ffg5d9bg4a7ag9dfdg97a596f4591a" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h0b6254ffg5d9bg4a7ag9dfdg97a596f4591a" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Necrotic damage.</content>
 
 	<content contentuid="h39af6b9agaf25g4391gb13fga445e39aa22e" version="1">Poison Vulnerability</content>
-	<content contentuid="h3462d114gf28fg497dga972gf1aa9b2b9b31" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h3462d114gf28fg497dga972gf1aa9b2b9b31" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Poison damage.</content>
 	<content contentuid="h3462d114gf28fg497dga972gf1aa9b2b9b31" version="1">Poison Resistance</content>
-	<content contentuid="h7eb6b563g4eeeg4a92g90fbgbebe62b729b6" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h7eb6b563g4eeeg4a92g90fbgbebe62b729b6" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Poison damage.</content>
 	<content contentuid="hd26d77f2g5b43g4c94gb2e7g5d2265503c96" version="1">Poison Immunity</content>
-	<content contentuid="hc027845dg6ca2g40f6ga180g7fa2d6bcbc3d" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hc027845dg6ca2g40f6ga180g7fa2d6bcbc3d" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Poison damage.</content>
 	<content contentuid="h4f5ee60agd449g4c1egb6c1ge39f63badcac" version="1">Ignore Poison Resistance</content>
-	<content contentuid="h56093bd7g95d7g4401g862fg383ba140af1d" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h56093bd7g95d7g4401g862fg383ba140af1d" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Poison damage.</content>
 	<content contentuid="h2a5c91b8gcf5eg4b5fg955eg40aa9564a140" version="1">Ignore Poison Immunity</content>
-	<content contentuid="h590ef6d2g3f51g4241g86fagb6534f0b8a6d" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h590ef6d2g3f51g4241g86fagb6534f0b8a6d" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Poison damage.</content>
 
 	<content contentuid="hac696a0cg14ffg4663g81f3gf9e8acdda36a" version="1">Piercing Vulnerability</content>
-	<content contentuid="hd08ea428gc427g4370g807ag9b6b4e1d1c9a" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hd08ea428gc427g4370g807ag9b6b4e1d1c9a" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Piercing damage.</content>
 	<content contentuid="h8113eb28g44c7g4f20g8ee0gd466822d88c8" version="1">Piercing Resistance</content>
-	<content contentuid="h849e1b0eg7867g4034ga6ddgc73f7e7b3d73" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h849e1b0eg7867g4034ga6ddgc73f7e7b3d73" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Piercing damage.</content>
 	<content contentuid="hebdba19bg85a4g4f28g9db9gd7df158e3b6f" version="1">Piercing Immunity</content>
-	<content contentuid="h611519b9g23d4g4655gbfb8g2fa269d3ae49" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h611519b9g23d4g4655gbfb8g2fa269d3ae49" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Piercing damage.</content>
 	<content contentuid="hc08ca13cg0d00g4fb6ga7d1g8a17fca426cb" version="1">Ignore Piercing Resistance</content>
-	<content contentuid="hf6ebca35g1ebbg4d42gba62g7c3f3e675350" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hf6ebca35g1ebbg4d42gba62g7c3f3e675350" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Piercing damage.</content>
 	<content contentuid="h3bed5cc3ga59bg4541gad51gd68d3a185cc6" version="1">Ignore Piercing Immunity</content>
-	<content contentuid="h4375b91agec6fg402dg8682gec42270d570e" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h4375b91agec6fg402dg8682gec42270d570e" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Piercing damage.</content>
 
 	<content contentuid="h1e87fbddg1c2dg43a3gbd19g2fa8e157ed7b" version="1">Psychic Vulnerability</content>
-	<content contentuid="h750a198bgc870g42efg94f0gc01f1da26d61" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h750a198bgc870g42efg94f0gc01f1da26d61" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Psychic damage.</content>
 	<content contentuid="h4bed0c33g9a52g4627g9b6bgbccd57156964" version="1">Psychic Resistance</content>
-	<content contentuid="h0384cabag8aa0g4396g8c33g023ee7b594e5" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h0384cabag8aa0g4396g8c33g023ee7b594e5" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Psychic damage.</content>
 	<content contentuid="h6ab2c60bgcbe6g4569g83cbg94cd588e6b1c" version="1">Psychic Immunity</content>
-	<content contentuid="h2621b7e9g1704g4488g9c49g0bf8710453d8" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h2621b7e9g1704g4488g9c49g0bf8710453d8" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Psychic damage.</content>
 	<content contentuid="h7c26ce0egfca9g48f1gb55fga57918b431f5" version="1">Ignore Psychic Resistance</content>
-	<content contentuid="hceeea100g1ed1g4d47gbb95g8a030409d11b" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hceeea100g1ed1g4d47gbb95g8a030409d11b" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Psychic damage.</content>
 	<content contentuid="hb20fa430g8d3ag4065g9c15g2642d031225e" version="1">Ignore Psychic Immunity</content>
-	<content contentuid="h748fa10aga56bg450dga488g54a84d72dce9" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h748fa10aga56bg450dga488g54a84d72dce9" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Psychic damage.</content>
 
 	<content contentuid="h0ecd62begc744g4a64g87aege7f77819f3e6" version="1">Radiant Vulnerability</content>
-	<content contentuid="h91e68e8bg8663g49d9gb412g93f0d69eaf08" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h91e68e8bg8663g49d9gb412g93f0d69eaf08" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Radiant damage.</content>
 	<content contentuid="hd5341bf3g725ag4a78gae71g7b9ba6681079" version="1">Radiant Resistance</content>
-	<content contentuid="hcd510a6ag634fg4b4bgb6d0g46724d7bbe10" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hcd510a6ag634fg4b4bgb6d0g46724d7bbe10" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Radiant damage.</content>
 	<content contentuid="hf5377258g095dg4f02g9a0bgf7f1d7063235" version="1">Radiant Immunity</content>
-	<content contentuid="hddc73b6fg36f2g4df0gbb12ge69a97e865bd" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hddc73b6fg36f2g4df0gbb12ge69a97e865bd" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Radiant damage.</content>
 	<content contentuid="h57dc7f17gbddeg4bd7ga25ag63212d8cc775" version="1">Ignore Radiant Resistance</content>
-	<content contentuid="h6f0eedcegaef5g4e8agbd67g58469fb21076" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h6f0eedcegaef5g4e8agbd67g58469fb21076" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Radiant damage.</content>
 	<content contentuid="he6757e2bg608eg4648ga86cgb608e96d86d3" version="1">Ignore Radiant Immunity</content>
-	<content contentuid="h9004813dgfe7cg4f33g9c48g53f7e1da3219" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h9004813dgfe7cg4f33g9c48g53f7e1da3219" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Radiant damage.</content>
 
 	<content contentuid="hf032f9dbgf3beg49d7g8f1dgc4394976f026" version="1">Slashing Vulnerability</content>
-	<content contentuid="h621040f3g445ag4de4ga8eeg977b0ba24729" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h621040f3g445ag4de4ga8eeg977b0ba24729" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Slashing damage.</content>
 	<content contentuid="h517dbe09gf3e9g4ceeg963eg0901f22f5366" version="1">Slashing Resistance</content>
-	<content contentuid="hc6a055b8g4638g43e3g9794g728490e2b379" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hc6a055b8g4638g43e3g9794g728490e2b379" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Slashing damage.</content>
 	<content contentuid="h69e73545g5ff8g46f3g8faagf8dd85896f7e" version="1">Slashing Immunity</content>
-	<content contentuid="h32387f3dg9abbg4b1eg9f6dgcbd51ba0cfa1" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h32387f3dg9abbg4b1eg9f6dgcbd51ba0cfa1" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Slashing damage.</content>
 	<content contentuid="ha93df3f3gd6acg407agafc5g2627c1ca060e" version="1">Ignore Slashing Resistance</content>
-	<content contentuid="h8d17f208g0b3fg44e6gb76dgfd2b0af8591d" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h8d17f208g0b3fg44e6gb76dgfd2b0af8591d" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Slashing damage.</content>
 	<content contentuid="h288ea61fg6812g41e1g860ag108a8c2b70af" version="1">Ignore Slashing Immunity</content>
-	<content contentuid="h4300749agfb45g427fga7dcgd609846ea014" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h4300749agfb45g427fga7dcgd609846ea014" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Slashing damage.</content>
 
 	<content contentuid="hc5e6557cge051g488cg835bg753444f592d2" version="1">Thunder Vulnerability</content>
-	<content contentuid="he7127fc5g663bg40f9gb734g8a2bc5768194" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="he7127fc5g663bg40f9gb734g8a2bc5768194" version="1">An omnipotent force has weakened this creature rendering it &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Thunder damage.</content>
 	<content contentuid="h9545740age2b7g4446g9e31gd24ed7f7f15b" version="1">Thunder Resistance</content>
-	<content contentuid="hc757d602g9490g4cffg99f7g39e60d0c4a43" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hc757d602g9490g4cffg99f7g39e60d0c4a43" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Thunder damage.</content>
 	<content contentuid="h36cc3246gd25cg4e29gb273g09b16a0496ee" version="1">Thunder Immunity</content>
-	<content contentuid="hddc73b6fg36f2g4df0gbb12ge69a97e865bd" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="hddc73b6fg36f2g4df0gbb12ge69a97e865bd" version="1">An omnipotent force has granted this creature &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Thunder damage.</content>
 	<content contentuid="ha64f98f1g10bcg4d2eg9743g1fed769865c8" version="1">Ignore Thunder Resistance</content>
-	<content contentuid="h425a3dbagec42g4a3cg9810ga1598a60de97" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h425a3dbagec42g4a3cg9810ga1598a60de97" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to Thunder damage.</content>
 	<content contentuid="h425a3dbagec42g4a3cg9810ga1598a60de97" version="1">Ignore Thunder Immunity</content>
-	<content contentuid="h483ea15fg172bg4af9g85d7g4754a65d01c7" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to [1] damage.</content>
+	<content contentuid="h483ea15fg172bg4af9g85d7g4754a65d01c7" version="1">An omnipotent force allows this creature to ignore their target's &lt;LSTag Tooltip="Immunity"&gt;Immunity&lt;/LSTag&gt; to Thunder damage.</content>
 
 	<content contentuid="h45bdc878g3c3bg45c7g88bfg04af046e6c23" version="1">An omnipotent force allows this creature's weapon and unarmed &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; to deal an additional [1].</content>
 	<content contentuid="hc4c65557ge9bag4a3bg9aa8gcada0f972dbd" version="1">An omnipotent force allows this creature's melee and ranged spell &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; to deal an additional [1].</content>
