@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+  <version major="4" minor="0" revision="9" build="328" />
+  <region id="ActionResourceDefinitions">
+    <node id="root">
+      <children>
+        <node id="ActionResourceDefinition">
+                    <attribute id="Description" type="TranslatedString" handle="hb023f549g9e93g4be0gb917g8e2287c9be1c" version="1" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="hab61f9ffg8d8eg433eg9c35gc4ec76ddb823" version="1" />
+                    <attribute id="MaxLevel" type="uint32" value="0" />
+                    <attribute id="Name" type="FixedString" value="GoonTargetInvisibilityGreaterResource" />
+                    <attribute id="ReplenishType" type="FixedString" value="Rest" />
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true" />
+                    <attribute id="UUID" type="guid" value="dc152ac7-dbe8-4662-8500-d98ea31301c1" />
+                </node>
+      </children>
+    </node>
+  </region>
+</save>

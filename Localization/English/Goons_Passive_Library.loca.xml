@@ -268,4 +268,12 @@
 
 	<content contentuid="h441396f0g2826g49efgbe51gcbcbabde0f12" version="1">Automatic Sanctuary</content>
 	<content contentuid="hd7db620dg26c9g4a4fgb530ge7b997be5ba5" version="1">An omnipotent force provides this creature with &lt;LSTag Type="Status" Tooltip="SANCTUARY"&gt;Sanctuary&lt;/LSTag&gt; at the start of combat.</content>
+
+	<content contentuid="hab61f9ffg8d8eg433eg9c35gc4ec76ddb823" version="1">Spooder Invisibility Point</content>
+	<content contentuid="hb023f549g9e93g4be0gb917g8e2287c9be1c" version="1">The Spider Queen Matriarch certainly got the gyatt.</content>
+
+	<content contentuid="hbf3fe4abg837bg4fdega4b7geae392d58088" version="1">Improved Invisibility Resource</content>
+	<content contentuid="hd5c3a80fga55eg46f4gab29gae6414389e4e" version="1">Improved Invisibility Resource description</content>
+
+
 </contentList>
