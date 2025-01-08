@@ -61,7 +61,7 @@ data "SpellType" "Target"
 data "Level" "4"
 using "Target_Invisibility_Greater"
 data "UseCosts" "GoonTargetInvisibilityGreaterResource:1"
-data "SpellProperties" "AI_IGNORE:ApplyStatus(GREATER_INVISIBILITY,100,10);AI_ONLY:ApplyStatus(GREATER_INVISIBILITY,100,10);ApplyStatus(GOON_TARGET_INVISIBILITY_GREATER_COOLDOWN_2,100,2)"
+data "SpellProperties" "AI_IGNORE:ApplyStatus(GREATER_INVISIBILITY,100,1);AI_ONLY:ApplyStatus(GREATER_INVISIBILITY,100,1);ApplyStatus(GOON_TARGET_INVISIBILITY_GREATER_COOLDOWN_2,100,2)"
 data "TargetConditions" "Character() and not HasStatus('FAERIE_FIRE')  and not IsImmuneToStatus('SG_Invisible') and not HasStatus('GOON_TARGET_INVISIBILITY_GREATER_COOLDOWN_2', context.Source)"
 data "Cooldown" ""
 
@@ -71,7 +71,7 @@ data "SpellType" "Target"
 data "Level" "4"
 using "Target_Invisibility_Greater"
 data "UseCosts" "GoonTargetInvisibilityGreaterResource:1"
-data "SpellProperties" "AI_IGNORE:ApplyStatus(GREATER_INVISIBILITY,100,10);AI_ONLY:ApplyStatus(GREATER_INVISIBILITY,100,10);ApplyStatus(GOON_TARGET_INVISIBILITY_GREATER_COOLDOWN_2,100,3)"
+data "SpellProperties" "AI_IGNORE:ApplyStatus(GREATER_INVISIBILITY,100,1);AI_ONLY:ApplyStatus(GREATER_INVISIBILITY,100,1);ApplyStatus(GOON_TARGET_INVISIBILITY_GREATER_COOLDOWN_2,100,3)"
 data "TargetConditions" "Character() and not HasStatus('FAERIE_FIRE')  and not IsImmuneToStatus('SG_Invisible') and not HasStatus('GOON_TARGET_INVISIBILITY_GREATER_COOLDOWN_3', context.Source)"
 data "Cooldown" ""
 
@@ -98,3 +98,21 @@ data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndi
 data "StackId" "GOON_TARGET_INVISIBILITY_GREATER_COOLDOWN_3"
 data "StackType" "Overwrite"
 data "TickType" "StartTurn"
+
+// ==================================== Custom Invisibility status ====================================
+
+//new entry "GREATER_INVISIBILITY"
+//type "StatusData"
+//data "StatusType" "INVISIBLE"
+//using "INVISIBILITY"
+// Greater Invisibility
+//data "DisplayName" "h17d32d34g187eg46b1g938fg20d567df6eb4;2"
+// Entity has <LSTag Tooltip="Advantage">Advantage</LSTag> on <LSTag Tooltip="AttackRoll">Attack Rolls</LSTag>. Attack Rolls against it have <LSTag Tooltip="Disadvantage">Disadvantage</LSTag>. <br><br>When interacting with items, casting spells or attacking, the entity needs to succeed a Stealth <LSTag Tooltip="AbilityCheck">Check</LSTag> to maintain Invisibility. The check becomes harder with each successful attempt.
+//data "Description" "ha4468dd2gdefeg4a52ga0c7g91ae57aef8a3;5"
+//data "Icon" "Spell_Illusion_GreaterInvisibility"
+//data "StackPriority" "5"
+//data "OnApplyFunctors" "ApplyStatus(GREATER_INVISIBILITY_TRACKER,100,-1)"
+//data "StatusPropertyFlags" "UnavailableInActiveRoll;ExcludeFromPortraitRendering"
+//data "RemoveEvents" "OnSpellCast;OnEntityPickUp;OnEntityDrop;OnEntityDrag;OnLockpickingFinished;OnDisarmingFinished"
+//data "RemoveConditions" "GreaterInvisibilityCheck_InvisSpellOrRoll()"
+//data "OnRemoveFunctors" "RemoveStatus(GREATER_INVISIBILITY_TRACKER);RemoveStatus(GREATER_INVISIBILITY_SUCCESS)"
