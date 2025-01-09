@@ -1,3 +1,5 @@
+// ==================================== Patch for Enweaved Feat by Yoesph ====================================
+
 new entry "Enweaved_Magic_Allergy_Passive"
 type "PassiveData"
 using "Enweaved_Magic_Allergy_Passive"
@@ -8,8 +10,7 @@ data "Properties" "Highlighted"
 data "StatsFunctorContext" "OnCreate;OnStatusRemove;OnStatusApplied;OnCast;OnTurn;OnCombatStarted"
 data "StatsFunctors" "ApplyStatus(GOON_MAGICALLERGY_AURA,100,-1)"
 
-// why this capitals lol
-new entry "GOON_MAGICALLERGY_UNLOCK"
+new entry "Goon_Magic_Allergy_Unlock"
 type "PassiveData"
 // Magic Allergy
 data "DisplayName" "hb3a26f07g52dfg4d55g9620gfa00fdd39a99"
@@ -47,7 +48,7 @@ data "StatusPropertyFlags" "IgnoreResting;ApplyToDead"
 data "StackId" "GOON_MAGICALLERGY_AURA"
 data "StackType" "Ignore"
 data "StatusGroups" "SG_RemoveOnRespec"
-data "RemoveConditions" "not HasPassive('GOON_MAGICALLERGY_UNLOCK') and not HasPassive('Enweaved_Magic_Allergy_Passive')"
+data "RemoveConditions" "not HasPassive('Goon_Magic_Allergy_Unlock') and not HasPassive('GOON_MAGICALLERGY_UNLOCK') and not HasPassive('Enweaved_Magic_Allergy_Passive')"
 
 new entry "GOON_UNSTABLE"
 type "StatusData"

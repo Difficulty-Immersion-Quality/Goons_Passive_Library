@@ -268,6 +268,7 @@
 
 	<content contentuid="h441396f0g2826g49efgbe51gcbcbabde0f12" version="1">Automatic Sanctuary</content>
 	<content contentuid="hd7db620dg26c9g4a4fgb530ge7b997be5ba5" version="1">An omnipotent force provides this creature with &lt;LSTag Type="Status" Tooltip="SANCTUARY"&gt;Sanctuary&lt;/LSTag&gt; at the start of combat.</content>
+	<content contentuid="hcdf47849g0d0bg418dg82b5g7b5063a8e5a8" version="1">An omnipotent force provides this creature with &lt;LSTag Type="Status" Tooltip="SANCTUARY"&gt;Sanctuary&lt;/LSTag&gt; at the end of their turn. &lt;LSTag Type="Status" Tooltip="SANCTUARY"&gt;Sanctuary&lt;/LSTag&gt; can reapply this way at the end of every second turn.</content>
 
 	<content contentuid="hab61f9ffg8d8eg433eg9c35gc4ec76ddb823" version="1">Spooder Invisibility Point</content>
 	<content contentuid="hb023f549g9e93g4be0gb917g8e2287c9be1c" version="1">The Spider Queen Matriarch certainly got the gyatt.</content>
