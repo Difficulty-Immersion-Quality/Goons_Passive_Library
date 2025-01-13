@@ -7,16 +7,27 @@
 //data "DisplayName" "h6f2fbf73g1962g47f2g8af0g3c80ffb2fb32;1"
 //data "RemoveConditions" "HasStatus('SG_Incapacitated',context.Source)"
 //data "RemoveEvents" "OnSourceStatusApplied"
-//data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+//data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 //data "OnRemoveFunctors" "Unsummon()"
 
 new entry "GOON_KNOCKED_OUT_CONSUMABLE_SUMMON_DISMISS"
 type "StatusData"
 data "StatusType" "BOOST"
-data "RemoveConditions" "HasStatus('KNOCKED_OUT',context.Source) or HasStatus('KNOCKED_OUT_PERMANENTLY',context.Source) or HasStatus('KNOCKED_OUT_TEMPORARILY',context.Source)"
+data "RemoveConditions" "HasStatus('KNOCKED_OUT',context.Source) or HasStatus('KNOCKED_OUT_PERMANENTLY',context.Source) or HasStatus('KNOCKED_OUT_TEMPORARILY',context.Source) or IsStatusEvent(StatusEvent.OnSourceDeath)"
 data "RemoveEvents" "OnSourceStatusApplied"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
-data "OnRemoveFunctors" "Unsummon()"
+data "OnRemoveFunctors" "Unsummon();Kill()"
+data "Passives" "fuck_fuck_fuck_innit_m8"
+
+new entry "fuck_fuck_fuck_innit_m8"
+type "PassiveData"
+data "DisplayName" ""
+data "Description" ""
+data "DescriptionParams" "1"
+data "Icon" ""
+data "Properties" "Highlighted"
+data "StatsFunctorContext" "OnDamaged;OnAttacked"
+data "StatsFunctors" "IF(HasStatus('KNOCKED_OUT',context.Source) or HasStatus('KNOCKED_OUT_PERMANENTLY',context.Source) or HasStatus('KNOCKED_OUT_TEMPORARILY',context.Source) or IsStatusEvent(StatusEvent.OnSourceDeath) or LethalHP()):Unsummon()"
 
 //SummonInInventory
 //SpawnInInventory
@@ -39,7 +50,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_X1_TECHNICAL'
 new entry "GOON_SUMMON_POTION_HEALING_X1_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_x2"
 type "PassiveData"
@@ -54,7 +65,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_X2_TECHNICAL'
 new entry "GOON_SUMMON_POTION_HEALING_X2_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_x3"
 type "PassiveData"
@@ -69,7 +80,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_X3_TECHNICAL'
 new entry "GOON_SUMMON_POTION_HEALING_X3_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_x4"
 type "PassiveData"
@@ -84,7 +95,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_X4_TECHNICAL'
 new entry "GOON_SUMMON_POTION_HEALING_X4_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_x5"
 type "PassiveData"
@@ -99,7 +110,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_X5_TECHNICAL'
 new entry "GOON_SUMMON_POTION_HEALING_X5_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 // Potion of Greater Healing
 
@@ -116,7 +127,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_GREATER_X1_TE
 new entry "GOON_SUMMON_POTION_HEALING_GREATER_X1_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_Greater_x2"
 type "PassiveData"
@@ -131,7 +142,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_GREATER_X2_TE
 new entry "GOON_SUMMON_POTION_HEALING_GREATER_X2_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_Greater_x3"
 type "PassiveData"
@@ -146,7 +157,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_GREATER_X3_TE
 new entry "GOON_SUMMON_POTION_HEALING_GREATER_X3_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_Greater_x4"
 type "PassiveData"
@@ -161,7 +172,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_GREATER_X4_TE
 new entry "GOON_SUMMON_POTION_HEALING_GREATER_X4_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_Greater_x5"
 type "PassiveData"
@@ -176,7 +187,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_GREATER_X5_TE
 new entry "GOON_SUMMON_POTION_HEALING_GREATER_X5_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 // Potion of Superior Healing
 
@@ -193,7 +204,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_SUPERIOR_X1_T
 new entry "GOON_SUMMON_POTION_HEALING_SUPERIOR_X1_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_Superior_x2"
 type "PassiveData"
@@ -208,7 +219,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_SUPERIOR_X2_T
 new entry "GOON_SUMMON_POTION_HEALING_SUPERIOR_X2_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_Superior_x3"
 type "PassiveData"
@@ -223,7 +234,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_SUPERIOR_X3_T
 new entry "GOON_SUMMON_POTION_HEALING_SUPERIOR_X3_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_Superior_x4"
 type "PassiveData"
@@ -238,7 +249,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_SUPERIOR_X4_T
 new entry "GOON_SUMMON_POTION_HEALING_SUPERIOR_X4_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_Superior_x5"
 type "PassiveData"
@@ -253,7 +264,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_SUPERIOR_X5_T
 new entry "GOON_SUMMON_POTION_HEALING_SUPERIOR_X5_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 // Potion of Supreme Healing
 
@@ -270,7 +281,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_SUPREME_X1_TE
 new entry "GOON_SUMMON_POTION_HEALING_SUPREME_X1_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_Supreme_x2"
 type "PassiveData"
@@ -285,7 +296,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_SUPREME_X2_TE
 new entry "GOON_SUMMON_POTION_HEALING_SUPREME_X2_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_Supreme_x3"
 type "PassiveData"
@@ -300,7 +311,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_SUPREME_X3_TE
 new entry "GOON_SUMMON_POTION_HEALING_SUPREME_X3_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_Supreme_x4"
 type "PassiveData"
@@ -315,7 +326,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_SUPREME_X4_TE
 new entry "GOON_SUMMON_POTION_HEALING_SUPREME_X4_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Potion_Healing_Supreme_x5"
 type "PassiveData"
@@ -330,7 +341,7 @@ data "StatsFunctors" "IF(not HasStatus('GOON_SUMMON_POTION_HEALING_SUPREME_X5_TE
 new entry "GOON_SUMMON_POTION_HEALING_SUPREME_X5_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 // ==================================== Utility Potions ====================================
 
@@ -338,10 +349,10 @@ data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndi
 
 // Dream Mist
 
-new entry "GOON_SUMMON_POTION_HEALING_SUPREME_X5_TECHNICAL"
+new entry "GOON_SUMMON_DRUG_DREAM_MIST_TECHNICAL"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 new entry "Goon_Summon_Drugs_Dream_Mist_x1"
 type "PassiveData"
