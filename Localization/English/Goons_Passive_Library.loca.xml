@@ -258,14 +258,19 @@
 	<content contentuid="hb075868dg6954g48b7gb23cg3a2c93d39a66" version="1">Spells Damage Bonus</content>
 
 	<content contentuid="hd701ed72gc3e9g4162g957fg513c16f91234" version="1">Potions of Healing</content>
-	<content contentuid="h49522c5cg0c15g45a8gb648g2cab00a813a3" version="1">An omnipotent force has gifted this creature [1] Potion(s) of Healing.</content>
+	<content contentuid="h49522c5cg0c15g45a8gb648g2cab00a813a3" version="1">An omnipotent force has gifted this creature x[1] Potion of Healing.</content>
 	<content contentuid="h5f6f84ddgab0eg462aga71cg74fa0cee209d" version="1">Potions of Greater Healing</content>
-	<content contentuid="hc68acbd6ga803g4f4fg913ag6cb0ed2f9e32" version="1">An omnipotent force has gifted this creature [1] Potion(s) of Greater Healing.</content>
+	<content contentuid="hc68acbd6ga803g4f4fg913ag6cb0ed2f9e32" version="1">An omnipotent force has gifted this creature x[1] Potion of Greater Healing.</content>
 	<content contentuid="h6d4610aeg4ff8g4687g9439ga8217a3c2c4b" version="1">Potions of Superior Healing</content>
-	<content contentuid="hbd2ffcffg7d23g4942g8575g61252df9f720" version="1">An omnipotent force has gifted this creature [1] Potion(s) of Superior Healing.</content>
+	<content contentuid="hbd2ffcffg7d23g4942g8575g61252df9f720" version="1">An omnipotent force has gifted this creature x[1] Potion of Superior Healing.</content>
 	<content contentuid="h5fa64594g2ab8g4566gaf61gd57160515a1e" version="1">Potions of Supreme Healing</content>
-	<content contentuid="ha44ab676gf43eg493ag9b38g27b45ecfba2e" version="1">An omnipotent force has gifted this creature [1] Potion(s) of Supreme Healing.</content>
-	
+	<content contentuid="ha44ab676gf43eg493ag9b38g27b45ecfba2e" version="1">An omnipotent force has gifted this creature x[1] Potion of Supreme Healing.</content>
+	<content contentuid="ha44ab676gf43eg493ag9b38g27b45ecfba2e" version="1">Vaporous decoction that absolutely rocks the brainstem.&lt;LSTag Type="Status" Tooltip="INCAPACITATED"&gt;Incapacitated&lt;/LSTag&gt;</content>
+	<content contentuid="h2a4ed8a3g9942g4b0cga1e8g2366eb87665e" version="1">Dream Mist</content>
+	<content contentuid="hc66c6e6cgb7d3g4499g805ag2e82c212ad1b" version="1">An omnipotent force has gifted this creature x[1] &lt;LSTag Type="Status" Tooltip="DRUG_DREAMMIST_CONDITION"&gt;Dream Mist&lt;/LSTag&gt;</content>
+
+	<content contentuid="ha44ab676gf43eg493ag9b38g27b45ecfba2e" version="1">Vaporous decoction that absolutely rocks the brainstem. Induces DRUG_DREAMMIST_CONDITION&lt;LSTag Type="Status" Tooltip="INCAPACITATED"&gt;Incapacitated&lt;/LSTag&gt;</content>
+	<content contentuid="h2a4ed8a3g9942g4b0cga1e8g2366eb87665e" version="1">Dream Mist</content>
 
 	<content contentuid="h441396f0g2826g49efgbe51gcbcbabde0f12" version="1">Automatic Sanctuary</content>
 	<content contentuid="hd7db620dg26c9g4a4fgb530ge7b997be5ba5" version="1">An omnipotent force provides this creature with &lt;LSTag Type="Status" Tooltip="SANCTUARY"&gt;Sanctuary&lt;/LSTag&gt; at the start of combat.</content>
