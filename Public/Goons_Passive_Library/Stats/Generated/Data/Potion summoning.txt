@@ -16,22 +16,23 @@ data "StatusType" "BOOST"
 data "RemoveConditions" "HasStatus('KNOCKED_OUT',context.Source) or HasStatus('KNOCKED_OUT_PERMANENTLY',context.Source) or HasStatus('KNOCKED_OUT_TEMPORARILY',context.Source) or IsStatusEvent(StatusEvent.OnSourceDeath)"
 data "RemoveEvents" "OnSourceStatusApplied"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
-data "OnRemoveFunctors" "Unsummon();Kill()"
-data "Passives" "fuck_fuck_fuck_innit_m8"
+data "OnRemoveFunctors" "Unsummon()"
+//data "Passives" "fuck_fuck_fuck_innit_m8"
 
-new entry "fuck_fuck_fuck_innit_m8"
-type "PassiveData"
-data "DisplayName" ""
-data "Description" ""
-data "DescriptionParams" "1"
-data "Icon" ""
-data "Properties" "Highlighted"
-data "StatsFunctorContext" "OnDamaged;OnAttacked"
-data "StatsFunctors" "IF(HasStatus('KNOCKED_OUT',context.Source) or HasStatus('KNOCKED_OUT_PERMANENTLY',context.Source) or HasStatus('KNOCKED_OUT_TEMPORARILY',context.Source) or IsStatusEvent(StatusEvent.OnSourceDeath) or LethalHP()):Unsummon()"
+//new entry "fuck_fuck_fuck_innit_m8"
+//type "PassiveData"
+//data "DisplayName" ""
+//data "Description" ""
+//data "DescriptionParams" "1"
+//data "Icon" ""
+//data "Properties" "Highlighted"
+//data "StatsFunctorContext" "OnDamaged;OnAttacked"
+//data "StatsFunctors" "IF(HasStatus('KNOCKED_OUT',context.Source) or HasStatus('KNOCKED_OUT_PERMANENTLY',context.Source) or HasStatus('KNOCKED_OUT_TEMPORARILY',context.Source) or IsStatusEvent(StatusEvent.OnSourceDeath) or LethalHP()):Unsummon()"
 
 //SummonInInventory
 //SpawnInInventory
 //data "Properties" "ExecuteOnce"
+//Kill()
 
 // ==================================== Healing Potions ====================================
 
