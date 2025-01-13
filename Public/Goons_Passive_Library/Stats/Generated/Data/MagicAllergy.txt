@@ -1,15 +1,5 @@
 // ==================================== Patch for Enweaved Feat by Yoesph ====================================
 
-new entry "Enweaved_Magic_Allergy_Passive"
-type "PassiveData"
-using "Enweaved_Magic_Allergy_Passive"
-data "DisplayName" "hb3a26f07g52dfg4d55g9620gfa00fdd39a99"
-data "Description" "hf677acbfgb2e1g401agb55dg5accaf8f69d5"
-data "Icon" "GenericIcon_Intent_Damage"
-data "Properties" "Highlighted"
-data "StatsFunctorContext" "OnCreate;OnStatusRemove;OnStatusApplied;OnCast;OnTurn;OnCombatStarted"
-data "StatsFunctors" "ApplyStatus(GOON_MAGICALLERGY_AURA,100,-1)"
-
 new entry "Goon_Magic_Allergy_Unlock"
 type "PassiveData"
 // Magic Allergy
@@ -43,11 +33,12 @@ data "DisplayName" "he3ff7e25gd139g4d13g9cb9gb21f0850697e"
 data "Description" "h0bd9ac32g0b3fg4e30gb4ceg1c7377f29761"
 data "Icon" "GenericIcon_Intent_Damage"
 data "AuraRadius" "9"
-data "AuraStatuses" "TARGET:IF(Character() and not Dead()):ApplyStatus(GOON_MAGICALLERGY_INAURARANGE,100,-1)"
+data "AuraStatuses" "TARGET:IF(Character() and not Dead()):ApplyStatus(GOON_MAGICALLERGY_INAURARANGE)"
 data "StatusPropertyFlags" "IgnoreResting;ApplyToDead"
 data "StackId" "GOON_MAGICALLERGY_AURA"
 data "StackType" "Ignore"
 data "StatusGroups" "SG_RemoveOnRespec"
+data "RemoveEvents" "OnStatusApplied;OnStatusRemoved"
 data "RemoveConditions" "not HasPassive('Goon_Magic_Allergy_Unlock') and not HasPassive('GOON_MAGICALLERGY_UNLOCK') and not HasPassive('Enweaved_Magic_Allergy_Passive')"
 
 new entry "GOON_UNSTABLE"
