@@ -265,17 +265,8 @@
 	<content contentuid="hbd2ffcffg7d23g4942g8575g61252df9f720" version="1">An omnipotent force has gifted this creature x[1] Potion of Superior Healing.</content>
 	<content contentuid="h5fa64594g2ab8g4566gaf61gd57160515a1e" version="1">Potions of Supreme Healing</content>
 	<content contentuid="ha44ab676gf43eg493ag9b38g27b45ecfba2e" version="1">An omnipotent force has gifted this creature x[1] Potion of Supreme Healing.</content>
-	<content contentuid="hd701ed72gc3e9g4162g957fg513c16f91234" version="1">Potions of Healing</content>
-	<content contentuid="hd701ed72gc3e9g4162g957fg513c16f91234" version="1">Potions of Healing</content>
-
-
-	
-	<content contentuid="hc4a4e94fg6eb1g4407g823dg851afb1afa27" version="1">Vaporous decoction that absolutely rocks the brainstem.&lt;LSTag Type="Status" Tooltip="INCAPACITATED"&gt;Incapacitated&lt;/LSTag&gt;</content>
-	<content contentuid="hc4a4e94fg6eb1g4407g823dg851afb1afa27" version="1">Dream Mist</content>
-	<content contentuid="hc66c6e6cgb7d3g4499g805ag2e82c212ad1b" version="1">An omnipotent force has gifted this creature x[1] &lt;LSTag Type="Status" Tooltip="DRUG_DREAMMIST_CONDITION"&gt;Dream Mist&lt;/LSTag&gt;</content>
-
-	<content contentuid="h7e392374gc739g49c4ga671gadb8c3cf75b1" version="1">Vaporous decoction that absolutely rocks the brainstem. Induces DRUG_DREAMMIST_CONDITION&lt;LSTag Type="Status" Tooltip="INCAPACITATED"&gt;Incapacitated&lt;/LSTag&gt;</content>
-	<content contentuid="h2a4ed8a3g9942g4b0cga1e8g2366eb87665e" version="1">Dream Mist</content>
+	<content contentuid="h4379027bga5afg4a91g9f63gdf2721a953eb" version="1">Dream Mist</content>
+	<content contentuid="h25f6ae9dg10c3g4502gaa76ge35fbedb87d6" version="1">An omnipotent force has gifted this creature x[1] Dream Mist.</content>
 
 	<content contentuid="h441396f0g2826g49efgbe51gcbcbabde0f12" version="1">Automatic Sanctuary</content>
 	<content contentuid="hd7db620dg26c9g4a4fgb530ge7b997be5ba5" version="1">An omnipotent force provides this creature with &lt;LSTag Type="Status" Tooltip="SANCTUARY"&gt;Sanctuary&lt;/LSTag&gt; at the start of combat.</content>
