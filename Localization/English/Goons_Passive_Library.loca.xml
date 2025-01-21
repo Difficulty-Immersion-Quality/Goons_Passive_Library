@@ -278,5 +278,21 @@
 	<content contentuid="hbf3fe4abg837bg4fdega4b7geae392d58088" version="1">Improved Invisibility Resource</content>
 	<content contentuid="hd5c3a80fga55eg46f4gab29gae6414389e4e" version="1">Improved Invisibility Resource description</content>
 
+	<content contentuid="h9c55a246g3ec2g4801ga638gb1218ae4bdf1" version="1">Defensive Resource</content>
+	<content contentuid="h1a9c0933g5e71g45bfg9f6ag3bd91a2daa8b" version="1">A shared resource pool for defensive abilities.</content>
+	<content contentuid="h0bb2e2a5g96f9g4837ga6dag327a624dc220" version="1">An omnipotent force has gifted this creature with [1] charge(s) of a resource pool for defensive abilities.</content>
+	<content contentuid="h884b69b7g6d88g4e67g8960gc43a28215432" version="1">Defensive Cooldown</content>
+	<content contentuid="hbdcb5ddcg267ag4bdcg849eg05d910b5b326" version="1">This creature has used a defensive ability and must wait to do so again.</content>
 
+	<content contentuid="hd6c95b32g15cbg4504g8dcagad787be50b71" version="1">Offensive Resource</content>
+	<content contentuid="h78b6d0c8g34c2g4f6bg9701gfe5a6549b2a2" version="1">A shared resource pool for offensive abilities.</content>
+	<content contentuid="h17f52459gaa47g4ed4ga76ega934de9ef495" version="1">An omnipotent force has gifted this creature with [1] charge(s) of a resource pool for offensive abilities.</content>
+	<content contentuid="h3d91d484g4518g4ab2gb9dbgc9521eecfb59" version="1">Offensive Cooldown</content>
+	<content contentuid="hb7623d93ga17ag4ae6ga580g21da55b23118" version="1">This creature has used an offensive ability and must wait to do so again.</content>
+
+	<content contentuid="hc6e8707eg803fg4bb7g844dg0a1ea832d0da" version="1">Utility Resource</content>
+	<content contentuid="hbffada51gf11fg4a10g90acg0b6ccd231a61" version="1">A shared resource pool for utility abilities.</content>
+	<content contentuid="h4243c4d9g08c3g4ee7g8cc7ga55004ef61c8" version="1">An omnipotent force has gifted this creature with [1] charge(s) of a resource pool for utility abilities.</content>
+	<content contentuid="he55c0e0agf730g4695gaff8g4045ec0e7b4a" version="1">Utility Cooldown</content>
+	<content contentuid="hb9e29f08gd0b4g479fg8cf7g7ac3b5936083" version="1">This creature has used a utility ability and must wait to do so again.</content>
 </contentList>

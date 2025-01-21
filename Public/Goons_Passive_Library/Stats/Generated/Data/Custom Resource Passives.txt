@@ -1,0 +1,277 @@
+// ==================================== Cooldown statuses ====================================
+
+new entry "GOON_DEFENSIVE_COOLDOWN"
+type "StatusData"
+data "StatusType" "BOOST"
+// Defensive Cooldown
+data "DisplayName" "h884b69b7g6d88g4e67g8960gc43a28215432"
+// This creature has used a defensive ability and must wait to do so again.
+data "Description" "hbdcb5ddcg267ag4bdcg849eg05d910b5b326"
+data "Icon" "GenericIcon_Intent_Buff"
+data "StackId" "GOON_DEFENSIVE_COOLDOWN"
+data "StackType" "Ignore"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;IgnoreResting;ApplyToDead"
+data "Boosts" "ActionResourceBlock(GoonDefensiveResource)"
+data "TickType" "StartTurn"
+
+new entry "GOON_OFFENSIVE_COOLDOWN"
+type "StatusData"
+data "StatusType" "BOOST"
+// Offensive Cooldown
+data "DisplayName" "h3d91d484g4518g4ab2gb9dbgc9521eecfb59"
+// This creature has used an offensive ability and must wait to do so again.
+data "Description" "hb7623d93ga17ag4ae6ga580g21da55b23118"
+data "Icon" "GenericIcon_Intent_Damage"
+data "StackId" "GOON_OFFENSIVE_COOLDOWN"
+data "StackType" "Ignore"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;IgnoreResting;ApplyToDead"
+data "Boosts" "ActionResourceBlock(GoonOffensiveResource)"
+data "TickType" "StartTurn"
+
+new entry "GOON_UTILITY_COOLDOWN"
+type "StatusData"
+data "StatusType" "BOOST"
+// Utility Cooldown
+data "DisplayName" "he55c0e0agf730g4695gaff8g4045ec0e7b4a"
+// This creature has used a utility ability and must wait to do so again.
+data "Description" "hb9e29f08gd0b4g479fg8cf7g7ac3b5936083"
+data "Icon" "GenericIcon_Intent_Utility"
+data "StackId" "GOON_UTILITY_COOLDOWN"
+data "StackType" "Ignore"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;IgnoreResting;ApplyToDead"
+data "Boosts" "ActionResourceBlock(GoonUtilityResource)"
+data "TickType" "StartTurn"
+
+// ==================================== Defensive resource ====================================
+
+new entry "Goon_Defensive_Resource"
+data "Properties" "Highlighted"
+// Defensive Resource
+data "DisplayName" "h9c55a246g3ec2g4801ga638gb1218ae4bdf1"
+// An omnipotent force has gifted this creature with [1] charge(s) of a resource pool for defensive abilities.
+data "Description" "h0bb2e2a5g96f9g4837ga6dag327a624dc220"
+data "Icon" "GenericIcon_Intent_Buff"
+
+new entry "Goon_Defensive_Resource_1"
+type "PassiveData"
+using "Goon_Defensive_Resource"
+data "DescriptionParams" "1"
+data "Boosts" "ActionResource(GoonDefensiveResource,1,0)"
+
+new entry "Goon_Defensive_Resource_2"
+type "PassiveData"
+using "Goon_Defensive_Resource"
+data "DescriptionParams" "2"
+data "Boosts" "ActionResource(GoonDefensiveResource,2,0)"
+
+new entry "Goon_Defensive_Resource_3"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Defensive_Resource"
+data "DescriptionParams" "3"
+data "Boosts" "ActionResource(GoonDefensiveResource,3,0)"
+
+new entry "Goon_Defensive_Resource_4"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Defensive_Resource"
+data "DescriptionParams" "4"
+data "Boosts" "ActionResource(GoonDefensiveResource,4,0)"
+
+new entry "Goon_Defensive_Resource_5"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Defensive_Resource"
+data "DescriptionParams" "5"
+data "Boosts" "ActionResource(GoonDefensiveResource,5,0)"
+
+new entry "Goon_Defensive_Resource_6"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Defensive_Resource"
+data "DescriptionParams" "6"
+data "Boosts" "ActionResource(GoonDefensiveResource,6,0)"
+
+new entry "Goon_Defensive_Resource_7"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Defensive_Resource"
+data "DescriptionParams" "7"
+data "Boosts" "ActionResource(GoonDefensiveResource,7,0)"
+
+new entry "Goon_Defensive_Resource_8"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Defensive_Resource"
+data "DescriptionParams" "8"
+data "Boosts" "ActionResource(GoonDefensiveResource,8,0)"
+
+new entry "Goon_Defensive_Resource_9"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Defensive_Resource"
+data "DescriptionParams" "9"
+data "Boosts" "ActionResource(GoonDefensiveResource,9,0)"
+
+new entry "Goon_Defensive_Resource_10"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Defensive_Resource"
+data "DescriptionParams" "10"
+data "Boosts" "ActionResource(GoonDefensiveResource,10,0)"
+
+// ==================================== Offensive resource ====================================
+
+new entry "Goon_Offensive_Resource"
+data "Properties" "Highlighted"
+// Offensive Resource
+data "DisplayName" "hd6c95b32g15cbg4504g8dcagad787be50b71"
+// An omnipotent force has gifted this creature with [1] charge(s) of a resource pool for offensive abilities.
+data "Description" "h17f52459gaa47g4ed4ga76ega934de9ef495"
+data "Icon" "GenericIcon_Intent_Damage"
+
+new entry "Goon_Offensive_Resource_1"
+type "PassiveData"
+using "Goon_Offensive_Resource"
+data "DescriptionParams" "1"
+data "Boosts" "ActionResource(GoonOffensiveResource,1,0)"
+
+new entry "Goon_Offensive_Resource_2"
+type "PassiveData"
+using "Goon_Offensive_Resource"
+data "DescriptionParams" "2"
+data "Boosts" "ActionResource(GoonOffensiveResource,2,0)"
+
+new entry "Goon_Offensive_Resource_3"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Offensive_Resource"
+data "DescriptionParams" "3"
+data "Boosts" "ActionResource(GoonOffensiveResource,3,0)"
+
+new entry "Goon_Offensive_Resource_4"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Offensive_Resource"
+data "DescriptionParams" "4"
+data "Boosts" "ActionResource(GoonOffensiveResource,4,0)"
+
+new entry "Goon_Offensive_Resource_5"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Offensive_Resource"
+data "DescriptionParams" "5"
+data "Boosts" "ActionResource(GoonOffensiveResource,5,0)"
+
+new entry "Goon_Offensive_Resource_6"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Offensive_Resource"
+data "DescriptionParams" "6"
+data "Boosts" "ActionResource(GoonOffensiveResource,6,0)"
+
+new entry "Goon_Offensive_Resource_7"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Offensive_Resource"
+data "DescriptionParams" "7"
+data "Boosts" "ActionResource(GoonOffensiveResource,7,0)"
+
+new entry "Goon_Offensive_Resource_8"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Offensive_Resource"
+data "DescriptionParams" "8"
+data "Boosts" "ActionResource(GoonOffensiveResource,8,0)"
+
+new entry "Goon_Offensive_Resource_9"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Offensive_Resource"
+data "DescriptionParams" "9"
+data "Boosts" "ActionResource(GoonOffensiveResource,9,0)"
+
+new entry "Goon_Offensive_Resource_10"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Offensive_Resource"
+data "DescriptionParams" "10"
+data "Boosts" "ActionResource(GoonOffensiveResource,10,0)"
+
+// ==================================== Utility resource ====================================
+
+new entry "Goon_Utility_Resource"
+data "Properties" "Highlighted"
+// Utility Resource
+data "DisplayName" "hc6e8707eg803fg4bb7g844dg0a1ea832d0da"
+// An omnipotent force has gifted this creature with [1] charge(s) of a resource pool for utility abilities.
+data "Description" "h4243c4d9g08c3g4ee7g8cc7ga55004ef61c8"
+data "Icon" "GenericIcon_Intent_Utility"
+
+new entry "Goon_Utility_Resource_1"
+type "PassiveData"
+using "Goon_Utility_Resource"
+data "DescriptionParams" "1"
+data "Boosts" "ActionResource(GoonUtilityResource,1,0)"
+
+new entry "Goon_Utility_Resource_2"
+type "PassiveData"
+using "Goon_Utility_Resource"
+data "DescriptionParams" "2"
+data "Boosts" "ActionResource(GoonUtilityResource,2,0)"
+
+new entry "Goon_Utility_Resource_3"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Utility_Resource"
+data "DescriptionParams" "3"
+data "Boosts" "ActionResource(GoonUtilityResource,3,0)"
+
+new entry "Goon_Utility_Resource_4"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Utility_Resource"
+data "DescriptionParams" "4"
+data "Boosts" "ActionResource(GoonUtilityResource,4,0)"
+
+new entry "Goon_Utility_Resource_5"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Utility_Resource"
+data "DescriptionParams" "5"
+data "Boosts" "ActionResource(GoonUtilityResource,5,0)"
+
+new entry "Goon_Utility_Resource_6"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Utility_Resource"
+data "DescriptionParams" "6"
+data "Boosts" "ActionResource(GoonUtilityResource,6,0)"
+
+new entry "Goon_Utility_Resource_7"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Utility_Resource"
+data "DescriptionParams" "7"
+data "Boosts" "ActionResource(GoonUtilityResource,7,0)"
+
+new entry "Goon_Utility_Resource_8"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Utility_Resource"
+data "DescriptionParams" "8"
+data "Boosts" "ActionResource(GoonUtilityResource,8,0)"
+
+new entry "Goon_Utility_Resource_9"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Utility_Resource"
+data "DescriptionParams" "9"
+data "Boosts" "ActionResource(GoonUtilityResource,9,0)"
+
+new entry "Goon_Utility_Resource_10"
+type "PassiveData"
+type "PassiveData"
+using "Goon_Utility_Resource"
+data "DescriptionParams" "10"
+data "Boosts" "ActionResource(GoonUtilityResource,10,0)"
