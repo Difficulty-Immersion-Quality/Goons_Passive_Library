@@ -1,0 +1,27 @@
+// ==================================== Offensive - Custom Invisibility ====================================
+
+new entry "Goon_Custom_Target_Invisibility"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Invisibility"
+data "UseCosts" "GoonOffensiveResource:1"
+data "RequirementConditions" "not HasActionResource(ActionPoint) and not HasStatus('EXTRA_ATTACK')"
+
+new entry "Goon_Offensive_Target_Invisibility_1"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "Boosts" "UnlockSpell(Goon_Custom_Target_Invisibility)"
+data "BoostConditions" "not HasStatus('GOON_UTILITY_COOLDOWN')"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(GOON_UTILITY_COOLDOWN,100,1)"
+data "StatsFunctorContext" "OnCast"
+data "Conditions" "(context.HasContextFlag(StatsFunctorContext.OnCast) and SpellId('Goon_Custom_Target_Invisibility'))"
+
+new entry "Goon_Offensive_Target_Invisibility_2"
+type "PassiveData"
+using "Goon_Offensive_Target_Invisibility_1"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(GOON_UTILITY_COOLDOWN,100,2)"
+
+new entry "Goon_Offensive_Target_Invisibility_3"
+type "PassiveData"
+using "Goon_Offensive_Target_Invisibility_1"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(GOON_UTILITY_COOLDOWN,100,3)"
