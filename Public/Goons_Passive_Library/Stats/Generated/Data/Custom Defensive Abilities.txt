@@ -1,0 +1,54 @@
+// ==================================== Defensive - Mirror Image ====================================
+
+new entry "Goon_Custom_Shout_MirrorImage"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_MirrorImage"
+data "UseCosts" "GoonDefensiveResource:1"
+
+new entry "Goon_Defensive_Mirror_Image_1"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "Boosts" "UnlockSpell(Goon_Custom_Shout_MirrorImage)"
+data "BoostConditions" "not HasStatus('GOON_DEFENSIVE_COOLDOWN')"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(GOON_DEFENSIVE_COOLDOWN,100,1);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(MIRROR_IMAGE_1,100,10);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(MIRROR_IMAGE_2,100,10);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(MIRROR_IMAGE_3,100,10);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(GOON_DEFENSIVE_COOLDOWN,100,1)"
+data "StatsFunctorContext" "OnCast;OnCombatStarted"
+data "Conditions" "(context.HasContextFlag(StatsFunctorContext.OnCast) and SpellId('Goon_Custom_Shout_MirrorImage')) or (context.HasContextFlag(StatsFunctorContext.OnCombatStarted) and not HasStatus('GOON_DEFENSIVE_COOLDOWN'))"
+
+new entry "Goon_Defensive_Mirror_Image_2"
+type "PassiveData"
+using "Goon_Defensive_Mirror_Image_1"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(GOON_DEFENSIVE_COOLDOWN,100,2);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(MIRROR_IMAGE_1,100,10);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(MIRROR_IMAGE_2,100,10);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(MIRROR_IMAGE_3,100,10);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(GOON_DEFENSIVE_COOLDOWN,100,2)"
+
+new entry "Goon_Defensive_Mirror_Image_3"
+type "PassiveData"
+using "Goon_Defensive_Mirror_Image_1"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(GOON_DEFENSIVE_COOLDOWN,100,3);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(MIRROR_IMAGE_1,100,10);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(MIRROR_IMAGE_2,100,10);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(MIRROR_IMAGE_3,100,10);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(GOON_DEFENSIVE_COOLDOWN,100,3)"
+
+// ==================================== Defensive - Sanctuary ====================================
+
+new entry "Goon_Custom_Target_Sanctuary"
+type "SpellData"
+data "SpellType" "Shout"
+using "Target_Sanctuary"
+data "UseCosts" "GoonDefensiveResource:1"
+data "RequirementConditions" "not HasActionResource(ActionPoint)"
+
+new entry "Goon_Defensive_Sanctuary_1"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "Boosts" "UnlockSpell(Goon_Custom_Target_Sanctuary)"
+data "BoostConditions" "not HasStatus('GOON_DEFENSIVE_COOLDOWN')"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(GOON_DEFENSIVE_COOLDOWN,100,1);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(GOON_DEFENSIVE_COOLDOWN,100,1);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(SANCTUARY,100,10)"
+data "StatsFunctorContext" "OnCast;OnCombatStarted"
+data "Conditions" "(context.HasContextFlag(StatsFunctorContext.OnCast) and SpellId('Goon_Custom_Target_Sanctuary')) or (context.HasContextFlag(StatsFunctorContext.OnCombatStarted) and not HasStatus('GOON_DEFENSIVE_COOLDOWN'))"
+
+new entry "Goon_Defensive_Sanctuary_2"
+type "PassiveData"
+using "Goon_Defensive_Sanctuary_1"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(GOON_DEFENSIVE_COOLDOWN,100,2);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(GOON_DEFENSIVE_COOLDOWN,100,2);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(SANCTUARY,100,10)"
+
+new entry "Goon_Defensive_Sanctuary_3"
+type "PassiveData"
+using "Goon_Defensive_Sanctuary_1"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(GOON_DEFENSIVE_COOLDOWN,100,3);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(GOON_DEFENSIVE_COOLDOWN,100,3);IF(context.HasContextFlag(StatsFunctorContext.OnCombatStarted)):ApplyStatus(SANCTUARY,100,10)"
