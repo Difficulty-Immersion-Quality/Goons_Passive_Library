@@ -30,7 +30,7 @@ data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnCast)):App
 new entry "Goon_Custom_Projectile_SteelWatcher_Quadruped_Bola"
 type "SpellData"
 data "SpellType" "Projectile"
-using "Target_SteelWatcher_Biped_RetrievingShot"
+using "Projectile_SteelWatcher_Quadruped_Bola"
 data "UseCosts" "GoonOffensiveResource:1"
 
 new entry "Goon_Offensive_Launch_Protocol_Bola_1"
