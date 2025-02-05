@@ -295,4 +295,9 @@
 	<content contentuid="h4243c4d9g08c3g4ee7g8cc7ga55004ef61c8" version="1">An omnipotent force has gifted this creature with [1] charge(s) of a resource pool for utility abilities.</content>
 	<content contentuid="he55c0e0agf730g4695gaff8g4045ec0e7b4a" version="1">Utility Cooldown</content>
 	<content contentuid="hb9e29f08gd0b4g479fg8cf7g7ac3b5936083" version="1">This creature has used a utility ability and must wait to do so again.</content>
+
+	<content contentuid="h66a15410gabfcg45acg9b7bgbeab059e8ae1" version="1">Weave Devouring Aura</content>
+	<content contentuid="h9d620501g1951g4ceegab51gee0020322cbe" version="1">This creature devoures the magical energy of the weave from all around them.</content>
+	<content contentuid="h02124374g23f7g48b1gb73dgce128b2b83ff" version="1">Devoured Magic</content>
+	<content contentuid="h2900144dg8afdg48d6ga41fgfeac4c706774" version="1">A presence is draining the character of its magical energy, preventing it from casting spells.</content>
 </contentList>

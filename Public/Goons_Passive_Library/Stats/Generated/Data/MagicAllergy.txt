@@ -1,4 +1,4 @@
-// ==================================== Patch for Enweaved Feat by Yoesph ====================================
+// ==================================== Magic Allergy ====================================
 
 new entry "Goon_Magic_Allergy_Unlock"
 type "PassiveData"
