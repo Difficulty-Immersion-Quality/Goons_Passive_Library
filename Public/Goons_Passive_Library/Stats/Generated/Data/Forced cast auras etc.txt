@@ -1,3 +1,57 @@
+// ==================================== Progression technical for NPCs ====================================
+// TODO: Revisit this for Aura of Courage
+
+new entry "Goon_Aura_Distribution_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnCreate;OnStatusApplied;OnStatusRemoved"
+data "StatsFunctors" "IF(HasPassive('Goon_Aura_of_Protection_Passive') and not HasPassive('Goon_Aura_of_Hate_Passive') and not HasPassive('Goon_Aura_of_Devotion_Passive') and not HasPassive('Goon_Aura_of_Warding_Passive')):ApplyStatus(GOON_AURA_DISTRIBUTION_PROTECTION,100,-1)"
+
+new entry "GOON_AURA_DISTRIBUTION_PROTECTION"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
+data "RemoveEvents" "OnStatusApplied;OnStatusRemoved"
+data "RemoveConditions" "not HasPassive('Goon_Aura_Distribution_Passive')"
+data "Passives" "Goon_Aura_of_Protection_Passive"
+
+// ==================================== Aura of Protection ====================================
+
+new entry "Goon_Aura_of_Protection_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnCreate;OnStatusApplied;OnStatusRemoved"
+data "StatsFunctors" "IF(not HasStatus('SG_Incapacitated') and not HasStatus('GOON_AURA_OF_PROTECTION_STATUS')):ApplyStatus(GOON_AURA_OF_PROTECTION_STATUS,100,-1)"
+
+new entry "GOON_AURA_OF_PROTECTION_STATUS"
+type "StatusData"
+data "StatusType" "BOOST"
+using "AURA_OF_PROTECTION"
+data "StackType" "Ignore"
+// data "RemoveConditions" "HasStatus('SG_Incapacitated') or HasStatus('SG_Unconscious')"
+data "RemoveConditions" "HasStatus('SG_Incapacitated') or HasStatus('SG_Unconscious') or not HasPassive('Goon_Aura_of_Protection_Passive')"
+// data "RemoveEvents" "OnStatusApplied"
+data "RemoveEvents" "OnStatusApplied;OnStatusRemoved"
+
+// new entry "AURA_OF_PROTECTION"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// // Aura of Protection
+// data "DisplayName" "hdfe1f27agb8e1g487cg88fdg8ca4b3c795fc;2"
+// // The paladin and any nearby allies have a +[1] bonus on <LSTag Tooltip="SavingThrow">Saving Throws</LSTag>.
+// data "Description" "hc3749f97g4b86g46e8g9f1bg8bd2293a8de0;4"
+// data "DescriptionParams" "max(1,Cause.CharismaModifier)"
+// data "Icon" "Action_Paladin_AuraOfProtection"
+// data "StackId" "AURA_OF_PROTECTION"
+// data "StackPriority" "10"
+// data "AuraRadius" "3"
+// data "AuraStatuses" "IF(Ally() and not Tagged('INANIMATE')):ApplyStatus(AURA_OF_PROTECTION_BUFF)"
+// data "Boosts" "RollBonus(SavingThrow, max(1, Cause.CharismaModifier));RollBonus(DeathSavingThrow, max(1, Cause.CharismaModifier))"
+// data "RemoveConditions" "HasStatus('SG_Incapacitated') or HasStatus('SG_Unconscious')"
+// data "RemoveEvents" "OnStatusApplied"
+// data "StatusPropertyFlags" "IgnoreResting"
+// data "StatusGroups" "SG_RemoveOnRespec"
+
 // ==================================== Aura of Hate ====================================
 
 new entry "Goon_Aura_of_Hate_Passive"
