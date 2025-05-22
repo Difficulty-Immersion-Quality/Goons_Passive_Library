@@ -1,0 +1,51 @@
+// Magic Weapon
+new entry "Goon_Target_Magic_Weapon_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnCreate;OnCombatStarted;OnStatusApplied;OnStatusRemoved"
+data "StatsFunctors" "IF(not HasStatus('MAGIC_WEAPON',GetActiveWeapon(context.Target, true))):ApplyEquipmentStatus(MainHand,MAGIC_WEAPON,100,-1)"
+
+// Elemental Weapon
+new entry "Goon_Target_Elemental_Weapon_Acid_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnCreate;OnCombatStarted;OnStatusApplied;OnStatusRemoved"
+data "StatsFunctors" "IF(not HasStatus('ELEMENTAL_WEAPON_ACID',GetActiveWeapon(context.Target, true))):ApplyEquipmentStatus(MainHand,ELEMENTAL_WEAPON_ACID,100,-1)"
+
+new entry "Goon_Target_Elemental_Weapon_Cold_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnCreate;OnCombatStarted;OnStatusApplied;OnStatusRemoved"
+data "StatsFunctors" "IF(not HasStatus('ELEMENTAL_WEAPON_COLD',GetActiveWeapon(context.Target, true))):ApplyEquipmentStatus(MainHand,ELEMENTAL_WEAPON_COLD,100,-1)"
+
+new entry "Goon_Target_Elemental_Weapon_Fire_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnCreate;OnCombatStarted;OnStatusApplied;OnStatusRemoved"
+data "StatsFunctors" "IF(not HasStatus('ELEMENTAL_WEAPON_FIRE',GetActiveWeapon(context.Target, true))):ApplyEquipmentStatus(MainHand,ELEMENTAL_WEAPON_FIRE,100,-1)"
+
+new entry "Goon_Target_Elemental_Weapon_Lightning_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnCreate;OnCombatStarted;OnStatusApplied;OnStatusRemoved"
+data "StatsFunctors" "IF(not HasStatus('ELEMENTAL_WEAPON_LIGHTNING',GetActiveWeapon(context.Target, true))):ApplyEquipmentStatus(MainHand,ELEMENTAL_WEAPON_LIGHTNING,100,-1)"
+
+new entry "Goon_Target_Elemental_Weapon_Thunder_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnCreate;OnCombatStarted;OnStatusApplied;OnStatusRemoved"
+data "StatsFunctors" "IF(not HasStatus('ELEMENTAL_WEAPON_THUNDER',GetActiveWeapon(context.Target, true))):ApplyEquipmentStatus(MainHand,ELEMENTAL_WEAPON_THUNDER,100,-1)"
+
+// Holy Weapon
+new entry "Goon_Target_Holy_Weapon_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnCreate;OnCombatStarted;OnStatusApplied;OnStatusRemoved"
+data "StatsFunctors" "IF(not HasStatus('HOLY_WEAPON',GetActiveWeapon(context.Target, true))):ApplyEquipmentStatus(MainHand,HOLY_WEAPON,100,-1)"
+
+// Pact Blade
+new entry "Goon_Pact_Blade_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnCreate;OnCombatStarted;OnStatusApplied;OnStatusRemoved"
+data "StatsFunctors" "IF(not HasStatus('PACT_BLADE',GetActiveWeapon(context.Target, true))):ApplyEquipmentStatus(MainHand,PACT_BLADE,100,-1)"
