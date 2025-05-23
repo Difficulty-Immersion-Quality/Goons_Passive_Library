@@ -100,7 +100,7 @@ new entry "Goon_Target_MageArmor_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('MAGE_ARMOR') and not WearingArmor()"
+data "Conditions" "not (HasStatus('MAGE_ARMOR') or HasStatus('LOW_ROLAN_MAGE_ARMOR')) and not HasPassive('DraconicResilience') and not WearingArmor()"
 data "StatsFunctors" "UseSpell(SWAP,Target_MageArmor,true,true,true)"
 
 // Shield of Faith
