@@ -1,0 +1,146 @@
+// ==================================== Flat Damage Reduction ====================================
+
+new entry "Goon_DamageReduction"
+type "PassiveData"
+// Impervious Defence
+data "DisplayName" "h5b4280056a754abe83ad50c05af217cfg861;1"
+// All incoming damage is reduced by [1], equal to your &lt;LSTag Tooltip="ProficiencyBonus"&gt;Proficiency Bonus&lt;/LSTag&gt;.
+data "Description" "hfef70fe222774b49b7eb7812b9c04e27cage;1"
+data "DescriptionParams" "ProficiencyBonus"
+data "Icon" "PassiveFeature_Durable"
+data "Properties" "Highlighted"
+data "Boosts" "DamageReduction(All, Flat, ProficiencyBonus)"
+
+new entry "Goon_DamageReduction_1"
+type "PassiveData"
+using "Goon_DamageReduction"
+// All incoming damage is reduced by [1].
+data "Description" "h09255dfdg6a3eg46d6g9cb2gfe90e9219972;1"
+data "DescriptionParams" "1"
+data "Boosts" "DamageReduction(All, Flat, 1)"
+
+new entry "Goon_DamageReduction_2"
+type "PassiveData"
+using "Goon_DamageReduction_1"
+data "DescriptionParams" "2"
+data "Boosts" "DamageReduction(All, Flat, 2)"
+
+new entry "Goon_DamageReduction_3"
+type "PassiveData"
+using "Goon_DamageReduction_1"
+data "DescriptionParams" "3"
+data "Boosts" "DamageReduction(All, Flat, 3)"
+
+new entry "Goon_DamageReduction_4"
+type "PassiveData"
+using "Goon_DamageReduction_1"
+data "DescriptionParams" "4"
+data "Boosts" "DamageReduction(All, Flat, 4)"
+
+new entry "Goon_DamageReduction_5"
+type "PassiveData"
+using "Goon_DamageReduction_1"
+data "DescriptionParams" "5"
+data "Boosts" "DamageReduction(All, Flat, 5)"
+
+new entry "Goon_DamageReduction_6"
+type "PassiveData"
+using "Goon_DamageReduction_1"
+data "DescriptionParams" "6"
+data "Boosts" "DamageReduction(All, Flat, 6)"
+
+// ==================================== Armour Class ====================================
+// Keeping these hidden to avoid clogging the passives section of the inspection sheet. These will only be seen when hovering over AC on the inspection sheet.
+
+// AC buffs
+new entry "Goon_AC_Buff_1"
+type "PassiveData"
+// Armour Class Increase
+data "DisplayName" "h193c4559g56e5g419aga8d3g78eee841b45f;1"
+data "Properties" "IsHidden"
+data "Boosts" "AC(1)"
+
+new entry "Goon_AC_Buff_2"
+type "PassiveData"
+using "Goon_AC_Buff_1"
+data "Boosts" "AC(2)"
+
+new entry "Goon_AC_Buff_3"
+type "PassiveData"
+using "Goon_AC_Buff_1"
+data "Boosts" "AC(3)"
+
+new entry "Goon_AC_Buff_4"
+type "PassiveData"
+using "Goon_AC_Buff_1"
+data "Boosts" "AC(4)"
+
+new entry "Goon_AC_Buff_5"
+type "PassiveData"
+using "Goon_AC_Buff_1"
+data "Boosts" "AC(5)"
+
+// AC debuffs
+new entry "Goon_AC_Debuff_1"
+type "PassiveData"
+// Armour Class Decrease
+data "DisplayName" "h3cc24883gfe3ag4c35gbc13gf87334eb5a4e;1"
+data "Properties" "IsHidden"
+data "Boosts" "AC(-1)"
+
+new entry "Goon_AC_Debuff_2"
+type "PassiveData"
+using "Goon_AC_Debuff_1"
+data "Boosts" "AC(-2)"
+
+new entry "Goon_AC_Debuff_3"
+type "PassiveData"
+using "Goon_AC_Debuff_1"
+data "Boosts" "AC(-3)"
+
+new entry "Goon_AC_Debuff_4"
+type "PassiveData"
+using "Goon_AC_Debuff_1"
+data "Boosts" "AC(-4)"
+
+new entry "Goon_AC_Debuff_5"
+type "PassiveData"
+using "Goon_AC_Debuff_1"
+data "Boosts" "AC(-5)"
+
+// ==================================== Attack Rolls ====================================
+
+new entry "Goon_AttackRoll_1"
+type "PassiveData"
+// Improved Accuracy
+data "DisplayName" "h93157a8fg6f18g4545g88a1g18e16621b367;1"
+// You gain a +[1] bonus to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;.
+data "Description" "h9171a2e1g4beag44e8gb069gcbf8150c0c44;1"
+data "DescriptionParams" "1"
+data "Icon" "Spell_Divination_TrueStrike"
+data "Properties" "Highlighted"
+data "Boosts" "RollBonus(Attack,1)"
+
+new entry "Goon_AttackRoll_2"
+type "PassiveData"
+using "Goon_AttackRoll_1"
+data "DescriptionParams" "2"
+data "Boosts" "RollBonus(Attack,2)"
+
+new entry "Goon_AttackRoll_3"
+type "PassiveData"
+using "Goon_AttackRoll_1"
+data "DescriptionParams" "3"
+data "Boosts" "RollBonus(Attack,3)"
+
+new entry "Goon_AttackRoll_4"
+type "PassiveData"
+using "Goon_AttackRoll_1"
+data "DescriptionParams" "4"
+data "Boosts" "RollBonus(Attack,4)"
+
+new entry "Goon_AttackRoll_5"
+type "PassiveData"
+using "Goon_AttackRoll_1"
+data "DescriptionParams" "5"
+data "Boosts" "RollBonus(Attack,5)"

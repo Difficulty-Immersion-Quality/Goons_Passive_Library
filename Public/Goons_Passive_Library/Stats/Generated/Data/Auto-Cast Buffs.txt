@@ -1,0 +1,144 @@
+// ==================================== Weapon Buffs ====================================
+
+// Magic Weapon
+new entry "Goon_Target_Magic_Weapon_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('MAGIC_WEAPON',GetActiveWeapon(context.Target, true))"
+data "StatsFunctors" "UseSpell(SWAP,Target_MagicWeapon,true,true,true)"
+
+// Elemental Weapon
+new entry "Goon_Target_Elemental_Weapon_Acid_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_ACID',GetActiveWeapon(context.Target, true))"
+data "StatsFunctors" "UseSpell(SWAP,Target_ElementalWeapon_Acid,true,true,true)"
+
+new entry "Goon_Target_Elemental_Weapon_Cold_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_COLD',GetActiveWeapon(context.Target, true))"
+data "StatsFunctors" "UseSpell(SWAP,Target_ElementalWeapon_Cold,true,true,true)"
+
+new entry "Goon_Target_Elemental_Weapon_Fire_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_FIRE',GetActiveWeapon(context.Target, true))"
+data "StatsFunctors" "UseSpell(SWAP,Target_ElementalWeapon_Fire,true,true,true)"
+
+new entry "Goon_Target_Elemental_Weapon_Lightning_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_LIGHTNING',GetActiveWeapon(context.Target, true))"
+data "StatsFunctors" "UseSpell(SWAP,Target_ElementalWeapon_Lightning,true,true,true)"
+
+new entry "Goon_Target_Elemental_Weapon_Thunder_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_Thunder',GetActiveWeapon(context.Target, true))"
+data "StatsFunctors" "UseSpell(SWAP,Target_ElementalWeapon_Thunder,true,true,true)"
+
+// Holy Weapon
+new entry "Goon_Target_Holy_Weapon_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('HOLY_WEAPON',GetActiveWeapon(context.Target, true))"
+data "StatsFunctors" "UseSpell(SWAP,Target_HolyWeapon,true,true,true)"
+
+// Pact Blade
+new entry "Goon_Shout_Pact_Blade_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('PACT_BLADE',GetActiveWeapon(context.Target, true))"
+data "StatsFunctors" "UseSpell(Shout_PactOfTheBlade_Bind,true,true,true)"
+
+// Bind Hexed Weapon
+new entry "Goon_Shout_Hexblade_Bind_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('HEXBLADE_BIND',GetActiveWeapon(context.Target, true))"
+data "StatsFunctors" "UseSpell(Shout_Hexblade_Bind ,true,true,true)"
+
+// Shillelagh
+// Not putting conditions here for the caster's weapon type for now as this is something many mods change, so just gonna let NPCs Shillelagh their weapon no matter what
+new entry "Goon_Shout_Shillelagh_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('SHILLELAGH',GetActiveWeapon(context.Target, true))"
+data "StatsFunctors" "UseSpell(Shout_Shillelagh,true,true,true)"
+
+// Weapon Bond
+new entry "Goon_Shout_WeaponBond_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('WEAPON_BOND',GetActiveWeapon(context.Target, true))"
+data "StatsFunctors" "UseSpell(Shout_WeaponBond,true,true,true)"
+
+// ==================================== Other Buffs ====================================
+
+// Longstrider
+new entry "Goon_Target_Longstrider_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('LONGSTRIDER')"
+data "StatsFunctors" "UseSpell(SWAP,Target_Longstrider,true,true,true)"
+
+// Mage Armour
+new entry "Goon_Target_MageArmor_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('MAGE_ARMOR') and not WearingArmor()"
+data "StatsFunctors" "UseSpell(SWAP,Target_MageArmor,true,true,true)"
+
+// Shield of Faith
+new entry "Goon_Target_ShieldOfFaith_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('SHIELD_OF_FAITH')"
+data "StatsFunctors" "UseSpell(SWAP,Target_ShieldOfFaith,true,true,true)"
+
+// Water Walk
+new entry "Goon_Shout_WaterWalk_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('WATER_WALK')"
+data "StatsFunctors" "UseSpell(Shout_WaterWalk,true,true,true)"
+
+// Death Ward: use this vanilla passive instead: LOW_HoH_Hope_DeathWard (display name makes most sense for Hope, who the passive's for, but still works in general)
+
+// Heroes Feast
+new entry "Goon_Shout_HeroesFeast_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('HEROES_FEAST')"
+data "StatsFunctors" "UseSpell(Shout_HeroesFeast,true,true,true)"
+
+// Crown of Stars
+new entry "Goon_Shout_ATT_CrownOfStars_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "not HasStatus('GOON_CROWNOFSTARS_TECHNICAL')"
+data "StatsFunctors" "UseSpell(Shout_ATT_CrownOfStars,true,true,true);ApplyStatus(GOON_CROWNOFSTARS_TECHNICAL,100,-1)"
+
+new entry "GOON_CROWNOFSTARS_TECHNICAL"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackId" "GOON_CROWNOFSTARS_TECHNICAL"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
