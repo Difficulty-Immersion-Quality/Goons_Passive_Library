@@ -28,7 +28,7 @@ data "AuraRadius" "3"
 data "AuraStatuses" "TARGET:IF((Character() or Tagged('UND_SUSSUR_SUSCEPTIBLE')) and (not HasStatus('UND_ANCIENTSUSSURTREEANTIMAGIC_AURA'))):ApplyStatus(GOON_WEAVE_DEVOURING_INAURARANGE);TARGET:IF(HasPassive('AntimagicSusceptibility')):ApplyStatus(INCAPACITATED_DND)"
 data "StatusGroups" "SG_RemoveOnRespec"
 data "RemoveEvents" "OnStatusApplied;OnStatusRemoved"
-data "RemoveConditions" "not HasPassive('Goon_Weave_Devourer')
+data "RemoveConditions" "not HasPassive('Goon_Weave_Devourer')"
 //
 data "StatusEffect" "362f2080-b927-4846-8aec-66752dbafd07"
 

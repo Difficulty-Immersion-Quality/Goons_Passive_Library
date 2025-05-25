@@ -257,6 +257,14 @@
 	<content contentuid="hc21050e9g5d73g4dbbgab10gc907411bc1d1" version="1">Spell Attack Damage Bonus</content>
 	<content contentuid="hb075868dg6954g48b7gb23cg3a2c93d39a66" version="1">Spells Damage Bonus</content>
 
+	<content contentuid="h5b4280056a754abe83ad50c05af217cfg861" version="1">Impervious Defence</content>
+	<content contentuid="hfef70fe222774b49b7eb7812b9c04e27cage" version="1">All incoming damage is reduced by [1], equal to your &lt;LSTag Tooltip="ProficiencyBonus"&gt;Proficiency Bonus&lt;/LSTag&gt;.</content>
+	<content contentuid="h09255dfdg6a3eg46d6g9cb2gfe90e9219972" version="1">All incoming damage is reduced by [1].</content>
+	<content contentuid="h193c4559g56e5g419aga8d3g78eee841b45f" version="1">Armour Class Increase</content>
+	<content contentuid="h3cc24883gfe3ag4c35gbc13gf87334eb5a4e" version="1">Armour Class Decrease</content>
+	<content contentuid="h93157a8fg6f18g4545g88a1g18e16621b367" version="1">Improved Accuracy</content>
+	<content contentuid="h9171a2e1g4beag44e8gb069gcbf8150c0c44" version="1">You gain a +[1] bonus to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;.</content>
+
 	<content contentuid="hd701ed72gc3e9g4162g957fg513c16f91234" version="1">Potions of Healing</content>
 	<content contentuid="h49522c5cg0c15g45a8gb648g2cab00a813a3" version="1">An omnipotent force has gifted this creature x[1] Potion of Healing.</content>
 	<content contentuid="h5f6f84ddgab0eg462aga71cg74fa0cee209d" version="1">Potions of Greater Healing</content>
