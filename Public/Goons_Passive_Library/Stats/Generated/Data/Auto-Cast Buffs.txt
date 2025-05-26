@@ -5,7 +5,7 @@ new entry "Goon_Target_Magic_Weapon_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('MAGIC_WEAPON',GetActiveWeapon(context.Target, true))"
+data "Conditions" "not HasStatus('MAGIC_WEAPON',GetActiveWeapon(context.Target, true)) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 data "StatsFunctors" "UseSpell(SWAP,Target_MagicWeapon,true,true,true)"
 
 // Elemental Weapon
@@ -13,35 +13,35 @@ new entry "Goon_Target_Elemental_Weapon_Acid_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_ACID',GetActiveWeapon(context.Target, true))"
+data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_ACID',GetActiveWeapon(context.Target, true)) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 data "StatsFunctors" "UseSpell(SWAP,Target_ElementalWeapon_Acid,true,true,true)"
 
 new entry "Goon_Target_Elemental_Weapon_Cold_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_COLD',GetActiveWeapon(context.Target, true))"
+data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_COLD',GetActiveWeapon(context.Target, true)) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 data "StatsFunctors" "UseSpell(SWAP,Target_ElementalWeapon_Cold,true,true,true)"
 
 new entry "Goon_Target_Elemental_Weapon_Fire_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_FIRE',GetActiveWeapon(context.Target, true))"
+data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_FIRE',GetActiveWeapon(context.Target, true)) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 data "StatsFunctors" "UseSpell(SWAP,Target_ElementalWeapon_Fire,true,true,true)"
 
 new entry "Goon_Target_Elemental_Weapon_Lightning_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_LIGHTNING',GetActiveWeapon(context.Target, true))"
+data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_LIGHTNING',GetActiveWeapon(context.Target, true)) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 data "StatsFunctors" "UseSpell(SWAP,Target_ElementalWeapon_Lightning,true,true,true)"
 
 new entry "Goon_Target_Elemental_Weapon_Thunder_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_Thunder',GetActiveWeapon(context.Target, true))"
+data "Conditions" "not HasStatus('ELEMENTAL_WEAPON_Thunder',GetActiveWeapon(context.Target, true) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target)))"
 data "StatsFunctors" "UseSpell(SWAP,Target_ElementalWeapon_Thunder,true,true,true)"
 
 // Holy Weapon
@@ -49,7 +49,7 @@ new entry "Goon_Target_Holy_Weapon_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('HOLY_WEAPON',GetActiveWeapon(context.Target, true))"
+data "Conditions" "not HasStatus('HOLY_WEAPON',GetActiveWeapon(context.Target, true)) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 data "StatsFunctors" "UseSpell(SWAP,Target_HolyWeapon,true,true,true)"
 
 // Pact Blade
@@ -57,7 +57,7 @@ new entry "Goon_Shout_Pact_Blade_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('PACT_BLADE',GetActiveWeapon(context.Target, true))"
+data "Conditions" "not HasStatus('PACT_BLADE',GetActiveWeapon(context.Target, true)) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 data "StatsFunctors" "UseSpell(Shout_PactOfTheBlade_Bind,true,true,true)"
 
 // Bind Hexed Weapon
@@ -65,7 +65,7 @@ new entry "Goon_Shout_Hexblade_Bind_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('HEXBLADE_BIND',GetActiveWeapon(context.Target, true))"
+data "Conditions" "not HasStatus('HEXBLADE_BIND',GetActiveWeapon(context.Target, true)) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 data "StatsFunctors" "UseSpell(Shout_Hexblade_Bind ,true,true,true)"
 
 // Shillelagh
@@ -74,7 +74,7 @@ new entry "Goon_Shout_Shillelagh_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('SHILLELAGH',GetActiveWeapon(context.Target, true))"
+data "Conditions" "not HasStatus('SHILLELAGH',GetActiveWeapon(context.Target, true)) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 data "StatsFunctors" "UseSpell(Shout_Shillelagh,true,true,true)"
 
 // Weapon Bond
@@ -82,7 +82,7 @@ new entry "Goon_Shout_WeaponBond_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('WEAPON_BOND',GetActiveWeapon(context.Target, true))"
+data "Conditions" "not HasStatus('WEAPON_BOND',GetActiveWeapon(context.Target, true)) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 data "StatsFunctors" "UseSpell(Shout_WeaponBond,true,true,true)"
 
 // ==================================== Other Buffs ====================================
@@ -92,7 +92,7 @@ new entry "Goon_Target_Longstrider_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('LONGSTRIDER')"
+data "Conditions" "not HasStatus('LONGSTRIDER') and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 data "StatsFunctors" "UseSpell(SWAP,Target_Longstrider,true,true,true)"
 
 // Mage Armour
@@ -109,7 +109,7 @@ type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
 data "Conditions" "not HasStatus('SHIELD_OF_FAITH')"
-data "StatsFunctors" "UseSpell(SWAP,Target_ShieldOfFaith,true,true,true)"
+data "StatsFunctors" "UseSpell(SWAP,Target_ShieldOfFaith,true,true,true) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 
 // Water Walk
 new entry "Goon_Shout_WaterWalk_Passive"
@@ -117,7 +117,7 @@ type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
 data "Conditions" "not HasStatus('WATER_WALK')"
-data "StatsFunctors" "UseSpell(Shout_WaterWalk,true,true,true)"
+data "StatsFunctors" "UseSpell(Shout_WaterWalk,true,true,true) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 
 // Death Ward: use this vanilla passive instead: LOW_HoH_Hope_DeathWard (display name makes most sense for Hope, who the passive's for, but still works in general)
 
@@ -126,7 +126,7 @@ new entry "Goon_Shout_HeroesFeast_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('HEROES_FEAST')"
+data "Conditions" "not HasStatus('HEROES_FEAST') and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 data "StatsFunctors" "UseSpell(Shout_HeroesFeast,true,true,true)"
 
 // Crown of Stars
@@ -134,7 +134,7 @@ new entry "Goon_Shout_ATT_CrownOfStars_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('GOON_CROWNOFSTARS_TECHNICAL')"
+data "Conditions" "not HasStatus('GOON_CROWNOFSTARS_TECHNICAL') and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
 data "StatsFunctors" "UseSpell(Shout_ATT_CrownOfStars,true,true,true);ApplyStatus(GOON_CROWNOFSTARS_TECHNICAL,100,-1)"
 
 new entry "GOON_CROWNOFSTARS_TECHNICAL"
