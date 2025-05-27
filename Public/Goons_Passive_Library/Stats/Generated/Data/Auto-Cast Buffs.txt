@@ -108,16 +108,16 @@ new entry "Goon_Target_ShieldOfFaith_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('SHIELD_OF_FAITH')"
-data "StatsFunctors" "UseSpell(SWAP,Target_ShieldOfFaith,true,true,true) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
+data "Conditions" "not HasStatus('SHIELD_OF_FAITH') and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
+data "StatsFunctors" "UseSpell(SWAP,Target_ShieldOfFaith,true,true,true)"
 
 // Water Walk
 new entry "Goon_Shout_WaterWalk_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnTurn"
-data "Conditions" "not HasStatus('WATER_WALK')"
-data "StatsFunctors" "UseSpell(Shout_WaterWalk,true,true,true) and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
+data "Conditions" "not HasStatus('WATER_WALK') and not (HasStatus('SG_Incapacitated',context.Target) or HasStatus('SG_Sleeping',context.Target) or HasStatus('SG_Stunned',context.Target) or HasStatus('SG_Paralyzed',context.Target) or HasStatus('SG_Polymorph',context.Target) or HasStatus('SG_Polymorph_BeastShape',context.Target))"
+data "StatsFunctors" "UseSpell(Shout_WaterWalk,true,true,true)"
 
 // Death Ward: use this vanilla passive instead: LOW_HoH_Hope_DeathWard (display name makes most sense for Hope, who the passive's for, but still works in general)
 
