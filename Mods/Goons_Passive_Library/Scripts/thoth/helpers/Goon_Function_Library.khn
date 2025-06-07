@@ -1,0 +1,46 @@
+-- ==================================== Weapon enchant checks ====================================
+// TODO: Hunt down everything relevant.
+
+-- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)))
+function Goon_IsSpellcastingModifierWeapon(entity)
+    entity = entity or context.Source
+    return HasAnyStatus({'MAG_MELEE_CASTER_BOON','LHB_SEL_TASHASOTHERWORLDLYGUISE_MAGICWEAPON','FourEle_Attuned'}, {}, {}, entity)
+end
+
+-- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsIntelligenceModifierWeapon(GetAttackWeapon(context.Source)))
+function Goon_IsIntelligenceModifierWeapon(entity)
+    entity = entity or context.Source
+    return HasAnyStatus({}, {}, {}, entity)
+end
+
+-- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsWisdomModifierWeapon(GetAttackWeapon(context.Source)))
+function Goon_IsWisdomModifierWeapon(entity)
+    entity = entity or context.Source
+    return HasAnyStatus({'SHILLELAGH','FourEle_Attuned'}, {}, {}, entity)
+end
+
+-- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsCharismaModifierWeapon(GetAttackWeapon(context.Source)))
+function Goon_IsCharismaModifierWeapon(entity)
+    entity = entity or context.Source
+    return HasAnyStatus({'HEXBLADE_BIND','PACT_BLADE'}, {}, {}, entity)
+end
+
+-- ==================================== Druid and Polymorph stuff ====================================
+// TODO: Hunt down everything relevant.
+
+-- Check for any and all druid forms, only druid forms and not stinky disguise self etc. 
+-- Includes support for Circle of Storm Chasers, the old (pre-toolkit) Circle of Stars, 
+function Goon_IsDruidFormOrStatus(entity)
+    entity = entity or context.Source
+    return HasStatus('SG_Polymorph_BeastShape', entity, context.Source) | HasStatus('SG_Polymorph', entity, context.Source) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity) | HasStatus('WILDSHAPE_STARRY_ARCHER_PLAYER', entity, context.Source) | HasStatus('WILDSHAPE_STARRY_CHALICE_PLAYER', entity, context.Source) | HasStatus('WILDSHAPE_STARRY_DRAGON_PLAYER', entity, context.Source) | HasStatus('STORM_SHIFTER', entity, context.Source) | HasStatus('STARRY_FORM_ARCHER', entity, context.Source) | HasStatus('STARRY_FORM_CHALICE', entity, context.Source) | HasStatus('STARRY_FORM_DRAGON', entity, context.Source)
+end
+
+function Goon_IsDruidForm(entity)
+    entity = entity or context.Source
+    return HasStatus('SG_Polymorph_BeastShape', entity, context.Source) | HasStatus('SG_Polymorph', entity, context.Source) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity)
+end
+
+function Goon_IsUnrestrictedPolymorphStatus(entity)
+    entity = entity or context.Source
+    return HasStatus('SG_Disguise', entity, context.Source) | HasStatus('WILDSHAPE_STARRY_ARCHER_PLAYER', entity, context.Source) | HasStatus('WILDSHAPE_STARRY_CHALICE_PLAYER', entity, context.Source) | HasStatus('WILDSHAPE_STARRY_DRAGON_PLAYER', entity, context.Source) | HasStatus('STORM_SHIFTER', entity, context.Source) | HasStatus('STARRY_FORM_ARCHER', entity, context.Source) | HasStatus('STARRY_FORM_CHALICE', entity, context.Source) | HasStatus('STARRY_FORM_DRAGON', entity, context.Source)
+end
