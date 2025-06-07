@@ -4,7 +4,7 @@
 -- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)))
 function Goon_IsSpellcastingModifierWeapon(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'MAG_MELEE_CASTER_BOON','LHB_SEL_TASHASOTHERWORLDLYGUISE_MAGICWEAPON','FourEle_Attuned'}, {}, {}, entity)
+    return HasAnyStatus({'MAG_MELEE_CASTER_BOON','LHB_SEL_TASHASOTHERWORLDLYGUISE_MAGICWEAPON'}, {}, {}, entity)
 end
 
 -- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsIntelligenceModifierWeapon(GetAttackWeapon(context.Source)))
