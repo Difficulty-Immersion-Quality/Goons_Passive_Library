@@ -18,7 +18,7 @@ new entry "AJ_BearRage_Emergency"
 type "SpellData"
 data "SpellType" "Shout"
 using "Shout_Rage_Totem_Bear"
-data "RequirementConditions" "HasHPPercentageWithoutTemporaryHPEqualOrLessThan(50, context.Source) and not HasStatus('RAGE') and not HasStatus('CALM_EMOTIONS')"
+data "RequirementConditions" "HasHPPercentageWithoutTemporaryHPEqualOrLessThan(50, context.Source) and not HasStatus('SG_Rage') and not HasStatus('CALM_EMOTIONS')"
 data "UseCosts" "BonusActionPoint:1"
 data "Cooldown" "OncePerRest"
 
