@@ -3,6 +3,11 @@
 // A thing for Aylin in CX
 new entry "NPC_CbD"
 type "PassiveData"
+// Favoured by the Divine
+data "DisplayName" "h8bec4a12g45a3g424ag9fe0g7bd2637635f8;1"
+// The creature's targets are cursed by transgressed and irritable gods. When it falls unconscious, it immediately dies. Moreover, when it dies, a terrible envoy of the offended deity is conjured from the entity's corpse.
+data "Description" "h602b3e3dgd4f9g448fgb73bg6113c025e719;1"
+data "Icon" "Spell_Evocation_DivineFavor"
 data "Properties" "Highlighted"
 data "StatsFunctorContext" "OnDamage"
 data "StatsFunctors" "TARGET:IF(Character() and Party() and not Ally() and not Dead() and not Summon() and not Tagged('SUMMON')):ApplyStatus(LOW_STORMSHORETABERNACLE_GODCURSED,100,-1)"

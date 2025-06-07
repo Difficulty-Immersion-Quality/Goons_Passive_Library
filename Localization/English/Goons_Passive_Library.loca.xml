@@ -308,4 +308,14 @@
 	<content contentuid="h9d620501g1951g4ceegab51gee0020322cbe" version="1">This creature devoures the magical energy of the weave from all around them.</content>
 	<content contentuid="h02124374g23f7g48b1gb73dgce128b2b83ff" version="1">Devoured Magic</content>
 	<content contentuid="h2900144dg8afdg48d6ga41fgfeac4c706774" version="1">A presence is draining the character of its magical energy, preventing it from casting spells.</content>
+
+	<!-- "NPC_CbD" --> <content contentuid="h8bec4a12g45a3g424ag9fe0g7bd2637635f8" version="1">Favoured by the Divine</content>
+	<!-- "NPC_CbD" --> <content contentuid="h602b3e3dgd4f9g448fgb73bg6113c025e719" version="1">The creature's targets are cursed by transgressed and irritable gods. When it falls unconscious, it immediately dies. Moreover, when it dies, a terrible envoy of the offended deity is conjured from the entity's corpse.</content>
+	<!-- "DeGreaser_Rolans_Stolen_Spellbook" --> <content contentuid="h51d96a5bg2f20g4b73g89f0g7c73e947d78e" version="1">Rolan's Stolen Spellbook</content>
+	<!-- "DeGreaser_Rolans_Stolen_Spellbook" --> <content contentuid="hb376ba8bg8842g4230ga9cdgf4e549b40767" version="1">According to Lorroakan, these are nothing but "Meaningless cantrips and playthings." Yet you can tell someone has studied it closely, tried to copy the formula, and failed.</content>
+	
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
 </contentList>

@@ -5,8 +5,8 @@
 		<node id="Templates">
 			<children>
 				<node id="GameObjects">
-					<attribute id="Description" type="TranslatedString" handle="ha96336b2c9584e5ca3d721e7387e2e4b" version="1" />
-					<attribute id="DisplayName" type="TranslatedString" handle="h222f719e8b784260aa15ac4675d9cb87" version="1" />
+					<attribute id="Description" type="TranslatedString" handle="h51d96a5bg2f20g4b73g89f0g7c73e947d78e" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hb376ba8bg8842g4230ga9cdgf4e549b40767" version="1" />
 					<attribute id="Icon" type="FixedString" value="JWL_Item_DI_BookManySpells" />
 					<attribute id="MapKey" type="FixedString" value="6bc82164-8cd8-4fc4-8077-8b4c02bac113" />
 					<attribute id="Name" type="LSString" value="DeGreaser_Rolans_Stolen_Spellbook" />
