@@ -1,3 +1,11 @@
+-- ==================================== Spell batching ====================================
+// TODO: Hunt down everything relevant.
+
+function Goon_IsBardicInspirationSpell(entity)
+    entity = entity or context.Source
+    return SpellId('Target_BardicInspiration') | SpellId('Target_BardicInspiration_Combat') | SpellId('Target_MantleOfInspiration') | SpellId('Target_MantleOfInspiration_2') | SpellId('Target_MantleOfInspiration_3') |
+end
+
 -- ==================================== Weapon enchant checks ====================================
 // TODO: Hunt down everything relevant.
 
