@@ -1,0 +1,141 @@
+new entry "Goon_Immunity_Approaching"
+type "PassiveData"
+// Immunity: Approach
+data "DisplayName" "h4f424c66g025dg405bg81d2ga431facf24a2;1"
+// This creature cannot be forced to &lt;LSTag Type="Status" Tooltip="COMMAND_APPROACH"&gt;Approach&lt;/LSTag&gt;.
+data "Description" "hc84e7b31ga283g438ag969egfd0ffb60f8ab;1"
+data "Icon" "Spell_Enchantment_CommandApproach"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Approaching)"
+
+new entry "Goon_Immunity_Bleeding"
+type "PassiveData"
+// Immunity: Bleeding
+data "DisplayName" "h46cf5d82gdf62g4440g8fd1g27259ef5407c;1"
+// This creature cannot be forced to &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;Bleed&lt;/LSTag&gt;.
+data "Description" "h99a44f53g64cag4deag9d7ag7254b47f47de;1"
+data "Icon" "Status_Bleeding"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(BLEEDING);StatusImmunity(HEAVY_BLEEDING);StatusImmunity(BARBED_ARROW)"
+
+new entry "Goon_Immunity_Blinded"
+type "PassiveData"
+// Immunity: Blindness
+data "DisplayName" "h3bc2d8cag58f3g4658g90ffge40c468797fd;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;Blinded&lt;/LSTag&gt;.
+data "Description" "h5dea9b79gf7fag499dgbea2g490cffaf64a1;1"
+data "Icon" "Status_Blinded"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Blinded)"
+
+new entry "Goon_Immunity_Charmed"
+type "PassiveData"
+// Immunity: Charmed
+data "DisplayName" "h8eb4f2efg3ad1g4e03ga1c1g07ba4e8e5947;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="CHARMED"&gt;Charmed&lt;/LSTag&gt;.
+data "Description" "h277d5552g62f5g4417ga98bg607fa27c0208;1"
+data "Icon" "Status_Charmed"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Charmed);StatusImmunity(SG_Charmed_Subtle)"
+
+new entry "Goon_Immunity_Charmed_Subtle"
+type "PassiveData"
+// Immunity: Charmed (Subtle)
+data "DisplayName" "hdb0513abga5edg4f5cg9ffag28cd2c372311;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="CHARMED"&gt;Charmed&lt;/LSTag&gt; by subtle charms.
+data "Description" "he04099d5g3a5fg48a7gb138gcce05e0e1697;1"
+data "Icon" "Status_Charmed"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Charmed_Subtle)"
+
+new entry "Goon_Immunity_Confused"
+type "PassiveData"
+// Immunity: Confused
+data "DisplayName" "h9fed1f8cgf9fbg46a1gbe0fg3ee56f409d28;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confused&lt;/LSTag&gt;.
+data "Description" "ha1424dd9g1f2bg4e98g873fg1b3a1d332fe4;1"
+data "Icon" "Spell_Enchantment_Confusion"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Confused)"
+
+new entry "Goon_Immunity_Cursed"
+type "PassiveData"
+// Immunity: Cursed
+data "DisplayName" "hfaefafbag80c5g4d04g953egdb3c09da661d;1"
+// This creature cannot be Cursed.
+data "Description" "hd2614998g286eg4ad3ga881gef39686d9e4f;1"
+data "Icon" "Spell_Necromancy_BestowCurse_DebuffAbility"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Cursed)"
+
+new entry "Goon_Immunity_DifficultTerrain"
+type "PassiveData"
+// Immunity: Difficult Terrain
+data "DisplayName" "hb9326211g89a9g4e25gbed7ge2977ce745c4;1"
+// This creature cannot be halted by &lt;LSTag Type="Status" Tooltip="DIFFICULT_TERRAIN"&gt;Difficult Terrain&lt;/LSTag&gt;.
+data "Description" "h3933772ag190dg44bfgbaa7g357d7cf6dd2f;1"
+data "Icon" "Status_DifficultTerrain"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_DifficultTerrain)"
+
+new entry "Goon_Immunity_Disease"
+type "PassiveData"
+// Immunity: Disease
+data "DisplayName" "hba60be16g54a9g4e1ag8203g62154ce948ff;1"
+// This creature cannot be afflicted with &lt;LSTag Type="Status" Tooltip="DISEASED"&gt;Disease&lt;/LSTag&gt;.
+data "Description" "he3586277g7101g4212g8ec5gfc3a5cd859b1;1"
+data "Icon" "Spell_Necromancy_Contagion_FleshRot"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Disease)"
+
+new entry "Goon_Immunity_Dominated"
+type "PassiveData"
+// Immunity: Domination
+data "DisplayName" "h92167de1g7ad4g4cdeg8f2ag37311890c433;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="DOMINATE_PERSON"&gt;Dominated&lt;/LSTag&gt;.
+data "Description" "h78a39bd0g3ff0g4cd9g92b9gee06bc373ac7;1"
+data "Icon" "Spell_Enchantment_DominatePerson"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Dominated)"
+
+new entry "Goon_Immunity_Drunk"
+type "PassiveData"
+// Immunity: Drunk
+data "DisplayName" "hb286cfb2gf9c8g44a9g9752gbe6790be804b;1"
+// This creature cannot become &lt;LSTag Type="Status" Tooltip="DRUNK"&gt;Drunk&lt;/LSTag&gt;.
+data "Description" "h6e5a612bg6a79g436fgbdf1g7400fb4a0c7f;1"
+data "Icon" "Status_Drunk"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Drunk)"
+
+new entry "Goon_Immunity_Exhausted"
+type "PassiveData"
+// Immunity: Exhaustion
+data "DisplayName" "h9adf7e24g5fdcg462cgb9e0g599430619527;1"
+// This creature cannot become &lt;LSTag Type="Status" Tooltip="EXHAUSTED"&gt;Exhausted&lt;/LSTag&gt;.
+data "Description" "h77890a3agac68g4df2g9da1g6059e8cbb195;1"
+data "Icon" "Status_Exhaustion"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Exhausted)"
+
+new entry "Goon_Immunity_Prone"
+type "PassiveData"
+// Immunity: Prone
+data "DisplayName" "h65db0466g3449g4890ga4bdg68d2c5dc55ea;1"
+// This creature cannot be forced &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;.
+data "Description" "hdff7bd14g678eg47d8gbfa8g9ce6579316f4;1"
+data "Icon" "Status_Prone"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Prone)"
+
+new entry "Goon_Immunity_Taunted"
+type "PassiveData"
+// Immunity: Taunt
+data "DisplayName" "hb5dce9a6g71fag43e2gbc95g25e88aa6612a;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="TAUNTED"&gt;Goaded&lt;/LSTag&gt;, or forced to &lt;LSTag Type="Status" Tooltip="COMMAND_APPROACH"&gt;Approach&lt;/LSTag&gt;.
+data "Description" "h7b4b61d7g703fg42b7gbcfdgd44cc5396064;1"
+data "Icon" "statIcons_Goaded"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Taunted);StatusImmunity(SG_Approaching)"
+
+

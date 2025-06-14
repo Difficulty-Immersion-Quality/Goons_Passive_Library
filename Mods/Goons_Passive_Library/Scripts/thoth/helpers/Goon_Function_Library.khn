@@ -1,54 +1,60 @@
 -- ==================================== Spell batching ====================================
-// TODO: Hunt down everything relevant.
+-- TODO: Hunt down everything relevant.
 
 function Goon_IsBardicInspirationSpell(entity)
     entity = entity or context.Source
-    return SpellId('Target_BardicInspiration') | SpellId('Target_BardicInspiration_Combat') | SpellId('Target_MantleOfInspiration') | SpellId('Target_MantleOfInspiration_2') | SpellId('Target_MantleOfInspiration_3') |
+    return SpellId('Target_BardicInspiration') | SpellId('Target_BardicInspiration_Combat') | SpellId('Target_MantleOfInspiration') | SpellId('Target_MantleOfInspiration_2') | SpellId('Target_MantleOfInspiration_3')
 end
 
 -- ==================================== Weapon enchant checks ====================================
-// TODO: Hunt down everything relevant.
-
+-- TODO: Hunt down everything relevant.
 -- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)))
+-- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsIntelligenceModifierWeapon(GetAttackWeapon(context.Source)))
+-- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsWisdomModifierWeapon(GetAttackWeapon(context.Source)))
+-- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsCharismaModifierWeapon(GetAttackWeapon(context.Source)))
+
 function Goon_IsSpellcastingModifierWeapon(entity)
     entity = entity or context.Source
     return HasAnyStatus({'MAG_MELEE_CASTER_BOON','LHB_SEL_TASHASOTHERWORLDLYGUISE_MAGICWEAPON'}, {}, {}, entity)
 end
 
--- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsIntelligenceModifierWeapon(GetAttackWeapon(context.Source)))
 function Goon_IsIntelligenceModifierWeapon(entity)
     entity = entity or context.Source
     return HasAnyStatus({}, {}, {}, entity)
 end
 
--- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsWisdomModifierWeapon(GetAttackWeapon(context.Source)))
 function Goon_IsWisdomModifierWeapon(entity)
     entity = entity or context.Source
     return HasAnyStatus({'SHILLELAGH','FourEle_Attuned'}, {}, {}, entity)
 end
 
--- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsCharismaModifierWeapon(GetAttackWeapon(context.Source)))
 function Goon_IsCharismaModifierWeapon(entity)
     entity = entity or context.Source
     return HasAnyStatus({'HEXBLADE_BIND','PACT_BLADE'}, {}, {}, entity)
 end
 
 -- ==================================== Druid and Polymorph stuff ====================================
-// TODO: Hunt down everything relevant.
+-- TODO: Hunt down everything relevant.
 
 -- Check for any and all druid forms, only druid forms and not stinky disguise self etc. 
 -- Includes support for Circle of Storm Chasers, the old (pre-toolkit) Circle of Stars, 
 function Goon_IsDruidFormOrStatus(entity)
     entity = entity or context.Source
-    return HasStatus('SG_Polymorph_BeastShape', entity, context.Source) | HasStatus('SG_Polymorph', entity, context.Source) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity) | HasStatus('WILDSHAPE_STARRY_ARCHER_PLAYER', entity, context.Source) | HasStatus('WILDSHAPE_STARRY_CHALICE_PLAYER', entity, context.Source) | HasStatus('WILDSHAPE_STARRY_DRAGON_PLAYER', entity, context.Source) | HasStatus('STORM_SHIFTER', entity, context.Source) | HasStatus('STARRY_FORM_ARCHER', entity, context.Source) | HasStatus('STARRY_FORM_CHALICE', entity, context.Source) | HasStatus('STARRY_FORM_DRAGON', entity, context.Source)
+    return HasAnyStatus({'SG_Polymorph_BeastShape','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER','STARRY_FORM_ARCHER','STARRY_FORM_CHALICE','STARRY_FORM_DRAGON','STORM_SHIFTER'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity, context.Source) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity)
 end
 
 function Goon_IsDruidForm(entity)
     entity = entity or context.Source
-    return HasStatus('SG_Polymorph_BeastShape', entity, context.Source) | HasStatus('SG_Polymorph', entity, context.Source) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity)
+    return HasAnyStatus({'SG_Polymorph_BeastShape'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity, context.Source) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity)
 end
 
 function Goon_IsUnrestrictedPolymorphStatus(entity)
     entity = entity or context.Source
-    return HasStatus('SG_Disguise', entity, context.Source) | HasStatus('WILDSHAPE_STARRY_ARCHER_PLAYER', entity, context.Source) | HasStatus('WILDSHAPE_STARRY_CHALICE_PLAYER', entity, context.Source) | HasStatus('WILDSHAPE_STARRY_DRAGON_PLAYER', entity, context.Source) | HasStatus('STORM_SHIFTER', entity, context.Source) | HasStatus('STARRY_FORM_ARCHER', entity, context.Source) | HasStatus('STARRY_FORM_CHALICE', entity, context.Source) | HasStatus('STARRY_FORM_DRAGON', entity, context.Source)
+    return HasAnyStatus({'SG_Disguise','SG_Doppelganger','SG_Polymorph_BeastShape','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER','STARRY_FORM_ARCHER','STARRY_FORM_CHALICE','STARRY_FORM_DRAGON','STORM_SHIFTER'}, {}, {}, entity)
+end
+
+-- TODO: Need to sort out Immutable Form so it doesn't block non-hostile Polymorphs
+function Goon_IsNonHostilePolymorphStatus(entity)
+    entity = entity or context.Source
+    return HasAnyStatus({'SG_Disguise','SG_Doppelganger','SG_Polymorph_BeastShape','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER','STARRY_FORM_ARCHER','STARRY_FORM_CHALICE','STARRY_FORM_DRAGON','STORM_SHIFTER'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity, context.Source) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity)
 end

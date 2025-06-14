@@ -318,4 +318,46 @@
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
+
+	<!-- Status immunity passives -->
+	<!-- "Goon_Immunity_Approaching" --> <content contentuid="h4f424c66g025dg405bg81d2ga431facf24a2" version="1">Immunity: Approach</content>
+	<!-- "Goon_Immunity_Approaching" --> <content contentuid="hc84e7b31ga283g438ag969egfd0ffb60f8ab" version="1">This creature cannot be forced to &lt;LSTag Type="Status" Tooltip="COMMAND_APPROACH"&gt;Approach&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Bleeding" --> <content contentuid="h46cf5d82gdf62g4440g8fd1g27259ef5407c" version="1">Immunity: Bleeding</content>
+	<!-- "Goon_Immunity_Bleeding" --> <content contentuid="h99a44f53g64cag4deag9d7ag7254b47f47de" version="1">This creature cannot be forced to &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;Bleed&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Blinded" --> <content contentuid="h3bc2d8cag58f3g4658g90ffge40c468797fd" version="1">Immunity: Blindness</content>
+	<!-- "Goon_Immunity_Blinded" --> <content contentuid="h5dea9b79gf7fag499dgbea2g490cffaf64a1" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;Blinded&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Charmed" --> <content contentuid="h8eb4f2efg3ad1g4e03ga1c1g07ba4e8e5947" version="1">Immunity: Charmed</content>
+	<!-- "Goon_Immunity_Charmed" --> <content contentuid="h277d5552g62f5g4417ga98bg607fa27c0208" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="CHARMED"&gt;Charmed&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Charmed_Subtle" --> <content contentuid="hdb0513abga5edg4f5cg9ffag28cd2c372311" version="1">Immunity: Charmed (Subtle)</content>
+	<!-- "Goon_Immunity_Charmed_Subtle" --> <content contentuid="he04099d5g3a5fg48a7gb138gcce05e0e1697" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="CHARMED"&gt;Charmed&lt;/LSTag&gt; by subtle charms.</content>
+	<!-- "Goon_Immunity_Confused" --> <content contentuid="h9fed1f8cgf9fbg46a1gbe0fg3ee56f409d28" version="1">Immunity: Confused</content>
+	<!-- "Goon_Immunity_Confused" --> <content contentuid="ha1424dd9g1f2bg4e98g873fg1b3a1d332fe4" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confused&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Cursed" --> <content contentuid="hfaefafbag80c5g4d04g953egdb3c09da661d" version="1">Immunity: Cursed</content>
+	<!-- "Goon_Immunity_Cursed" --> <content contentuid="hd2614998g286eg4ad3ga881gef39686d9e4f" version="1">This creature cannot be Cursed.</content>
+	<!-- "Goon_Immunity_DifficultTerrain" --> <content contentuid="hb9326211g89a9g4e25gbed7ge2977ce745c4" version="1">Immunity: Difficult Terrain</content>
+	<!-- "Goon_Immunity_DifficultTerrain" --> <content contentuid="h3933772ag190dg44bfgbaa7g357d7cf6dd2f" version="1">This creature cannot be halted by &lt;LSTag Type="Status" Tooltip="DIFFICULT_TERRAIN"&gt;Difficult Terrain&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Disease" --> <content contentuid="hba60be16g54a9g4e1ag8203g62154ce948ff" version="1">Immunity: Disease</content>
+	<!-- "Goon_Immunity_Disease" --> <content contentuid="he3586277g7101g4212g8ec5gfc3a5cd859b1" version="1">This creature cannot be afflicted with &lt;LSTag Type="Status" Tooltip="DISEASED"&gt;Disease&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Dominated" --> <content contentuid="h92167de1g7ad4g4cdeg8f2ag37311890c433" version="1">Immunity: Domination</content>
+	<!-- "Goon_Immunity_Dominated" --> <content contentuid="h78a39bd0g3ff0g4cd9g92b9gee06bc373ac7" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="DOMINATE_PERSON"&gt;Dominated&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Drunk" --> <content contentuid="hb286cfb2gf9c8g44a9g9752gbe6790be804b" version="1">Immunity: Drunk</content>
+	<!-- "Goon_Immunity_Drunk" --> <content contentuid="h6e5a612bg6a79g436fgbdf1g7400fb4a0c7f" version="1">This creature cannot become &lt;LSTag Type="Status" Tooltip="DRUNK"&gt;Drunk&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Exhausted" --> <content contentuid="h9adf7e24g5fdcg462cgb9e0g599430619527" version="1">Immunity: Exhaustion</content>
+	<!-- "Goon_Immunity_Exhausted" --> <content contentuid="h77890a3agac68g4df2g9da1g6059e8cbb195" version="1">This creature cannot become &lt;LSTag Type="Status" Tooltip="EXHAUSTED"&gt;Exhausted&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Prone" --> <content contentuid="h65db0466g3449g4890ga4bdg68d2c5dc55ea" version="1">Immunity: Prone</content>
+	<!-- "Goon_Immunity_Prone" --> <content contentuid="hdff7bd14g678eg47d8gbfa8g9ce6579316f4" version="1">This creature cannot be forced &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Taunted" --> <content contentuid="hb5dce9a6g71fag43e2gbc95g25e88aa6612a" version="1">Immunity: Taunt</content>
+	<!-- "Goon_Immunity_Taunted" --> <content contentuid="h7b4b61d7g703fg42b7gbcfdgd44cc5396064" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="TAUNTED"&gt;Goaded&lt;/LSTag&gt;, or forced to &lt;LSTag Type="Status" Tooltip="COMMAND_APPROACH"&gt;Approach&lt;/LSTag&gt;.</content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
 </contentList>
