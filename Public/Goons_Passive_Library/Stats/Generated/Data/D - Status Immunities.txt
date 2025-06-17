@@ -118,6 +118,36 @@ data "Icon" "Status_Exhaustion"
 data "Properties" "Highlighted"
 data "Boosts" "StatusImmunity(SG_Exhausted)"
 
+new entry "Goon_Immunity_Fleeing"
+type "PassiveData"
+// Immunity: Fleeing
+data "DisplayName" "hc1b0d537gb2b4g4804g9667gf7080550e28f;1"
+// This creature cannot be forced to &lt;LSTag Type="Status" Tooltip="COMMAND_FLEE"&gt;Flee&lt;/LSTag&gt;.
+data "Description" "ha29cdd3fg8274g4466g8d04ga443b0bc9143;1"
+data "Icon" "Spell_Enchantment_CommandFlee"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Fleeing)"
+
+new entry "Goon_Immunity_Frightened"
+type "PassiveData"
+// Immunity: Frightened
+data "DisplayName" "h0706aa54gf3d4g4304gafc6g9b9754cf48a9;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt;.
+data "Description" "h9c3c6f19g5cb4g4748g8ff0g983306a2305a;1"
+data "Icon" "Status_Frightened"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Frightened)"
+
+new entry "Goon_Immunity_Incapacitated"
+type "PassiveData"
+// Immunity: Incapacitated
+data "DisplayName" "hb426daa0g1055g40aagb74fgd656d32f8a76;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="INCAPACITATED_DND"&gt;Incapacitated&lt;/LSTag&gt;.
+data "Description" "hefdfabadg4195g4c1egab51g85db5c04a706;1"
+data "Icon" "Status_Incapacitated"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Incapacitated)"
+
 new entry "Goon_Immunity_Prone"
 type "PassiveData"
 // Immunity: Prone

@@ -348,12 +348,12 @@
 	<!-- "Goon_Immunity_Prone" --> <content contentuid="hdff7bd14g678eg47d8gbfa8g9ce6579316f4" version="1">This creature cannot be forced &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_Taunted" --> <content contentuid="hb5dce9a6g71fag43e2gbc95g25e88aa6612a" version="1">Immunity: Taunt</content>
 	<!-- "Goon_Immunity_Taunted" --> <content contentuid="h7b4b61d7g703fg42b7gbcfdgd44cc5396064" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="TAUNTED"&gt;Goaded&lt;/LSTag&gt;, or forced to &lt;LSTag Type="Status" Tooltip="COMMAND_APPROACH"&gt;Approach&lt;/LSTag&gt;.</content>
-	<!-- "" --> <content contentuid="" version="1"></content>
-	<!-- "" --> <content contentuid="" version="1"></content>
-	<!-- "" --> <content contentuid="" version="1"></content>
-	<!-- "" --> <content contentuid="" version="1"></content>
-	<!-- "" --> <content contentuid="" version="1"></content>
-	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "Goon_Immunity_Fleeing" --> <content contentuid="hc1b0d537gb2b4g4804g9667gf7080550e28f" version="1">Immunity: Fleeing</content>
+	<!-- "Goon_Immunity_Fleeing" --> <content contentuid="ha29cdd3fg8274g4466g8d04ga443b0bc9143" version="1">This creature cannot be forced to &lt;LSTag Type="Status" Tooltip="COMMAND_FLEE"&gt;Flee&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Frightened" --> <content contentuid="h0706aa54gf3d4g4304gafc6g9b9754cf48a9" version="1">Immunity: Frightened</content>
+	<!-- "Goon_Immunity_Frightened" --> <content contentuid="h9c3c6f19g5cb4g4748g8ff0g983306a2305a" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Incapacitated" --> <content contentuid="hb426daa0g1055g40aagb74fgd656d32f8a76" version="1">Immunity: Incapacitated</content>
+	<!-- "Goon_Immunity_Incapacitated" --> <content contentuid="hefdfabadg4195g4c1egab51g85db5c04a706" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="INCAPACITATED_DND"&gt;Incapacitated&lt;/LSTag&gt;.</content>
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
