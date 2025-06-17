@@ -132,11 +132,11 @@ new entry "Goon_Immunity_Frightened"
 type "PassiveData"
 // Immunity: Frightened
 data "DisplayName" "h0706aa54gf3d4g4304gafc6g9b9754cf48a9;1"
-// This creature cannot be &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt;.
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt;, or forced to &lt;LSTag Type="Status" Tooltip="COMMAND_FLEE"&gt;Flee&lt;/LSTag&gt;.
 data "Description" "h9c3c6f19g5cb4g4748g8ff0g983306a2305a;1"
 data "Icon" "Status_Frightened"
 data "Properties" "Highlighted"
-data "Boosts" "StatusImmunity(SG_Frightened)"
+data "Boosts" "StatusImmunity(SG_Frightened);StatusImmunity(SG_Fleeing)"
 
 new entry "Goon_Immunity_Incapacitated"
 type "PassiveData"
