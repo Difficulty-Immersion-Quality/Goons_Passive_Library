@@ -76,5 +76,5 @@ end
 -- TODO: Need to sort out Immutable Form so it doesn't block non-hostile Polymorphs
 function Goon_IsNonHostilePolymorphStatus(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'SG_Disguise','SG_Doppelganger','SG_Polymorph_BeastShape','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER','STARRY_FORM_ARCHER','STARRY_FORM_CHALICE','STARRY_FORM_DRAGON','STORM_SHIFTER'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity, context.Source) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity) | Tagged('MINDFLAYER', entity)
+    return not Tagged('POLYMORPHED_UNWILLING', entity) & HasAnyStatus({'SG_Disguise','SG_Doppelganger','SG_Polymorph_BeastShape','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER','STARRY_FORM_ARCHER','STARRY_FORM_CHALICE','STARRY_FORM_DRAGON','STORM_SHIFTER'}, {}, {}, entity) | not Tagged('POLYMORPHED_UNWILLING', entity) & HasStatus('SG_Polymorph', entity, context.Source) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity) | not Tagged('POLYMORPHED_UNWILLING', entity) & Tagged('MINDFLAYER', entity)
 end
