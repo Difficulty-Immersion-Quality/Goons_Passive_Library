@@ -92,11 +92,11 @@ new entry "Goon_Immunity_Dominated"
 type "PassiveData"
 // Immunity: Domination
 data "DisplayName" "h92167de1g7ad4g4cdeg8f2ag37311890c433;1"
-// This creature cannot be &lt;LSTag Type="Status" Tooltip="DOMINATE_PERSON"&gt;Dominated&lt;/LSTag&gt;.
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="DOMINATE_PERSON"&gt;Dominated&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="LOW_OSKARSBELOVED_OSKARPOSSESSED"&gt;Possessed&lt;/LSTag&gt;.
 data "Description" "h78a39bd0g3ff0g4cd9g92b9gee06bc373ac7;1"
 data "Icon" "Spell_Enchantment_DominatePerson"
 data "Properties" "Highlighted"
-data "Boosts" "StatusImmunity(SG_Dominated)"
+data "Boosts" "StatusImmunity(SG_Dominated);StatusImmunity(SG_Possessed)"
 
 new entry "Goon_Immunity_Drunk"
 type "PassiveData"
