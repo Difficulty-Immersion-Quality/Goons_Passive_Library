@@ -55,26 +55,26 @@ end
 
 -- ==================================== Druid and Polymorph stuff ====================================
 -- TODO: Hunt down everything relevant.
-
 -- Check for any and all druid forms, only druid forms and not stinky disguise self etc. 
--- Includes support for Circle of Storm Chasers, the old (pre-toolkit) Circle of Stars, 
-function Goon_IsDruidFormOrStatus(entity)
+-- Includes support for Circle of Storm Chasers, the old (pre-toolkit) Circle of Stars.
+
+function Goon_IsDruidWildshapeOrStatus(entity)
     entity = entity or context.Source
     return HasAnyStatus({'SG_Polymorph_BeastShape','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER','STARRY_FORM_ARCHER','STARRY_FORM_CHALICE','STARRY_FORM_DRAGON','STORM_SHIFTER'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity, context.Source) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity)
 end
 
-function Goon_IsDruidForm(entity)
+function Goon_IsDruidWildshape(entity)
     entity = entity or context.Source
     return HasAnyStatus({'SG_Polymorph_BeastShape'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity, context.Source) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity)
 end
 
 function Goon_IsUnrestrictedPolymorphStatus(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'SG_Disguise','SG_Doppelganger','SG_Polymorph_BeastShape','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER','STARRY_FORM_ARCHER','STARRY_FORM_CHALICE','STARRY_FORM_DRAGON','STORM_SHIFTER'}, {}, {}, entity)
+    return HasAnyStatus({'SG_Disguise','SG_Doppelganger','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER','STARRY_FORM_ARCHER','STARRY_FORM_CHALICE','STARRY_FORM_DRAGON','STORM_SHIFTER'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity, context.Source) & Tagged('MINDFLAYER', entity)
 end
 
 -- TODO: Need to sort out Immutable Form so it doesn't block non-hostile Polymorphs
 function Goon_IsNonHostilePolymorphStatus(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'SG_Disguise','SG_Doppelganger','SG_Polymorph_BeastShape','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER','STARRY_FORM_ARCHER','STARRY_FORM_CHALICE','STARRY_FORM_DRAGON','STORM_SHIFTER'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity, context.Source) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity)
+    return HasAnyStatus({'SG_Disguise','SG_Doppelganger','SG_Polymorph_BeastShape','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER','STARRY_FORM_ARCHER','STARRY_FORM_CHALICE','STARRY_FORM_DRAGON','STORM_SHIFTER'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity, context.Source) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity) or Tagged('MINDFLAYER', entity)
 end
