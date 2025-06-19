@@ -162,7 +162,7 @@ new entry "Goon_Immunity_Light"
 type "PassiveData"
 // Immunity: Burning and Light
 data "DisplayName" "ha362bd0cg6247g4df4gbbbbg32d106e14f7b;1"
-// This creature cannot &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burn&lt;/LSTag&gt; or be the source of &lt;LSTag Type="Status" Tooltip="LIGHT"&gt;Light&lt;/LSTag&gt;.
+// This creature cannot &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burn&lt;/LSTag&gt;, or be the source of &lt;LSTag Type="Status" Tooltip="LIGHT"&gt;Light&lt;/LSTag&gt;.
 data "Description" "he74d327bg1cdeg45bdg9a3bg896cf7633c6c;1"
 data "Icon" "Status_Burning"
 data "Properties" "Highlighted"
@@ -208,7 +208,7 @@ data "Icon" "Status_Poisoned"
 data "Properties" "Highlighted"
 data "Boosts" "StatusImmunity(SG_Poisoned)"
 
-new entry "Goon_Immunity_Poisoned"
+new entry "Goon_Immunity_Possessed"
 type "PassiveData"
 // Immunity: Possession
 data "DisplayName" "h09f5e59ag89bag4272g87f4g4bad3a177698;1"
