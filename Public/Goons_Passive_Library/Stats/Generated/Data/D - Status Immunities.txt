@@ -148,6 +148,76 @@ data "Icon" "Status_Incapacitated"
 data "Properties" "Highlighted"
 data "Boosts" "StatusImmunity(SG_Incapacitated)"
 
+new entry "Goon_Immunity_Invisible"
+type "PassiveData"
+// Immunity: Invisibility
+data "DisplayName" "h98fff5a4g85a5g4073ga675g17b01da1e764;1"
+// This creature cannot become &lt;LSTag Type="Status" Tooltip="INVISIBLE"&gt;Invisible&lt;/LSTag&gt;.
+data "Description" "h9c7889e0g3496g4ffcgbf1dg89fa7a25d747;1"
+data "Icon" "Status_Invisible"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Invisible)"
+
+new entry "Goon_Immunity_Light"
+type "PassiveData"
+// Immunity: Burning and Light
+data "DisplayName" "ha362bd0cg6247g4df4gbbbbg32d106e14f7b;1"
+// This creature cannot &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burn&lt;/LSTag&gt; or be the source of &lt;LSTag Type="Status" Tooltip="LIGHT"&gt;Light&lt;/LSTag&gt;.
+data "Description" "he74d327bg1cdeg45bdg9a3bg896cf7633c6c;1"
+data "Icon" "Status_Burning"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Light)"
+
+new entry "Goon_Immunity_Mad"
+type "PassiveData"
+// Immunity: Madness
+data "DisplayName" "h3b98037bg9bf1g43ffg9381g6c1f395f7288;1"
+// This creature cannot become &lt;LSTag Type="Status" Tooltip="MADNESS"&gt;Mad&lt;/LSTag&gt;.
+data "Description" "h7837563fgd930g4715gaa43g0200f549c6d8;1"
+data "Icon" "statIcons_Madness"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Mad)"
+
+new entry "Goon_Immunity_Paralyzed"
+type "PassiveData"
+// Immunity: Paralysis
+data "DisplayName" "h35bb6e9agd04fg4445gbd2eg3d80ae862efb;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="PARALYZED"&gt;Paralyzed&lt;/LSTag&gt;.
+data "Description" "hf14038bega04fg4c1dga7b0g1df4d1dc3b97;1"
+data "Icon" "Status_Paralyzed"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Paralyzed)"
+
+new entry "Goon_Immunity_Petrified"
+type "PassiveData"
+// Immunity: Petrification
+data "DisplayName" "h0aaca1d2g5905g4f96g9be4gbe75801e722f;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrified&lt;/LSTag&gt;.
+data "Description" "h48242ecag3d87g4f18g80f5g0c4af726626f;1"
+data "Icon" "Status_Petrified"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Petrified)"
+
+new entry "Goon_Immunity_Poisoned"
+type "PassiveData"
+// Immunity: Poison
+data "DisplayName" "h09f5e59ag89bag4272g87f4g4bad3a177698;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poisoned&lt;/LSTag&gt;.
+data "Description" "hbf31bcc7ga05eg47e1g8b36g2f903f1d45ca;1"
+data "Icon" "Status_Poisoned"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Poisoned)"
+
+new entry "Goon_Immunity_Poisoned"
+type "PassiveData"
+// Immunity: Possession
+data "DisplayName" "h09f5e59ag89bag4272g87f4g4bad3a177698;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="LOW_OSKARSBELOVED_OSKARPOSSESSED"&gt;Possessed&lt;/LSTag&gt;.
+data "Description" "hbf31bcc7ga05eg47e1g8b36g2f903f1d45ca;1"
+data "Icon" "Status_Poisoned"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Possessed)"
+
 new entry "Goon_Immunity_Prone"
 type "PassiveData"
 // Immunity: Prone
@@ -157,6 +227,66 @@ data "Description" "hdff7bd14g678eg47d8gbfa8g9ce6579316f4;1"
 data "Icon" "Status_Prone"
 data "Properties" "Highlighted"
 data "Boosts" "StatusImmunity(SG_Prone)"
+
+new entry "Goon_Immunity_Rage"
+type "PassiveData"
+// Immunity: Rage
+data "DisplayName" "hfdd3bfedg6d8bg4d36gbd9eg5ab5112a07f8;1"
+// This creature cannot &lt;LSTag Type="Status" Tooltip="RAGE"&gt;Rage&lt;/LSTag&gt;.
+data "Description" "h5e741f77gfc37g4ad3ga66fg73437c035d7c;1"
+data "Icon" "Action_Barbarian_Rage"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Rage)"
+
+new entry "Goon_Immunity_Restrained"
+type "PassiveData"
+// Immunity: Restrained
+data "DisplayName" "he93c65b7gdb71g4ad5gbee5gcffd1feb9790;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="RESTRAINED"&gt;Restrained&lt;/LSTag&gt;.
+data "Description" "he3a8773dg4a34g42b5ga305g086796b7fe08;1"
+data "Icon" "Status_Restrained"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Restrained)"
+
+new entry "Goon_Immunity_Sleeping"
+type "PassiveData"
+// Immunity: Sleep
+data "DisplayName" "hf4e98c09g7416g49bdg9588ga16703104167;1"
+// This creature cannot &lt;LSTag Type="Status" Tooltip="SLEEPING"&gt;Sleep&lt;/LSTag&gt;.
+data "Description" "h9a0fe26bg806dg4156g9310gbf46f8a0172f;1"
+data "Icon" "Status_Sleep"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Sleeping);StatusImmunity(SG_Sleeping_Magical)"
+
+new entry "Goon_Immunity_Sleeping_Magical"
+type "PassiveData"
+// Immunity: Sleep (Magical)
+data "DisplayName" "hd1826205g2024g4ae4ga5f7g593e0e8e27c4;1"
+// This creature cannot be forced to &lt;LSTag Type="Status" Tooltip="SLEEPING"&gt;Sleep&lt;/LSTag&gt; by magic.
+data "Description" "haac5b436ga977g4e9dgae46g6c58ade610b7;1"
+data "Icon" "Status_Sleep"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Sleeping_Magical)"
+
+new entry "Goon_Immunity_Stunned"
+type "PassiveData"
+// Immunity: Stunned
+data "DisplayName" "h1bde10ecgfdd3g4364g8bcdge26e6384d3b2;1"
+// This creature cannot &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stunned&lt;/LSTag&gt;.
+data "Description" "hf54fa734ge087g49adga523gddabe8b61071;1"
+data "Icon" "Status_Sleep"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Stunned)"
+
+new entry "Goon_Immunity_Surface"
+type "PassiveData"
+// Immunity: Surfaces
+data "DisplayName" "hb82e50e4ge47ag4f75gb763g18de08154334;1"
+// This creature ignores all surfaces.
+data "Description" "hd6d5b3a0g65e2g43a0g96c8gd56420d474ae;1"
+data "Icon" "Status_Sleep"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Surface)"
 
 new entry "Goon_Immunity_Taunted"
 type "PassiveData"
@@ -168,4 +298,13 @@ data "Icon" "statIcons_Goaded"
 data "Properties" "Highlighted"
 data "Boosts" "StatusImmunity(SG_Taunted);StatusImmunity(SG_Approaching)"
 
-
+// Note: Do not recommend using this one really. Nothing "Goon_Immunity_Incapacitated" and "Goon_Immunity_Sleeping" can't take care of.
+new entry "Goon_Immunity_Unconscious"
+type "PassiveData"
+// Immunity: Unconscious
+data "DisplayName" "h85774a25ga19bg4c45g9d8egd4ee2dce4a66;1"
+// This creature cannot become Unconscious.
+data "Description" "hfd4ca1c7gfd74g4600gb892gd9bac02e7305;1"
+data "Icon" "statIcons_Goaded"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Unconscious)"
