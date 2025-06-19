@@ -353,7 +353,7 @@
 	<!-- "Goon_Immunity_Invisible" --> <content contentuid="h98fff5a4g85a5g4073ga675g17b01da1e764" version="1">Immunity: Invisibility</content>
 	<!-- "Goon_Immunity_Invisible" --> <content contentuid="h9c7889e0g3496g4ffcgbf1dg89fa7a25d747" version="1">This creature cannot become &lt;LSTag Type="Status" Tooltip="INVISIBLE"&gt;Invisible&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_Light" --> <content contentuid="ha362bd0cg6247g4df4gbbbbg32d106e14f7b" version="1">Immunity: Burning and Light</content>
-	<!-- "Goon_Immunity_Light" --> <content contentuid="he74d327bg1cdeg45bdg9a3bg896cf7633c6c" version="1">This creature cannot &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burn&lt;/LSTag&gt; or be the source of &lt;LSTag Type="Status" Tooltip="LIGHT"&gt;Light&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Light" --> <content contentuid="he74d327bg1cdeg45bdg9a3bg896cf7633c6c" version="1">This creature cannot &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burn&lt;/LSTag&gt;, or be the source of &lt;LSTag Type="Status" Tooltip="LIGHT"&gt;Light&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_Mad" --> <content contentuid="h3b98037bg9bf1g43ffg9381g6c1f395f7288" version="1">Immunity: Madness</content>
 	<!-- "Goon_Immunity_Mad" --> <content contentuid="h7837563fgd930g4715gaa43g0200f549c6d8" version="1">This creature cannot become &lt;LSTag Type="Status" Tooltip="MADNESS"&gt;Mad&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_Paralyzed" --> <content contentuid="h35bb6e9agd04fg4445gbd2eg3d80ae862efb" version="1">Immunity: Paralysis</content>
@@ -380,7 +380,7 @@
 	<!-- "Goon_Immunity_Taunted" --> <content contentuid="h7b4b61d7g703fg42b7gbcfdgd44cc5396064" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="TAUNTED"&gt;Goaded&lt;/LSTag&gt;, or forced to &lt;LSTag Type="Status" Tooltip="COMMAND_APPROACH"&gt;Approach&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_Unconscious" --> <content contentuid="h85774a25ga19bg4c45g9d8egd4ee2dce4a66" version="1">Immunity: Unconscious</content>
 	<!-- "Goon_Immunity_Unconscious" --> <content contentuid="hfd4ca1c7gfd74g4600gb892gd9bac02e7305" version="1">This creature cannot become Unconscious.</content>
-	
+
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
