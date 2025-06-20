@@ -18,6 +18,16 @@ data "Icon" "Status_Bleeding"
 data "Properties" "Highlighted"
 data "Boosts" "StatusImmunity(BLEEDING);StatusImmunity(HEAVY_BLEEDING);StatusImmunity(BARBED_ARROW)"
 
+new entry "Goon_Immunity_Burning"
+type "PassiveData"
+// Immunity: Burning
+data "DisplayName" "h00330db4g3ee6g493bg8648g41ff80b32e18;1"
+// This creature cannot to &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burn&lt;/LSTag&gt;.
+data "Description" "h35e100cag799eg4d5cgade2g95e1b3350cbc;1"
+data "Icon" "Status_Burning"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(BURNING);StatusImmunity(BURNING_AZER);StatusImmunity(BURNING_TRAPWALL);StatusImmunity(BURNING_TRIAL);StatusImmunity(BURNING_LAVA);StatusImmunity(WILD_MAGIC_BURNING);StatusImmunity(MAG_INFERNAL_BURNING);StatusImmunity(BURNING_HELLFIRE);StatusImmunity(BURNING_HOLY);StatusImmunity(HAV_MAG_INFERNAL_FIRE);StatusImmunity(MAG_FIRE_HEAT);StatusImmunity(END_NETHERILLUSION_BURNING);StatusImmunity(LOW_DEVILSFEE_BURNING);StatusImmunity(DIPPED_FIRE_SWITCH);StatusImmunity(DIPPED_FIRE);StatusImmunity(ORI_KARLACH_INFERNAL_FURY);StatusImmunity(ORI_KARLACH_ENRAGE);StatusImmunity(LOW_HOH_BOAR_BURNING_DAMAGE);StatusImmunity(FLAMING_SPHERE);StatusImmunity(FLAMING_SPHERE_3);StatusImmunity(FLAMING_SPHERE_4);StatusImmunity(FLAMING_SPHERE_5);StatusImmunity(FLAMING_SPHERE_6);StatusImmunity(FLAMING_SPHERE_7);StatusImmunity(FLAMING_SPHERE_8);StatusImmunity(FLAMING_SPHERE_9)"
+
 new entry "Goon_Immunity_Blinded"
 type "PassiveData"
 // Immunity: Blindness
