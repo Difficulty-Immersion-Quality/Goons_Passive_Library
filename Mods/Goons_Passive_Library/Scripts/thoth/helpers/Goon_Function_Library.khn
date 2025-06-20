@@ -1,3 +1,10 @@
+-- ==================================== Is Karlach cooking? ====================================
+
+function Goon_IsKarlachCooking(entity)
+    entity = entity or context.Source
+    return Tagged('REALLY_KARLACH', entity) & not Tagged('KARLACH_CAN_TOUCH', entity) | Tagged('REALLY_KARLACH', entity) & HasAnyStatus({'ORI_KARLACH_INFERNAL_FURY','ORI_KARLACH_ENRAGE'}, {}, {}, entity)
+end
+
 -- ==================================== Fetch character levels ====================================
 
 function GoonCharacterLevelEqualTo(value, entity)
