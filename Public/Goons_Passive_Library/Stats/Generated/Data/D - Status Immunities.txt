@@ -16,7 +16,7 @@ data "DisplayName" "h46cf5d82gdf62g4440g8fd1g27259ef5407c;1"
 data "Description" "h99a44f53g64cag4deag9d7ag7254b47f47de;1"
 data "Icon" "Status_Bleeding"
 data "Properties" "Highlighted"
-data "Boosts" "StatusImmunity(BLEEDING);StatusImmunity(HEAVY_BLEEDING);StatusImmunity(BARBED_ARROW)"
+data "Boosts" "StatusImmunity(BLEEDING);StatusImmunity(BARBED_ARROW);StatusImmunity(HEAVY_BLEEDING)"
 
 new entry "Goon_Immunity_Burning"
 type "PassiveData"
