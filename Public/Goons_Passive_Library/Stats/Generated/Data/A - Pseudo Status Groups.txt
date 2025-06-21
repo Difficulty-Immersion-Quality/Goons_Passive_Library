@@ -5,14 +5,14 @@ new entry "Goon_Psuedo_Status_Group_Passive"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnStatusApplied;OnStatusRemoved"
-data "StatsFunctors" "IF(Goon_HasBleedingCondition()):ApplyStatus(SG_Bleeding,100,-1);IF(Goon_HasBurningCondition()):ApplyStatus(SG_Burning,100,-1);IF(Goon_HasDeafenedCondition()):ApplyStatus(SG_Deafened,100,-1);IF(Goon_HasSilencedCondition()):ApplyStatus(SG_Silenced,100,-1);"
+data "StatsFunctors" "IF(Goon_HasBleedingCondition()):ApplyStatus(Goon_SG_Bleeding,100,-1);IF(Goon_HasBurningCondition()):ApplyStatus(Goon_SG_Burning,100,-1);IF(Goon_HasDeafenedCondition()):ApplyStatus(Goon_SG_Deafened,100,-1);IF(Goon_HasSilencedCondition()):ApplyStatus(Goon_SG_Silenced,100,-1);"
 
 // ==================================== Bleeding ====================================
 
-new entry "SG_Bleeding"
+new entry "Goon_SG_Bleeding"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StackId" "SG_Bleeding"
+data "StackId" "Goon_SG_Bleeding"
 data "StackType" "Overwrite"
 data "StackPriority" "1"
 data "Boosts" ""
@@ -24,10 +24,10 @@ data "RemoveConditions" "not Goon_HasBleedingCondition()"
 
 // ==================================== Burning ====================================
 
-new entry "SG_Burning"
+new entry "Goon_SG_Burning"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StackId" "SG_Burning"
+data "StackId" "Goon_SG_Burning"
 data "StackType" "Overwrite"
 data "StackPriority" "1"
 data "Boosts" ""
@@ -39,10 +39,10 @@ data "RemoveConditions" "not Goon_HasBurningCondition()"
 
 // ==================================== Deafened ====================================
 
-new entry "SG_Deafened"
+new entry "Goon_SG_Deafened"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StackId" "SG_Deafened"
+data "StackId" "Goon_SG_Deafened"
 data "StackType" "Overwrite"
 data "StackPriority" "1"
 data "Boosts" "StatusImmunity(LURING_SONG)"
@@ -54,10 +54,10 @@ data "RemoveConditions" "not Goon_HasDeafenedCondition()"
 
 // ==================================== Silenced ====================================
 
-new entry "SG_Silenced"
+new entry "Goon_SG_Silenced"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StackId" "SG_Silenced"
+data "StackId" "Goon_SG_Silenced"
 data "StackType" "Overwrite"
 data "StackPriority" "1"
 data "Boosts" ""

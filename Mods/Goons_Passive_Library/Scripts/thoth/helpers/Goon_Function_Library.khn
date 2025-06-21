@@ -2,19 +2,19 @@
 
 function Goon_HasBleedingCondition(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'BLEEDING','BARBED_ARROW','HEAVY_BLEEDING'}, {}, {}, entity)
+    return HasAnyStatus({'Goon_SG_Bleeding', 'SG_Bleeding', 'BLEEDING', 'BARBED_ARROW', 'HEAVY_BLEEDING'}, {}, {}, entity)
 end
 
 -- ==================================== Silenced/Deafened ====================================
 
 function Goon_HasSilencedCondition(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'SG_Silenced','SILENCED','SHA_SILENTLIBRARY_LIBRARIANSILENCE_STATUS','LOW_VoicelessPenitent_Silenced','SILENCED_MOVEMENT', 'GARROTE_SILENCED'}, {}, {}, entity)
+    return HasAnyStatus({'Goon_SG_Silenced', 'SG_Silenced', 'SILENCED', 'SHA_SILENTLIBRARY_LIBRARIANSILENCE_STATUS', 'LOW_VoicelessPenitent_Silenced', 'SILENCED_MOVEMENT', 'GARROTE_SILENCED'}, {}, {}, entity)
 end
 
 function Goon_HasDeafenedCondition(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'SG_Deafened','DEAFENED'}, {}, {}, entity)
+    return HasAnyStatus({'Goon_SG_Deafened', 'SG_Deafened', 'DEAFENED'}, {}, {}, entity)
 end
 
 function SavingThrow_SoundBased(ability, dc, advantage, disadvantage, target)
@@ -34,7 +34,7 @@ end
 
 function Goon_HasBurningCondition()
     entity = entity or context.Source
-    result = HasAnyStatus({'SG_Burning', 'BURNING', 'BURNING_AZER', 'BURNING_HELLFIRE', 'BURNING_HOLY', 'BURNING_LAVA', 'BURNING_TRAPWALL', 'DIPPED_FIRE', 'FLAMING_SPHERE_AURA', 'FLAMING_SPHERE_AURA_3', 'FLAMING_SPHERE_AURA_4', 'FLAMING_SPHERE_AURA_5', 'FLAMING_SPHERE_AURA_6', 'FLAMING_SPHERE_AURA_7', 'FLAMING_SPHERE_AURA_8', 'FLAMING_SPHERE_AURA_9', 'FLAMING_SPHERE', 'FLAMING_SPHERE_3', 'FLAMING_SPHERE_4', 'FLAMING_SPHERE_5', 'FLAMING_SPHERE_6', 'FLAMING_SPHERE_7', 'FLAMING_SPHERE_8', 'FLAMING_SPHERE_9', 'HAV_MAG_INFERNAL_FIRE', 'LOW_HOH_BOAR_BURNING_DAMAGE', 'MAG_FIRE_HEAT', 'MAG_INFERNAL_BURNING', 'ORI_KARLACH_ENRAGE', 'ORI_KARLACH_INFERNAL_FURY', 'SEARING_SMITE', 'WILD_MAGIC_BURNING'}, {}, {}, entity) | Tagged('REALLY_KARLACH', entity) & not Tagged('KARLACH_CAN_TOUCH', entity)
+    result = HasAnyStatus({'Goon_SG_Burning', 'SG_Burning', 'BURNING', 'BURNING_AZER', 'BURNING_HELLFIRE', 'BURNING_HOLY', 'BURNING_LAVA', 'BURNING_TRAPWALL', 'DIPPED_FIRE', 'FLAMING_SPHERE_AURA', 'FLAMING_SPHERE_AURA_3', 'FLAMING_SPHERE_AURA_4', 'FLAMING_SPHERE_AURA_5', 'FLAMING_SPHERE_AURA_6', 'FLAMING_SPHERE_AURA_7', 'FLAMING_SPHERE_AURA_8', 'FLAMING_SPHERE_AURA_9', 'FLAMING_SPHERE', 'FLAMING_SPHERE_3', 'FLAMING_SPHERE_4', 'FLAMING_SPHERE_5', 'FLAMING_SPHERE_6', 'FLAMING_SPHERE_7', 'FLAMING_SPHERE_8', 'FLAMING_SPHERE_9', 'HAV_MAG_INFERNAL_FIRE', 'LOW_HOH_BOAR_BURNING_DAMAGE', 'MAG_FIRE_HEAT', 'MAG_INFERNAL_BURNING', 'ORI_KARLACH_ENRAGE', 'ORI_KARLACH_INFERNAL_FURY', 'SEARING_SMITE', 'WILD_MAGIC_BURNING'}, {}, {}, entity) | Tagged('REALLY_KARLACH', entity) & not Tagged('KARLACH_CAN_TOUCH', entity)
     return ConditionResult(result.Result, {ConditionError("IsNotOnFire")})
 end
 
