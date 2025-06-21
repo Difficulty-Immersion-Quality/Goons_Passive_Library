@@ -60,6 +60,11 @@ data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnCreate;OnStatusApplied;OnStatusRemoved"
 data "StatsFunctors" "IF(not HasStatus('GOON_AURA_OF_HATE_STATUS')):ApplyStatus(GOON_AURA_OF_HATE_STATUS,100,-1)"
 
+// Retired entry
+new entry "Goon_AURA_OF_HATE_Passive"
+type "PassiveData"
+using "Goon_Aura_of_Hate_Passive"
+
 new entry "GOON_AURA_OF_HATE_STATUS"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -94,6 +99,10 @@ type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnCreate;OnStatusApplied;OnStatusRemoved"
 data "StatsFunctors" "IF(not HasStatus('SG_Incapacitated') and not HasStatus('GOON_AURA_OF_DEVOTION_STATUS')):ApplyStatus(GOON_AURA_OF_DEVOTION_STATUS,100,-1)"
+// Retired entry
+new entry "Goon_AURA_OF_DEVOTION_Passive"
+type "PassiveData"
+using "Goon_Aura_of_Devotion_Passive"
 
 new entry "GOON_AURA_OF_DEVOTION_STATUS"
 type "StatusData"
@@ -130,6 +139,11 @@ type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnCreate;OnStatusApplied;OnStatusRemoved"
 data "StatsFunctors" "IF(not HasStatus('SG_Incapacitated') and not HasStatus('GOON_AURA_OF_WARDING_STATUS')):ApplyStatus(GOON_AURA_OF_WARDING_STATUS,100,-1)"
+
+// Retired entry
+new entry "Goon_AURA_OF_WARDING_Passive"
+type "PassiveData"
+using "Goon_Aura_of_Warding_Passive"
 
 new entry "GOON_AURA_OF_WARDING_STATUS"
 type "StatusData"

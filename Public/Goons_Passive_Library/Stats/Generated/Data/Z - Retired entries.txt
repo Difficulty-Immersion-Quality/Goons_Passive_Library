@@ -1,45 +1,5 @@
 // I can't stand these capitals in my passives and shit 
 
-// ==================================== Forced cast auras etc.txt ====================================
-
-
-// Santuary for Isobel in Last Light Inn fight
-new entry "Goon_SANCTUARY_Auto_Cast"
-type "PassiveData"
-using "Goon_Sanctuary_Auto_Cast_Start_Combat"
-
-// Paladin auras without toggles to force NPCs to use it
-new entry "Goon_AURA_OF_HATE_Passive"
-type "PassiveData"
-using "Goon_Aura_of_Hate_Passive"
-
-new entry "Goon_AURA_OF_DEVOTION_Passive"
-type "PassiveData"
-using "Goon_Aura_of_Devotion_Passive"
-
-new entry "Goon_AURA_OF_WARDING_Passive"
-type "PassiveData"
-using "Goon_Aura_of_Warding_Passive"
-
-// ==================================== Custom Invisibility with Resource.txt ====================================
-
-// Cooldown statuses
-new entry "GOON_CUSTOM_INVISIBILITY_COOLDOWN_2"
-type "StatusData"
-data "StatusType" "BOOST"
-using "GOON_SANCTUARY_AUTO_CAST_COOLDOWN"
-
-new entry "GOON_CUSTOM_INVISIBILITY_COOLDOWN_3"
-type "StatusData"
-data "StatusType" "BOOST"
-using "GOON_SANCTUARY_AUTO_CAST_COOLDOWN"
-
-// ==================================== MagicAllergy.txt ====================================
-
-new entry "GOON_MAGICALLERGY_UNLOCK"
-type "PassiveData"
-using "Goon_Magic_Allergy_Unlock"
-
 // ==================================== Santuary for Isobel in Last Light Inn fight ====================================
 
 // This design can instead just be handled by my Custom Resource Passives system
@@ -56,6 +16,11 @@ data "Properties" "Highlighted"
 data "StatsFunctorContext" "OnCombatStarted"
 data "Conditions" "not HasStatus('GOON_SANCTUARY_AUTO_CAST_COOLDOWN',context.Source)"
 data "StatsFunctors" "ApplyStatus(SANCTUARY,100,10);ApplyStatus(GOON_SANCTUARY_AUTO_CAST_COOLDOWN,100,2)"
+
+// Santuary for Isobel in Last Light Inn fight
+new entry "Goon_SANCTUARY_Auto_Cast"
+type "PassiveData"
+using "Goon_Sanctuary_Auto_Cast_Start_Combat"
 
 new entry "Goon_Sanctuary_Auto_Cast_End_Turn"
 type "PassiveData"
@@ -92,3 +57,15 @@ data "StackPriority" "1"
 data "StackType" "Overwrite"
 data "TickType" "StartTurn"
 
+// ==================================== Custom Invisibility with Resource.txt ====================================
+
+// Cooldown statuses
+new entry "GOON_CUSTOM_INVISIBILITY_COOLDOWN_2"
+type "StatusData"
+data "StatusType" "BOOST"
+using "GOON_SANCTUARY_AUTO_CAST_COOLDOWN"
+
+new entry "GOON_CUSTOM_INVISIBILITY_COOLDOWN_3"
+type "StatusData"
+data "StatusType" "BOOST"
+using "GOON_SANCTUARY_AUTO_CAST_COOLDOWN"

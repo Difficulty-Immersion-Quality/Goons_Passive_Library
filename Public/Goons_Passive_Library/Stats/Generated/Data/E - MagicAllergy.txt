@@ -11,6 +11,11 @@ data "Icon" "GenericIcon_Intent_Damage"
 data "StatsFunctorContext" "OnCreate;OnStatusRemove;OnStatusApplied;OnCast;OnTurn;OnCombatStarted"
 data "StatsFunctors" "ApplyStatus(GOON_MAGICALLERGY_AURA,100,-1)"
 
+// Retired entry
+new entry "GOON_MAGICALLERGY_UNLOCK"
+type "PassiveData"
+using "Goon_Magic_Allergy_Unlock"
+
 new entry "GOON_MAGICALLERGY_INAURARANGE"
 type "StatusData"
 data "StatusType" "BOOST"
