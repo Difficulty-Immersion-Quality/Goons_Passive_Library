@@ -78,6 +78,16 @@ data "Icon" "Spell_Necromancy_BestowCurse_DebuffAbility"
 data "Properties" "Highlighted"
 data "Boosts" "StatusImmunity(SG_Cursed)"
 
+new entry "Goon_Immunity_Deafened"
+type "PassiveData"
+// Immunity: Deafened
+data "DisplayName" "h55957784ga132g4b5fg9d03gc6039b7edd59;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="DEAFENED"&gt;Deafened&lt;/LSTag&gt;.
+data "Description" "hd2614998g286eg4ad3ga881gef39686d9e4f;1"
+data "Icon" "Spell_Necromancy_BestowCurse_DebuffAbility"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Deafened);StatusImmunity(DEAFENED)"
+
 new entry "Goon_Immunity_DifficultTerrain"
 type "PassiveData"
 // Immunity: Difficult Terrain

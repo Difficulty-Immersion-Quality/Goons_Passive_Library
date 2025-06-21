@@ -336,6 +336,8 @@
 	<!-- "Goon_Immunity_Confused" --> <content contentuid="ha1424dd9g1f2bg4e98g873fg1b3a1d332fe4" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confused&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_Cursed" --> <content contentuid="hfaefafbag80c5g4d04g953egdb3c09da661d" version="1">Immunity: Cursed</content>
 	<!-- "Goon_Immunity_Cursed" --> <content contentuid="hd2614998g286eg4ad3ga881gef39686d9e4f" version="1">This creature cannot be Cursed.</content>
+	<!-- "Goon_Immunity_Deafened" --> <content contentuid="h55957784ga132g4b5fg9d03gc6039b7edd59" version="1">Immunity: Deafened</content>
+	<!-- "Goon_Immunity_Deafened" --> <content contentuid="h26144a27g89bfg4822g9482g1d096d2d1967" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="DEAFENED"&gt;Deafened&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_DifficultTerrain" --> <content contentuid="hb9326211g89a9g4e25gbed7ge2977ce745c4" version="1">Immunity: Difficult Terrain</content>
 	<!-- "Goon_Immunity_DifficultTerrain" --> <content contentuid="h3933772ag190dg44bfgbaa7g357d7cf6dd2f" version="1">This creature cannot be halted by &lt;LSTag Type="Status" Tooltip="DIFFICULT_TERRAIN"&gt;Difficult Terrain&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_Disease" --> <content contentuid="hba60be16g54a9g4e1ag8203g62154ce948ff" version="1">Immunity: Disease</content>
