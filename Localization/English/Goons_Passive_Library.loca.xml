@@ -323,9 +323,9 @@
 	<!-- "Goon_Immunity_Approaching" --> <content contentuid="h4f424c66g025dg405bg81d2ga431facf24a2" version="1">Immunity: Approach</content>
 	<!-- "Goon_Immunity_Approaching" --> <content contentuid="hc84e7b31ga283g438ag969egfd0ffb60f8ab" version="1">This creature cannot be forced to &lt;LSTag Type="Status" Tooltip="COMMAND_APPROACH"&gt;Approach&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_Bleeding" --> <content contentuid="h46cf5d82gdf62g4440g8fd1g27259ef5407c" version="1">Immunity: Bleeding</content>
-	<!-- "Goon_Immunity_Bleeding" --> <content contentuid="h99a44f53g64cag4deag9d7ag7254b47f47de" version="1">This creature cannot be forced to &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;Bleed&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Bleeding" --> <content contentuid="h99a44f53g64cag4deag9d7ag7254b47f47de" version="1">This creature cannot &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;Bleed&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_Burning" --> <content contentuid="h00330db4g3ee6g493bg8648g41ff80b32e18" version="1">Immunity: Burning</content>
-	<!-- "Goon_Immunity_Burning" --> <content contentuid="h35e100cag799eg4d5cgade2g95e1b3350cbc" version="1">This creature cannot to &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burn&lt;/LSTag&gt;.	</content>
+	<!-- "Goon_Immunity_Burning" --> <content contentuid="h35e100cag799eg4d5cgade2g95e1b3350cbc" version="1">This creature cannot &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burn&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_Blinded" --> <content contentuid="h3bc2d8cag58f3g4658g90ffge40c468797fd" version="1">Immunity: Blindness</content>
 	<!-- "Goon_Immunity_Blinded" --> <content contentuid="h5dea9b79gf7fag499dgbea2g490cffaf64a1" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;Blinded&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_Charmed" --> <content contentuid="h8eb4f2efg3ad1g4e03ga1c1g07ba4e8e5947" version="1">Immunity: Charmed</content>
