@@ -1,0 +1,46 @@
+new entry "Goon_Psuedo_Status_Group_Passive
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnStatusApplied;OnStatusRemoved"
+data "StatsFunctors" "IF(IsOnFire()):ApplyStatus(SG_Burning,100,-1);IF(Goon_HasDeafenedCondition()):ApplyStatus(SG_Deafened,100,-1);IF(Goon_HasSilencedCondition()):ApplyStatus(SG_Silenced,100,-1);"
+
+// ==================================== Deafened ====================================
+
+new entry "SG_Burning"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackId" "SG_Burning"
+data "StackType" "Overwrite"
+data "StackPriority" "1"
+data "Boosts" ""
+data "OnApplyFunctors" ""
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+data "RemoveEvents" "OnStatusRemoved"
+data "RemoveConditions" "not IsOnFire()"
+
+// ==================================== Deafened ====================================
+
+new entry "SG_Deafened"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackId" "SG_Deafened"
+data "StackType" "Overwrite"
+data "StackPriority" "1"
+data "Boosts" "StatusImmunity(LURING_SONG)"
+data "OnApplyFunctors" "RemoveStatus(LURING_SONG)"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+data "RemoveEvents" "OnStatusRemoved"
+data "RemoveConditions" "not Goon_HasDeafenedCondition()"
+
+// ==================================== Silenced ====================================
+
+new entry "SG_Silenced"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackId" "SG_Silenced"
+data "StackType" "Overwrite"
+data "StackPriority" "1"
+data "Boosts" ""
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+data "RemoveEvents" "OnStatusRemoved"
+data "RemoveConditions" "not Goon_HasSilencedCondition()"
