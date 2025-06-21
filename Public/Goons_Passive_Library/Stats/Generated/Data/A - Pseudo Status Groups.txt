@@ -1,3 +1,6 @@
+// ==================================== Master passive ====================================
+// TODO: Apply to all entities via SE/native script.
+
 new entry "Goon_Psuedo_Status_Group_Passive
 type "PassiveData"
 data "Properties" "IsHidden"
