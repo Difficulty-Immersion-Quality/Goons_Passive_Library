@@ -26,7 +26,7 @@ data "DisplayName" "h00330db4g3ee6g493bg8648g41ff80b32e18;1"
 data "Description" "h35e100cag799eg4d5cgade2g95e1b3350cbc;1"
 data "Icon" "Status_Burning"
 data "Properties" "Highlighted"
-data "Boosts" "StatusImmunity(BURNING);StatusImmunity(BURNING_AZER);StatusImmunity(BURNING_TRAPWALL);StatusImmunity(BURNING_TRIAL);StatusImmunity(BURNING_LAVA);StatusImmunity(WILD_MAGIC_BURNING);StatusImmunity(MAG_INFERNAL_BURNING);StatusImmunity(BURNING_HELLFIRE);StatusImmunity(BURNING_HOLY);StatusImmunity(HAV_MAG_INFERNAL_FIRE);StatusImmunity(MAG_FIRE_HEAT);StatusImmunity(END_NETHERILLUSION_BURNING);StatusImmunity(LOW_DEVILSFEE_BURNING);StatusImmunity(DIPPED_FIRE_SWITCH);StatusImmunity(DIPPED_FIRE);StatusImmunity(ORI_KARLACH_INFERNAL_FURY);StatusImmunity(ORI_KARLACH_ENRAGE);StatusImmunity(LOW_HOH_BOAR_BURNING_DAMAGE);StatusImmunity(FLAMING_SPHERE);StatusImmunity(FLAMING_SPHERE_3);StatusImmunity(FLAMING_SPHERE_4);StatusImmunity(FLAMING_SPHERE_5);StatusImmunity(FLAMING_SPHERE_6);StatusImmunity(FLAMING_SPHERE_7);StatusImmunity(FLAMING_SPHERE_8);StatusImmunity(FLAMING_SPHERE_9)"
+data "Boosts" "StatusImmunity(BURNING);StatusImmunity(BURNING_AZER);StatusImmunity(BURNING_HELLFIRE);StatusImmunity(BURNING_HOLY);StatusImmunity(BURNING_LAVA);StatusImmunity(BURNING_TRAPWALL);StatusImmunity(BURNING_TRIAL);StatusImmunity(DIPPED_FIRE);StatusImmunity(FLAMING_SPHERE);StatusImmunity(FLAMING_SPHERE_3);StatusImmunity(FLAMING_SPHERE_4);StatusImmunity(FLAMING_SPHERE_5);StatusImmunity(FLAMING_SPHERE_6);StatusImmunity(FLAMING_SPHERE_7);StatusImmunity(FLAMING_SPHERE_8);StatusImmunity(FLAMING_SPHERE_9);StatusImmunity(HAV_MAG_INFERNAL_FIRE);StatusImmunity(LOW_HOH_BOAR_BURNING_DAMAGE);StatusImmunity(MAG_FIRE_HEAT);StatusImmunity(MAG_INFERNAL_BURNING);StatusImmunity(ORI_KARLACH_ENRAGE);StatusImmunity(ORI_KARLACH_INFERNAL_FURY);StatusImmunity(SEARING_SMITE);StatusImmunityStatusImmunity(WILD_MAGIC_BURNING)"
 
 new entry "Goon_Immunity_Blinded"
 type "PassiveData"
@@ -257,6 +257,16 @@ data "Description" "he3a8773dg4a34g42b5ga305g086796b7fe08;1"
 data "Icon" "Status_Restrained"
 data "Properties" "Highlighted"
 data "Boosts" "StatusImmunity(SG_Restrained)"
+
+new entry "Goon_Immunity_Silenced"
+type "PassiveData"
+// Immunity: Silenced
+data "DisplayName" "hf9273a05gc73fg4809g8b26gc7695c7f8871;1"
+// This creature cannot be &lt;LSTag Type="Status" Tooltip="SILENCED"&gt;Silenced&lt;/LSTag&gt;.
+data "Description" "ha885792eg9354g43e4ga81bgc4cc63801e9e;1"
+data "Icon" "Spell_Illusion_Silence"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Silenced);StatusImmunity(SILENCED);StatusImmunity(SHA_SILENTLIBRARY_LIBRARIANSILENCE_STATUS);StatusImmunity(LOW_VoicelessPenitent_Silenced);StatusImmunity(SILENCED_MOVEMENT);StatusImmunity(GARROTE_SILENCED);"
 
 new entry "Goon_Immunity_Sleeping"
 type "PassiveData"

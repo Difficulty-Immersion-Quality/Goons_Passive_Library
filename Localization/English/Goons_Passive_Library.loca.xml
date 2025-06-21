@@ -370,6 +370,8 @@
 	<!-- "Goon_Immunity_Rage" --> <content contentuid="h5e741f77gfc37g4ad3ga66fg73437c035d7c" version="1">This creature cannot &lt;LSTag Type="Status" Tooltip="RAGE"&gt;Rage&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_Restrained" --> <content contentuid="he93c65b7gdb71g4ad5gbee5gcffd1feb9790" version="1">Immunity: Restrained</content>
 	<!-- "Goon_Immunity_Restrained" --> <content contentuid="he3a8773dg4a34g42b5ga305g086796b7fe08" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="RESTRAINED"&gt;Restrained&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Immunity_Silenced" --> <content contentuid="hf9273a05gc73fg4809g8b26gc7695c7f8871" version="1">Immunity: Silenced</content>
+	<!-- "Goon_Immunity_Silenced" --> <content contentuid="ha885792eg9354g43e4ga81bgc4cc63801e9e" version="1">This creature cannot be &lt;LSTag Type="Status" Tooltip="SILENCED"&gt;Silenced&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_Sleeping" --> <content contentuid="hf4e98c09g7416g49bdg9588ga16703104167" version="1">Immunity: Sleep</content>
 	<!-- "Goon_Immunity_Sleeping" --> <content contentuid="h9a0fe26bg806dg4156g9310gbf46f8a0172f" version="1">This creature cannot &lt;LSTag Type="Status" Tooltip="SLEEPING"&gt;Sleep&lt;/LSTag&gt;.</content>
 	<!-- "Goon_Immunity_Sleeping_Magical" --> <content contentuid="hd1826205g2024g4ae4ga5f7g593e0e8e27c4" version="1">Immunity: Sleep (Magical)</content>
@@ -383,6 +385,7 @@
 	<!-- "Goon_Immunity_Unconscious" --> <content contentuid="h85774a25ga19bg4c45g9d8egd4ee2dce4a66" version="1">Immunity: Unconscious</content>
 	<!-- "Goon_Immunity_Unconscious" --> <content contentuid="hfd4ca1c7gfd74g4600gb892gd9bac02e7305" version="1">This creature cannot become Unconscious.</content>
 
+	<!-- Pseudo Status Groups -->
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
