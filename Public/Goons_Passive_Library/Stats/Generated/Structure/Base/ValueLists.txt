@@ -1,0 +1,8 @@
+// ==================================== Non-functional custom status groups ====================================
+
+// valuelist "StatusGroupFlags"
+// value "SG_Bleeding" : 48
+// value "SG_Burning" : 49
+// value "SG_Deafened" : 50
+// value "SG_Silenced" : 51
+// value "SG_Disengage" : 52
