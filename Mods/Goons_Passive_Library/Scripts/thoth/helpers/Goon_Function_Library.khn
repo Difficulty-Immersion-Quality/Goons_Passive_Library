@@ -81,6 +81,16 @@ function Goon_IsBardicInspirationSpell(entity)
     return SpellId('Target_BardicInspiration') | SpellId('Target_BardicInspiration_Combat') | SpellId('Target_MantleOfInspiration') | SpellId('Target_MantleOfInspiration_2') | SpellId('Target_MantleOfInspiration_3')
 end
 
+function Goon_IsDisengageSpell(entity)
+    entity = entity or context.Source
+    return SpellId('Shout_Disengage') | SpellId('Shout_Disengage_BonusAction') | SpellId('Shout_Disengage_CunningAction') | SpellId('Shout_Disengage_StepOfTheWind') | SpellId('SYR_Shout_Disengage_BonusAction_DruidQoL')
+end
+
+function Goon_HasDisengageCondition(entity)
+    entity = entity or context.Source
+    return HasAnyStatus({'Goon_SG_Disengage', 'SG_Disengage', 'DISENGAGE', 'DRUNKEN_TECHNIQUE', 'HEAVY_BLEEDING'}, {}, {}, entity)
+end
+
 -- ==================================== Weapon enchant checks ====================================
 -- TODO: Hunt down everything relevant.
 -- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)))
@@ -90,7 +100,7 @@ end
 
 function Goon_IsSpellcastingModifierWeapon(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'MAG_MELEE_CASTER_BOON','LHB_SEL_TASHASOTHERWORLDLYGUISE_MAGICWEAPON'}, {}, {}, entity)
+    return HasAnyStatus({'MAG_MELEE_CASTER_BOON', 'LHB_SEL_TASHASOTHERWORLDLYGUISE_MAGICWEAPON'}, {}, {}, entity)
 end
 
 function Goon_IsIntelligenceModifierWeapon(entity)
@@ -100,12 +110,12 @@ end
 
 function Goon_IsWisdomModifierWeapon(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'SHILLELAGH','FourEle_Attuned'}, {}, {}, entity)
+    return HasAnyStatus({'SHILLELAGH', 'FourEle_Attuned'}, {}, {}, entity)
 end
 
 function Goon_IsCharismaModifierWeapon(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'HEXBLADE_BIND','PACT_BLADE'}, {}, {}, entity)
+    return HasAnyStatus({'HEXBLADE_BIND', 'PACT_BLADE'}, {}, {}, entity)
 end
 
 -- ==================================== Druid and Polymorph stuff ====================================
@@ -115,7 +125,7 @@ end
 
 function Goon_IsDruidWildshapeOrStatus(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'SG_Polymorph_BeastShape','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER','STARRY_FORM_ARCHER','STARRY_FORM_CHALICE','STARRY_FORM_DRAGON','STORM_SHIFTER'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity)
+    return HasAnyStatus({'SG_Polymorph_BeastShape', 'WILDSHAPE_STARRY_ARCHER_PLAYER', 'WILDSHAPE_STARRY_CHALICE_PLAYER', 'WILDSHAPE_STARRY_DRAGON_PLAYER', 'STARRY_FORM_ARCHER', 'STARRY_FORM_CHALICE', 'STARRY_FORM_DRAGON', 'STORM_SHIFTER'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity)
 end
 
 function Goon_IsDruidWildshape(entity)
@@ -125,11 +135,11 @@ end
 
 function Goon_IsUnrestrictedPolymorphStatus(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'SG_Disguise','SG_Doppelganger','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER','STARRY_FORM_ARCHER','STARRY_FORM_CHALICE','STARRY_FORM_DRAGON','STORM_SHIFTER'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity) | Tagged('MINDFLAYER', entity)
+    return HasAnyStatus({'SG_Disguise', 'SG_Doppelganger', 'WILDSHAPE_STARRY_ARCHER_PLAYER', 'WILDSHAPE_STARRY_CHALICE_PLAYER', 'WILDSHAPE_STARRY_DRAGON_PLAYER', 'STARRY_FORM_ARCHER', 'STARRY_FORM_CHALICE', 'STARRY_FORM_DRAGON', 'STORM_SHIFTER'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity) | Tagged('MINDFLAYER', entity)
 end
 
 -- TODO: Need to sort out Immutable Form so it doesn't block non-hostile Polymorphs
 function Goon_IsNonHostilePolymorphStatus(entity)
     entity = entity or context.Source
-    return not Tagged('POLYMORPHED_UNWILLING', entity) & HasAnyStatus({'SG_Disguise','SG_Doppelganger','SG_Polymorph_BeastShape','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER','STARRY_FORM_ARCHER','STARRY_FORM_CHALICE','STARRY_FORM_DRAGON','STORM_SHIFTER'}, {}, {}, entity) | not Tagged('POLYMORPHED_UNWILLING', entity) & HasStatus('SG_Polymorph', entity) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity) | not Tagged('POLYMORPHED_UNWILLING', entity) & Tagged('MINDFLAYER', entity)
+    return not Tagged('POLYMORPHED_UNWILLING', entity) & HasAnyStatus({'SG_Disguise', 'SG_Doppelganger', 'SG_Polymorph_BeastShape', 'WILDSHAPE_STARRY_ARCHER_PLAYER', 'WILDSHAPE_STARRY_CHALICE_PLAYER', 'WILDSHAPE_STARRY_DRAGON_PLAYER', 'STARRY_FORM_ARCHER', 'STARRY_FORM_CHALICE', 'STARRY_FORM_DRAGON', 'STORM_SHIFTER'}, {}, {}, entity) | not Tagged('POLYMORPHED_UNWILLING', entity) & HasStatus('SG_Polymorph', entity) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity) | not Tagged('POLYMORPHED_UNWILLING', entity) & Tagged('MINDFLAYER', entity)
 end
