@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="9" build="326"/>
+    <region id="TooltipExtraTexts">
+        <node id="root">
+            <children>
+                <node id="TooltipExtraTexts">
+                    <!-- &lt;LSTag Type="Image" Info="SoftWarning"/&gt; This effect is &lt;b&gt;also&lt;/b&gt; active in &lt;LSTag Type="Spell" Tooltip="Shout_WildShape"&gt;Wild Shape&lt;/LSTag&gt;. -->
+                    <attribute id="Text" type="TranslatedString" handle="h2aa95070gb790g4f45g825bg9aff35a5f7d1" version="1"/>
+                    <attribute id="UUID" type="guid" value="28186bf3-e19b-43a9-8395-7dc31a6a211d"/>
+                </node>
+                <node id="TooltipExtraTexts">
+                    <!-- &lt;LSTag Type="Image" Info="TutorialYellowWarning"/&gt; This effect is &lt;b&gt;only&lt;/b&gt; active in &lt;LSTag Type="Spell" Tooltip="Shout_WildShape"&gt;Wild Shape&lt;/LSTag&gt;. -->
+                    <attribute id="Text" type="TranslatedString" handle="hd6719b5ag959eg49d9ga484g4ebe6721b4a7" version="1"/>
+                    <attribute id="UUID" type="guid" value="0960bfe9-875f-4b41-8bfc-c8c707e93e1b"/>
+                </node>
+                <node id="TooltipExtraTexts">
+                    <!-- &lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; This effect is &lt;b&gt;not&lt;/b&gt; active in &lt;LSTag Type="Spell" Tooltip="Shout_WildShape"&gt;Wild Shape&lt;/LSTag&gt;. -->
+                    <attribute id="Text" type="TranslatedString" handle="he3f14eecg4233g49fag8b36g49ec015f4f54" version="1"/>
+                    <attribute id="UUID" type="guid" value="af675b0e-50b9-4451-b006-29bded4a4280"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>
