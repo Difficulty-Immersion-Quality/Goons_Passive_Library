@@ -4,10 +4,23 @@
     <region id="TooltipExtraTexts">
         <node id="root">
             <children>
+                <!-- Once per attack -->
                 <node id="TooltipExtraTexts">
-                    <!-- &lt;LSTag Type="Image" Info="SoftWarning"/&gt; This effect is &lt;b&gt;also&lt;/b&gt; active in &lt;LSTag Type="Spell" Tooltip="Shout_WildShape"&gt;Wild Shape&lt;/LSTag&gt;. -->
+                    <!-- &lt;LSTag Type="Image" Info="SoftWarning"/&gt; This effect can trigger &lt;b&gt;once&lt;/b&gt; per &lt;LSTag Tooltip="AttackRoll"&gt;Attack&lt;/LSTag&gt;. -->
+                    <attribute id="Text" type="TranslatedString" handle="h32c61940gcc68g4656gaba7g520594efd435" version="1"/>
+                    <attribute id="UUID" type="guid" value="f63b2f2d-b29b-40b8-86ea-9978c782c32e"/>
+                </node>
+                <!-- Works in Polymorph -->
+                <node id="TooltipExtraTexts">
+                    <!-- &lt;LSTag Type="Image" Info="SoftWarning"/&gt; This effect is &lt;b&gt;also&lt;/b&gt; active while Polymorphed, including &lt;LSTag Type="Spell" Tooltip="Shout_WildShape"&gt;Wild Shape&lt;/LSTag&gt;. -->
                     <attribute id="Text" type="TranslatedString" handle="h2aa95070gb790g4f45g825bg9aff35a5f7d1" version="1"/>
                     <attribute id="UUID" type="guid" value="28186bf3-e19b-43a9-8395-7dc31a6a211d"/>
+                </node>
+                <!-- Works in Wild Shape -->
+                <node id="TooltipExtraTexts">
+                    <!-- &lt;LSTag Type="Image" Info="SoftWarning"/&gt; This effect is &lt;b&gt;also&lt;/b&gt; active while &lt;LSTag Type="Spell" Tooltip="Shout_WildShape"&gt;Wild Shaped&lt;/LSTag&gt;. -->
+                    <attribute id="Text" type="TranslatedString" handle="3a0502dc-9a6c-41fb-8f1c-96ff3f879791" version="1"/>
+                    <attribute id="UUID" type="guid" value="fd6917c0-a47f-4b75-b2e4-1c60189210b0"/>
                 </node>
                 <node id="TooltipExtraTexts">
                     <!-- &lt;LSTag Type="Image" Info="TutorialYellowWarning"/&gt; This effect is &lt;b&gt;only&lt;/b&gt; active in &lt;LSTag Type="Spell" Tooltip="Shout_WildShape"&gt;Wild Shape&lt;/LSTag&gt;. -->
