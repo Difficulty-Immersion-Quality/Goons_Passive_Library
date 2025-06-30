@@ -4,6 +4,12 @@
     <region id="TooltipExtraTexts">
         <node id="root">
             <children>
+                <!-- Cumulative NOT multiplicative -->
+                <node id="TooltipExtraTexts">
+                    <!-- &lt;LSTag Type="Image" Info="SoftWarning"/&gt; This effect is cumulative, &lt;b&gt;not&lt;/b&gt; multiplicative. -->
+                    <attribute id="Text" type="TranslatedString" handle="haa7d238cg4064g4947ga9c8g3d908d1bd860" version="1"/>
+                    <attribute id="UUID" type="guid" value="d193dbf2-c16f-4416-934a-98037bf6a98e"/>
+                </node>
                 <!-- Once per attack -->
                 <node id="TooltipExtraTexts">
                     <!-- &lt;LSTag Type="Image" Info="SoftWarning"/&gt; This effect can trigger &lt;b&gt;once&lt;/b&gt; per &lt;LSTag Tooltip="AttackRoll"&gt;Attack&lt;/LSTag&gt;. -->
