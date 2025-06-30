@@ -83,12 +83,21 @@ end
 
 function Goon_IsDisengageSpell(entity)
     entity = entity or context.Source
-    return SpellId('Shout_Disengage') | SpellId('Shout_Disengage_BonusAction') | SpellId('Shout_Disengage_CunningAction') | SpellId('Shout_Disengage_StepOfTheWind') | SpellId('SYR_Shout_Disengage_BonusAction_DruidQoL')
+    return SpellId('Shout_Disengage') | SpellId('Shout_Disengage_BonusAction') | SpellId('Shout_Disengage_CunningAction') | SpellId('Shout_Disengage_StepOfTheWind') | SpellId('Shout_BootsOfSpeed') | SpellId('SYR_Shout_Disengage_BonusAction_DruidQoL')
 end
 
 function Goon_HasDisengageCondition(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'Goon_SG_Disengage', 'SG_Disengage', 'DISENGAGE', 'DRUNKEN_TECHNIQUE', 'HEAVY_BLEEDING'}, {}, {}, entity)
+    return HasAnyStatus({'Goon_SG_Disengage', 'SG_Disengage', 'DISENGAGE', 'DRUNKEN_TECHNIQUE', 'CLICK_HEELS'}, {}, {}, entity)
+end
+
+function Goon_HasDashStatus(entity)
+    entity = entity or context.Source
+    return HasAnyStatus({'DASH','DASH_STACKED','DASH_STACKED_2','GOON_DASH_STACKED_3','GOON_DASH_STACKED_4','GOON_DASH_STACKED_5','GOON_DASH_STACKED_6','GOON_DASH_STACKED_7','GOON_DASH_STACKED_8','GOON_DASH_STACKED_9'}, {}, {}, entity)
+end
+
+function Goon_IsJumpSpellCategory()
+    return SpellCategoryIs(SpellCategory.Jump)
 end
 
 -- ==================================== Weapon enchant checks ====================================
