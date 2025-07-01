@@ -53,6 +53,13 @@ function Goon_HasBurningCondition_Hell(entity)
     result = HasAnyStatus({'BURNING_HELLFIRE'}, {}, {}, entity)
 end
 
+-- ==================================== Tag checks ====================================
+
+function Goon_FiendOrUndead(entity)
+    entity = entity or context.Source
+    return Tagged('UNDEAD', entity) or Tagged('FIEND', entity) or Tagged('UNDEAD_BEAST', entity) or Tagged('SHADOW', entity)
+end
+
 -- ==================================== Fetch character levels ====================================
 
 function GoonCharacterLevelEqualTo(value, entity)
