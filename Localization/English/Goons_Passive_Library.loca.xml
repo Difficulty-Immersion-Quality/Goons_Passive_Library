@@ -11,6 +11,11 @@
 	<content contentuid="hb3a26f07g52dfg4d55g9620gfa00fdd39a99" version="1">Magic Allergy</content>
 	<content contentuid="hf677acbfgb2e1g401agb55dg5accaf8f69d5" version="1">An omnipotent force has given this creature a &lt;LSTag Type="Status" Tooltip="GOON_MAGICALLERGY_AURA"&gt;Magic Allergy&lt;/LSTag&gt;.</content>
 	
+	<!-- "Goon_Critical_Hit_Immunity" --> <content contentuid="he547088cg3538g477dg8019gd30052e44f34" version="1">Critical Hit Immunity</content>
+	<!-- "Goon_Critical_Hit_Immunity" --> <content contentuid="h7da4d760g695eg4090g965fg1039b73cf76e" version="1">&lt;LSTag Tooltip="Immune"&gt;Immune&lt;/LSTag&gt; to &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hits&lt;/LSTag&gt;.</content>
+	<!-- "Goon_Critical_Hit_Resistance" --> <content contentuid="h4e558d13g9001g4543g8e18g661852a597ec" version="1">Critical Hit Resistance</content>
+	<!-- "Goon_Critical_Hit_Resistance" --> <content contentuid="h20cfc2e4g1428g4151gb6a7g8bcd2d5b170b" version="1">&lt;LSTag Tooltip="Resistant"&gt;Resistant&lt;/LSTag&gt; to &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hits&lt;/LSTag&gt;.</content>
+
 	<content contentuid="h6822e288ga459g4837gac9cg29836b5858fb" version="1">Fall Damage Vulnerability</content>
 	<content contentuid="h24211675g665eg43f4ga3cfg327548af17b1" version="1">An omnipotent force has doubled the fall damage this creature receives.</content>
 	<content contentuid="h7aa3001bgeeceg4610g83d1g868e961d212f" version="1">Fall Damage Resistance</content>
