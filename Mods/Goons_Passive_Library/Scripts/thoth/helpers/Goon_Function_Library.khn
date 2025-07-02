@@ -144,7 +144,7 @@ end
 
 function Goon_IsUnrestrictedPolymorphStatus(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'SG_Disguise', 'SG_Doppelganger', 'WILDSHAPE_STARRY_ARCHER_PLAYER', 'WILDSHAPE_STARRY_CHALICE_PLAYER', 'WILDSHAPE_STARRY_DRAGON_PLAYER', 'STARRY_FORM_ARCHER', 'STARRY_FORM_CHALICE', 'STARRY_FORM_DRAGON', 'STORM_SHIFTER'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity) | Tagged('MINDFLAYER', entity)
+    return HasAnyStatus({'SG_Disguise', 'SG_Doppelganger', 'WILDSHAPE_STARRY_ARCHER_PLAYER', 'WILDSHAPE_STARRY_CHALICE_PLAYER', 'WILDSHAPE_STARRY_DRAGON_PLAYER', 'STARRY_FORM_ARCHER', 'STARRY_FORM_CHALICE', 'STARRY_FORM_DRAGON', 'STORM_SHIFTER'}, {}, {}, entity) | Tagged('MINDFLAYER', entity)
 end
 
 -- TODO: Need to sort out Immutable Form so it doesn't block non-hostile Polymorphs
