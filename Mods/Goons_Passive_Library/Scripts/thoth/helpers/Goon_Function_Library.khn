@@ -17,6 +17,11 @@ function WallOfFireCheck(ability, dc, result)
     return ConditionResult(result)
 end
 
+-- Added what appears to be a common solution for making the function more predictably fire
+function IsKillingBlow()
+    return HasDamageEffectFlag(DamageFlags.KillingBlow) or HasHPLessThan(1)
+end
+
 -- ==================================== STATUS GROUPINGS ====================================
 
 -- ==================================== Bleeding
