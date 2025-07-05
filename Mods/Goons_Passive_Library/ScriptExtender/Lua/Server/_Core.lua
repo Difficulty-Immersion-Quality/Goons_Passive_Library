@@ -6,7 +6,7 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
     local passives = {
         "Goon_Psuedo_Status_Groups_Master_Passive",
         "Goon_DamageReroll_Throwing_Master_Passive",
-        "Goon_Advantage_Throwing_Master_Passive".
+        "Goon_Advantage_Throwing_Master_Passive",
         "Goon_IgnoreResistance_Throwing_Master_Passive"
     }
 
