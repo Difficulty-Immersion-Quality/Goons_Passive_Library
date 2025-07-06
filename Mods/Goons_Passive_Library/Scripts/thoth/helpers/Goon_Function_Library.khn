@@ -1,16 +1,5 @@
 -- ==================================== VANILLA OVERWRITES ====================================
 
--- Added some additional tags
-function UndeadOrFiend(target)
-    target = target or context.Target
-    return Tagged('UNDEAD', target) | Tagged('FIEND', target) | Tagged('UNDEAD_BEAST', target) | Tagged('SHADOW', target)
-end
-
-function Goon_IsUndead(target)
-    target = target or context.Target
-    return Tagged('UNDEAD', target) | Tagged('UNDEAD_BEAST', target) | Tagged('SHADOW', target)
-end
-
 -- Add more technicals from entries using this function to negate niche, yet redundant saving throws from occuring
 function WallOfFireCheck(ability, dc, result)
     result = result or false
@@ -22,7 +11,7 @@ function WallOfFireCheck(ability, dc, result)
     return ConditionResult(result)
 end
 
--- TODO: Test attacking bodies and shit
+-- TODO: Test attacking bodies and shit. If that's triggering it, try 'not dead', maybe the function will fire before they are considered dead.
 -- Added what appears to be a common solution for making the function more predictably fire
 function IsKillingBlow()
     return HasDamageEffectFlag(DamageFlags.KillingBlow) | HasHPLessThan(1)
