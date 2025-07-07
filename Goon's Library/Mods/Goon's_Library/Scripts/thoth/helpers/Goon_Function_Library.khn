@@ -17,6 +17,18 @@ function IsKillingBlow()
     return HasDamageEffectFlag(DamageFlags.KillingBlow) | HasHPLessThan(1)
 end
 
+-- Death Domain was not included. -- TODO: Hunt down custom Divine Strikes, if any.
+function IsDivineStrike()
+    return SpellId('Target_DivineStrike_Melee_Life') | SpellId('Projectile_DivineStrike_Ranged_Life') 
+    | SpellId('Target_DivineStrike_Melee_Nature_Cold') | SpellId('Projectile_DivineStrike_Ranged_Nature_Cold') 
+    | SpellId('Target_DivineStrike_Melee_Nature_Fire') | SpellId('Projectile_DivineStrike_Ranged_Nature_Fire') 
+    | SpellId('Target_DivineStrike_Melee_Nature_Lightning') | SpellId('Projectile_DivineStrike_Ranged_Nature_Lightning') 
+    | SpellId('Target_DivineStrike_Melee_Tempest') | SpellId('Projectile_DivineStrike_Ranged_Tempest') 
+    | SpellId('Target_DivineStrike_Melee_Trickery') | SpellId('Projectile_DivineStrike_Ranged_Trickery') 
+    | SpellId('Target_DivineStrike_Melee_War') | SpellId('Projectile_DivineStrike_Ranged_War') 
+    | SpellId('Target_DivineStrike_Melee_Death') | SpellId('Projectile_DivineStrike_Ranged_Death')
+end
+
 -- ==================================== STATUS GROUPINGS ====================================
 
 -- ==================================== Bleeding
