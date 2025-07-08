@@ -17,20 +17,6 @@ function IsKillingBlow()
     return HasDamageEffectFlag(DamageFlags.KillingBlow) | HasHPLessThan(1)
 end
 
--- Death Domain was not included by Larian. Supports Darkness Domain by Xarara.
-function IsDivineStrike()
-    return SpellId('Target_DivineStrike_Melee_Life') | SpellId('Projectile_DivineStrike_Ranged_Life') 
-    | SpellId('Target_DivineStrike_Melee_Nature_Cold') | SpellId('Projectile_DivineStrike_Ranged_Nature_Cold') 
-    | SpellId('Target_DivineStrike_Melee_Nature_Fire') | SpellId('Projectile_DivineStrike_Ranged_Nature_Fire') 
-    | SpellId('Target_DivineStrike_Melee_Nature_Lightning') | SpellId('Projectile_DivineStrike_Ranged_Nature_Lightning') 
-    | SpellId('Target_DivineStrike_Melee_Tempest') | SpellId('Projectile_DivineStrike_Ranged_Tempest') 
-    | SpellId('Target_DivineStrike_Melee_Trickery') | SpellId('Projectile_DivineStrike_Ranged_Trickery') 
-    | SpellId('Target_DivineStrike_Melee_War') | SpellId('Projectile_DivineStrike_Ranged_War') 
-    | SpellId('Target_DivineStrike_Melee_Death') | SpellId('Projectile_DivineStrike_Ranged_Death')
-	| SpellId('TARGET_DIVINE_STRIKE_DARKNESS_DOMAIN') | SpellId('PROJECTILE_DIVINE_STRIKE_DARKNESS_DOMAIN') 
-    | SpellId('TARGET_DIVINE_STRIKE_DEATH_DOMAIN') | SpellId('PROJECTILE_DIVINE_STRIKE_DEATH_DOMAIN')
-end
-
 -- ==================================== STATUS GROUPINGS ====================================
 
 -- ==================================== Bleeding
