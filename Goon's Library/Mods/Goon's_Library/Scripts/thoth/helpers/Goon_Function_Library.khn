@@ -146,6 +146,90 @@ function Goon_IsCharismaModifierWeapon(entity)
     return HasAnyStatus({'HEXBLADE_BIND', 'PACT_BLADE'}, {}, {}, entity)
 end
 
+-- ==================================== Tag piles ====================================
+
+function Goon_IsWeapon(entity)
+    entity = entity or context.Source
+    return Goon_IsMeleeWeapon() | Goon_IsRangedWeapon()
+end
+
+function Goon_IsMeleeWeapon(entity)
+    entity = entity or context.Source
+    return Tagged('WPN_BATTLEAXE', entity) 
+    | Tagged('WPN_CLUB', entity) 
+    | Tagged('WPN_DAGGER', entity) 
+    | Tagged('WPN_DART', entity) 
+    | Tagged('WPN_FLAIL', entity) 
+    | Tagged('WPN_GLAIVE', entity) 
+    | Tagged('WPN_GREATAXE', entity) 
+    | Tagged('WPN_HALBERD', entity) 
+    | Tagged('WPN_HANDAXE', entity) 
+    | Tagged('WPN_JAVELIN', entity) 
+    | Tagged('WPN_LIGHT_HAMMER', entity) 
+    | Tagged('WPN_LONGSWORD', entity) 
+    | Tagged('WPN_MACE', entity) 
+    | Tagged('WPN_MAUL', entity) 
+    | Tagged('WPN_MORNINGSTAR', entity) 
+    | Tagged('WPN_PIKE', entity) 
+    | Tagged('WPN_STAVE', entity) 
+    | Tagged('WPN_RAPIER', entity) 
+    | Tagged('WPN_SCIMITAR', entity) 
+    | Tagged('WPN_SHORTSWORD', entity) 
+    | Tagged('WPN_SICKLE', entity) 
+    | Tagged('WPN_SPEAR', entity) 
+    | Tagged('WPN_TRIDENT', entity) 
+    | Tagged('WPN_WAR_PICK', entity) 
+    | Tagged('WPN_WARHAMMER', entity) 
+end
+
+function Goon_IsRangedWeapon(entity)
+    entity = entity or context.Source
+    return Tagged('WPN_HAND_CROSSBOW', entity) 
+    | Tagged('WPN_HEAVY_CROSSBOW', entity) 
+    | Tagged('WPN_LIGHT_CROSSBOW', entity) 
+    | Tagged('WPN_LONGBOW', entity) 
+    | Tagged('WPN_SHORTBOW', entity) 
+end
+
+function Goon_IsThrownWeapon(entity)
+    entity = entity or context.Source
+    return HasWeaponProperty(WeaponProperties.Thrown, entity)
+end
+
+function Goon_IsAxe(entity)
+    entity = entity or context.Source
+    return Tagged('WPN_BATTLEAXE', entity) 
+    | Tagged('WPN_GREATAXE', entity) 
+    | Tagged('WPN_HANDAXE', entity) 
+end
+
+function Goon_IsPolearm(entity)
+    entity = entity or context.Source
+    return Tagged('WPN_GLAIVE', entity) 
+    | Tagged('WPN_HALBERD', entity) 
+    | Tagged('WPN_JAVELIN', entity)
+    | Tagged('WPN_PIKE', entity) 
+    | Tagged('WPN_STAVE', entity) 
+    | Tagged('WPN_SPEAR', entity) 
+end
+
+function Goon_IsSword(entity)
+    entity = entity or context.Source
+    return Tagged('WPN_LONGSWORD', entity) 
+    | Tagged('WPN_RAPIER', entity) 
+    | Tagged('WPN_SCIMITAR', entity)
+    | Tagged('WPN_PIKE', entity) 
+    | Tagged('WPN_SHORTSWORD', entity) 
+    | Tagged('WPN_SPEAR', entity) 
+end
+
+function Goon_IsHammer(entity)
+    entity = entity or context.Source
+    return Tagged('WPN_LIGHT_HAMMER', entity) 
+    | Tagged('WPN_MAUL', entity) 
+    | Tagged('WPN_WARHAMMER', entity) 
+end
+
 -- ==================================== Druid and Polymorph stuff ====================================
 -- TODO: Hunt down everything relevant.
 -- Check for any and all druid forms, only druid forms and not stinky disguise self etc. 
