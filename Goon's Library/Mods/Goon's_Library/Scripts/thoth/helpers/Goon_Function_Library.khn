@@ -51,25 +51,35 @@ end
 -- ==================================== Fire shit - Is Karlach cooking?
 
 function Goon_HasBurningCondition()
-    return HasAnyStatus({'BURNING', 'BURNING_AZER', 'BURNING_HELLFIRE', 'BURNING_HOLY', 'BURNING_LAVA', 'BURNING_TRAPWALL', 'FLAMING_SPHERE_AURA', 'FLAMING_SPHERE_AURA_3', 'FLAMING_SPHERE_AURA_4', 'FLAMING_SPHERE_AURA_5', 'FLAMING_SPHERE_AURA_6', 'FLAMING_SPHERE_AURA_7', 'FLAMING_SPHERE_AURA_8', 'FLAMING_SPHERE_AURA_9', 'FLAMING_SPHERE', 'FLAMING_SPHERE_3', 'FLAMING_SPHERE_4', 'FLAMING_SPHERE_5', 'FLAMING_SPHERE_6', 'FLAMING_SPHERE_7', 'FLAMING_SPHERE_8', 'FLAMING_SPHERE_9', 'HAV_MAG_INFERNAL_FIRE', 'LOW_HOH_BOAR_BURNING_DAMAGE', 'MAG_FIRE_HEAT', 'MAG_INFERNAL_BURNING', 'ORI_KARLACH_ENRAGE', 'ORI_KARLACH_INFERNAL_FURY', 'SEARING_SMITE', 'WILD_MAGIC_BURNING'}, {}, {}, context.Target)
+    return Goon_HasBurningCondition_Normal() | Goon_HasBurningCondition_Holy() | Goon_HasBurningCondition_Hell()
+end
+
+function Goon_HasBurningConditionOrTag_Normal()
+    entity = entity or context.Target
+    result = Goon_HasBurningCondition_Normal | Goon_IsKarlachCooking()
+    return ConditionResult(result.Result, {ConditionError("IsNotOnFire")})
 end
 
 function Goon_HasBurningConditionOrTag()
     entity = entity or context.Target
-    result = HasAnyStatus({'BURNING', 'BURNING_AZER', 'BURNING_HELLFIRE', 'BURNING_HOLY', 'BURNING_LAVA', 'BURNING_TRAPWALL', 'FLAMING_SPHERE_AURA', 'FLAMING_SPHERE_AURA_3', 'FLAMING_SPHERE_AURA_4', 'FLAMING_SPHERE_AURA_5', 'FLAMING_SPHERE_AURA_6', 'FLAMING_SPHERE_AURA_7', 'FLAMING_SPHERE_AURA_8', 'FLAMING_SPHERE_AURA_9', 'FLAMING_SPHERE', 'FLAMING_SPHERE_3', 'FLAMING_SPHERE_4', 'FLAMING_SPHERE_5', 'FLAMING_SPHERE_6', 'FLAMING_SPHERE_7', 'FLAMING_SPHERE_8', 'FLAMING_SPHERE_9', 'HAV_MAG_INFERNAL_FIRE', 'LOW_HOH_BOAR_BURNING_DAMAGE', 'MAG_FIRE_HEAT', 'MAG_INFERNAL_BURNING', 'ORI_KARLACH_ENRAGE', 'ORI_KARLACH_INFERNAL_FURY', 'SEARING_SMITE', 'WILD_MAGIC_BURNING'}, {}, {}, context.Target) | Tagged('REALLY_KARLACH', context.Target) & not Tagged('KARLACH_CAN_TOUCH', context.Target)
+    result = Goon_HasBurningConditionOrTag_Normal() | Goon_HasBurningCondition_Holy() | Goon_HasBurningCondition_Hell() | Goon_IsKarlachCooking()
     return ConditionResult(result.Result, {ConditionError("IsNotOnFire")})
 end
 
-function Goon_HasBurningConditionOrTag_Normal()
-    return HasAnyStatus({'BURNING', 'BURNING_AZER', 'BURNING_LAVA', 'BURNING_TRAPWALL', 'FLAMING_SPHERE_AURA', 'FLAMING_SPHERE_AURA_3', 'FLAMING_SPHERE_AURA_4', 'FLAMING_SPHERE_AURA_5', 'FLAMING_SPHERE_AURA_6', 'FLAMING_SPHERE_AURA_7', 'FLAMING_SPHERE_AURA_8', 'FLAMING_SPHERE_AURA_9', 'FLAMING_SPHERE', 'FLAMING_SPHERE_3', 'FLAMING_SPHERE_4', 'FLAMING_SPHERE_5', 'FLAMING_SPHERE_6', 'FLAMING_SPHERE_7', 'FLAMING_SPHERE_8', 'FLAMING_SPHERE_9', 'HAV_MAG_INFERNAL_FIRE', 'LOW_HOH_BOAR_BURNING_DAMAGE', 'MAG_FIRE_HEAT', 'MAG_INFERNAL_BURNING', 'ORI_KARLACH_ENRAGE', 'ORI_KARLACH_INFERNAL_FURY', 'SEARING_SMITE', 'WILD_MAGIC_BURNING'}, {}, {}, context.Target) | Tagged('REALLY_KARLACH', context.Target) & not Tagged('KARLACH_CAN_TOUCH', context.Target)
+function Goon_HasBurningCondition_Normal()
+    return HasAnyStatus({'BURNING', 'BURNING_AZER', 'BURNING_LAVA', 'BURNING_TRAPWALL', 'FLAMING_SPHERE_AURA', 'FLAMING_SPHERE_AURA_3', 'FLAMING_SPHERE_AURA_4', 'FLAMING_SPHERE_AURA_5', 'FLAMING_SPHERE_AURA_6', 'FLAMING_SPHERE_AURA_7', 'FLAMING_SPHERE_AURA_8', 'FLAMING_SPHERE_AURA_9', 'FLAMING_SPHERE', 'FLAMING_SPHERE_3', 'FLAMING_SPHERE_4', 'FLAMING_SPHERE_5', 'FLAMING_SPHERE_6', 'FLAMING_SPHERE_7', 'FLAMING_SPHERE_8', 'FLAMING_SPHERE_9', 'HAV_MAG_INFERNAL_FIRE', 'LOW_HOH_BOAR_BURNING_DAMAGE', 'MAG_FIRE_HEAT', 'MAG_INFERNAL_BURNING', 'ORI_KARLACH_ENRAGE', 'ORI_KARLACH_INFERNAL_FURY', 'SEARING_SMITE', 'WILD_MAGIC_BURNING'}, {}, {}, context.Target)
 end
 
-function Goon_HasBurningConditionOrTag_Holy()
+function Goon_HasBurningCondition_Holy()
     return HasAnyStatus({'BURNING_HOLY'}, {}, {}, context.Target)
 end
 
-function Goon_HasBurningConditionOrTag_Hell()
+function Goon_HasBurningCondition_Hell()
     return HasAnyStatus({'BURNING_HELLFIRE'}, {}, {}, context.Target)
+end
+
+function Goon_IsKarlachCooking()
+    return HasAnyTags({'REALLY_KARLACH'}, {}, {'KARLACH_CAN_TOUCH'}, context.Target)
 end
 
 -- ==================================== Fetch character levels ====================================
@@ -147,6 +157,7 @@ function Goon_IsCharismaModifierWeapon(entity)
 end
 
 -- ==================================== Tag piles ====================================
+-- Mod support: FIREARM_MOD = Artificer
 
 function Goon_IsWeapon(entity)
     entity = entity or context.Source
@@ -155,40 +166,12 @@ end
 
 function Goon_IsMeleeWeapon(entity)
     entity = entity or context.Source
-    return Tagged('WPN_BATTLEAXE', entity) 
-    | Tagged('WPN_CLUB', entity) 
-    | Tagged('WPN_DAGGER', entity) 
-    | Tagged('WPN_DART', entity) 
-    | Tagged('WPN_FLAIL', entity) 
-    | Tagged('WPN_GLAIVE', entity) 
-    | Tagged('WPN_GREATAXE', entity) 
-    | Tagged('WPN_HALBERD', entity) 
-    | Tagged('WPN_HANDAXE', entity) 
-    | Tagged('WPN_JAVELIN', entity) 
-    | Tagged('WPN_LIGHT_HAMMER', entity) 
-    | Tagged('WPN_LONGSWORD', entity) 
-    | Tagged('WPN_MACE', entity) 
-    | Tagged('WPN_MAUL', entity) 
-    | Tagged('WPN_MORNINGSTAR', entity) 
-    | Tagged('WPN_PIKE', entity) 
-    | Tagged('WPN_STAVE', entity) 
-    | Tagged('WPN_RAPIER', entity) 
-    | Tagged('WPN_SCIMITAR', entity) 
-    | Tagged('WPN_SHORTSWORD', entity) 
-    | Tagged('WPN_SICKLE', entity) 
-    | Tagged('WPN_SPEAR', entity) 
-    | Tagged('WPN_TRIDENT', entity) 
-    | Tagged('WPN_WAR_PICK', entity) 
-    | Tagged('WPN_WARHAMMER', entity) 
+    return HasAnyTags({'WPN_BATTLEAXE', 'WPN_CLUB', 'WPN_DAGGER', 'WPN_DART', 'WPN_FLAIL', 'WPN_GLAIVE', 'WPN_GREATAXE', 'WPN_GREATSWORD', 'WPN_HALBERD', 'WPN_HANDAXE', 'WPN_JAVELIN', 'WPN_LIGHT_HAMMER', 'WPN_LONGSWORD', 'WPN_MACE', 'WPN_MAUL', 'WPN_MORNINGSTAR', 'WPN_PIKE', 'WPN_STAVE', 'WPN_RAPIER', 'WPN_SCIMITAR', 'WPN_SHORTSWORD', 'WPN_SICKLE', 'WPN_SPEAR', 'WPN_TRIDENT', 'WPN_WAR_PICK', 'WPN_WARHAMMER'}, {}, {}, entity)
 end
 
 function Goon_IsRangedWeapon(entity)
     entity = entity or context.Source
-    return Tagged('WPN_HAND_CROSSBOW', entity) 
-    | Tagged('WPN_HEAVY_CROSSBOW', entity) 
-    | Tagged('WPN_LIGHT_CROSSBOW', entity) 
-    | Tagged('WPN_LONGBOW', entity) 
-    | Tagged('WPN_SHORTBOW', entity) 
+    return HasAnyTags({'WPN_HAND_CROSSBOW', 'WPN_HEAVY_CROSSBOW', 'WPN_LIGHT_CROSSBOW', 'WPN_LONGBOW', 'WPN_SHORTBOW', 'WPN_SLING', 'FIREARM_MOD'}, {}, {}, entity)
 end
 
 function Goon_IsThrownWeapon(entity)
@@ -198,60 +181,71 @@ end
 
 function Goon_IsAxe(entity)
     entity = entity or context.Source
-    return Tagged('WPN_BATTLEAXE', entity) 
-    | Tagged('WPN_GREATAXE', entity) 
-    | Tagged('WPN_HANDAXE', entity) 
+    return HasAnyTags({'WPN_BATTLEAXE', 'WPN_GREATAXE', 'WPN_HANDAXE'}, {}, {}, entity)
 end
 
 function Goon_IsPolearm(entity)
     entity = entity or context.Source
-    return Tagged('WPN_GLAIVE', entity) 
-    | Tagged('WPN_HALBERD', entity) 
-    | Tagged('WPN_JAVELIN', entity)
-    | Tagged('WPN_PIKE', entity) 
-    | Tagged('WPN_STAVE', entity) 
-    | Tagged('WPN_SPEAR', entity) 
+    return HasAnyTags({'WPN_GLAIVE', 'WPN_HALBERD', 'WPN_JAVELIN', 'WPN_PIKE', 'WPN_STAVE', 'WPN_SPEAR'}, {}, {}, entity)
 end
 
 function Goon_IsSword(entity)
     entity = entity or context.Source
-    return Tagged('WPN_LONGSWORD', entity) 
-    | Tagged('WPN_RAPIER', entity) 
-    | Tagged('WPN_SCIMITAR', entity)
-    | Tagged('WPN_PIKE', entity) 
-    | Tagged('WPN_SHORTSWORD', entity) 
-    | Tagged('WPN_SPEAR', entity) 
+    return HasAnyTags({'WPN_GREATSWORD', 'WPN_LONGSWORD', 'WPN_RAPIER', 'WPN_SCIMITAR', 'WPN_SHORTSWORD'}, {}, {}, entity)
 end
 
 function Goon_IsHammer(entity)
     entity = entity or context.Source
-    return Tagged('WPN_LIGHT_HAMMER', entity) 
-    | Tagged('WPN_MAUL', entity) 
-    | Tagged('WPN_WARHAMMER', entity) 
+    return HasAnyTags({'WPN_LIGHT_HAMMER', 'WPN_MAUL', 'WPN_WARHAMMER'}, {}, {}, entity)
 end
 
 -- ==================================== Druid and Polymorph stuff ====================================
 -- TODO: Hunt down everything relevant.
 -- Check for any and all druid forms, only druid forms and not stinky disguise self etc. 
--- Includes support for Circle of Storm Chasers, the old (pre-toolkit) Circle of Stars.
+-- Mod support: Circle of Storm Chasers and the custom Circle of Stars.
 
 function Goon_IsDruidWildshapeOrStatus(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'SG_Polymorph_BeastShape', 'WILDSHAPE_STARRY_ARCHER_PLAYER', 'WILDSHAPE_STARRY_CHALICE_PLAYER', 'WILDSHAPE_STARRY_DRAGON_PLAYER', 'STARRY_FORM_ARCHER', 'STARRY_FORM_CHALICE', 'STARRY_FORM_DRAGON', 'STORM_SHIFTER'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity)
+    return Goon_IsWildshapeDruidPolymorph() | Goon_IsMyrmidonDruidPolymorph() | Goon_IsHumanoidDruidPolymorph()
 end
 
 function Goon_IsDruidWildshape(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'SG_Polymorph_BeastShape'}, {}, {}, entity) | HasStatus('SG_Polymorph', entity) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity)
+    return Goon_IsWildshapeDruidPolymorph() | Goon_IsMyrmidonDruidPolymorph()
 end
 
 function Goon_IsUnrestrictedPolymorphStatus(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'SG_Disguise', 'SG_Doppelganger', 'WILDSHAPE_STARRY_ARCHER_PLAYER', 'WILDSHAPE_STARRY_CHALICE_PLAYER', 'WILDSHAPE_STARRY_DRAGON_PLAYER', 'STARRY_FORM_ARCHER', 'STARRY_FORM_CHALICE', 'STARRY_FORM_DRAGON', 'STORM_SHIFTER'}, {}, {}, entity) | Tagged('MINDFLAYER', entity)
+    return Goon_IsHumanoidDruidPolymorph() | Goon_IsOtherPolymorph()
 end
 
 -- TODO: Need to sort out Immutable Form so it doesn't block non-hostile Polymorphs
 function Goon_IsNonHostilePolymorphStatus(entity)
     entity = entity or context.Source
-    return not Tagged('POLYMORPHED_UNWILLING', entity) & HasAnyStatus({'SG_Disguise', 'SG_Doppelganger', 'SG_Polymorph_BeastShape', 'WILDSHAPE_STARRY_ARCHER_PLAYER', 'WILDSHAPE_STARRY_CHALICE_PLAYER', 'WILDSHAPE_STARRY_DRAGON_PLAYER', 'STARRY_FORM_ARCHER', 'STARRY_FORM_CHALICE', 'STARRY_FORM_DRAGON', 'STORM_SHIFTER'}, {}, {}, entity) | not Tagged('POLYMORPHED_UNWILLING', entity) & HasStatus('SG_Polymorph', entity) & Tagged('MYRMIDON_FIRE', entity) or Tagged('MYRMIDON_WATER', entity) or Tagged('MYRMIDON_AIR', entity) or Tagged('MYRMIDON_EARTH', entity) | not Tagged('POLYMORPHED_UNWILLING', entity) & Tagged('MINDFLAYER', entity)
+    return not Tagged('POLYMORPHED_UNWILLING', entity) & Goon_IsWildshapeDruidPolymorph()
+    | not Tagged('POLYMORPHED_UNWILLING', entity) & Goon_IsMyrmidonDruidPolymorph()
+    | not Tagged('POLYMORPHED_UNWILLING', entity) & Goon_IsHumanoidDruidPolymorph()
+    | not Tagged('POLYMORPHED_UNWILLING', entity) & Goon_IsOtherPolymorph()
+end
+
+-- ==================================== Polymorph clusters
+
+function Goon_IsWildshapeDruidPolymorph(entity)
+    entity = entity or context.Source
+    return HasAnyStatus({'SG_Polymorph_BeastShape'}, {}, {}, entity)
+end
+
+function Goon_IsMyrmidonDruidPolymorph(entity)
+    entity = entity or context.Source
+    return HasAnyStatus({'SG_Polymorph'}, {}, {}, entity) & HasAnyTags({'MYRMIDON_FIRE', 'MYRMIDON_WATER', 'MYRMIDON_AIR', 'MYRMIDON_EARTH'}, {}, {}, entity)
+end
+
+function Goon_IsHumanoidDruidPolymorph(entity)
+    entity = entity or context.Source
+    return HasAnyStatus({'WILDSHAPE_STARRY_ARCHER_PLAYER', 'WILDSHAPE_STARRY_CHALICE_PLAYER', 'WILDSHAPE_STARRY_DRAGON_PLAYER', 'STARRY_FORM_ARCHER', 'STARRY_FORM_CHALICE', 'STARRY_FORM_DRAGON', 'STORM_SHIFTER'}, {}, {}, entity)
+end
+
+function Goon_IsOtherPolymorph(entity)
+    entity = entity or context.Source
+    return HasAnyStatus({'SG_Disguise', 'SG_Doppelganger'}, {}, {}, entity) | HasAnyTags({'MINDFLAYER'}, {}, {}, entity)
 end
