@@ -79,7 +79,7 @@ local function RunPseudoStatusGroups(charID)
     -- Bleeding
     if HasBleedingCondition(charID) then
         if Osi.HasActiveStatus(charID, "SG_Bleeding") == 0 then
-            Osi.ApplyStatus(charID, "SG_Bleeding", 100, 1, charID)
+            Osi.ApplyStatus(charID, "SG_Bleeding", -1, 1, charID)
         end
     else
         if Osi.HasActiveStatus(charID, "SG_Bleeding") == 1 then
@@ -89,7 +89,7 @@ local function RunPseudoStatusGroups(charID)
     -- Burning
     if HasBurningCondition(charID) then
         if Osi.HasActiveStatus(charID, "SG_Burning") == 0 then
-            Osi.ApplyStatus(charID, "SG_Burning", 100, 1, charID)
+            Osi.ApplyStatus(charID, "SG_Burning", -1, 1, charID)
         end
     else
         if Osi.HasActiveStatus(charID, "SG_Burning") == 1 then
@@ -99,7 +99,7 @@ local function RunPseudoStatusGroups(charID)
     -- Deafened
     if HasDeafenedCondition(charID) then
         if Osi.HasActiveStatus(charID, "SG_Deafened") == 0 then
-            Osi.ApplyStatus(charID, "SG_Deafened", 100, 1, charID)
+            Osi.ApplyStatus(charID, "SG_Deafened", -1, 1, charID)
         end
     else
         if Osi.HasActiveStatus(charID, "SG_Deafened") == 1 then
@@ -109,7 +109,7 @@ local function RunPseudoStatusGroups(charID)
     -- Silenced
     if HasSilencedCondition(charID) then
         if Osi.HasActiveStatus(charID, "SG_Silenced") == 0 then
-            Osi.ApplyStatus(charID, "SG_Silenced", 100, 1, charID)
+            Osi.ApplyStatus(charID, "SG_Silenced", -1, 1, charID)
         end
     else
         if Osi.HasActiveStatus(charID, "SG_Silenced") == 1 then
