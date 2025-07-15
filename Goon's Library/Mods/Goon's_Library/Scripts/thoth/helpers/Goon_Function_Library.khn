@@ -79,7 +79,7 @@ function Goon_HasBurningCondition_Hell()
 end
 
 function Goon_IsKarlachCooking()
-    return HasAnyTags({'REALLY_KARLACH'}, {}, {'KARLACH_CAN_TOUCH'}, context.Target)
+    return Tagged('REALLY_KARLACH', context.Target) & not Tagged('KARLACH_CAN_TOUCH', context.Target)
 end
 
 -- ==================================== Fetch character levels ====================================
@@ -166,12 +166,43 @@ end
 
 function Goon_IsMeleeWeapon(entity)
     entity = entity or context.Source
-    return HasAnyTags({'WPN_BATTLEAXE', 'WPN_CLUB', 'WPN_DAGGER', 'WPN_DART', 'WPN_FLAIL', 'WPN_GLAIVE', 'WPN_GREATAXE', 'WPN_GREATSWORD', 'WPN_HALBERD', 'WPN_HANDAXE', 'WPN_JAVELIN', 'WPN_LIGHT_HAMMER', 'WPN_LONGSWORD', 'WPN_MACE', 'WPN_MAUL', 'WPN_MORNINGSTAR', 'WPN_PIKE', 'WPN_STAVE', 'WPN_RAPIER', 'WPN_SCIMITAR', 'WPN_SHORTSWORD', 'WPN_SICKLE', 'WPN_SPEAR', 'WPN_TRIDENT', 'WPN_WAR_PICK', 'WPN_WARHAMMER'}, {}, {}, entity)
+    return Tagged('WPN_BATTLEAXE', entity)
+    | Tagged('WPN_CLUB', entity)
+    | Tagged('WPN_DAGGER', entity)
+    | Tagged('WPN_DART', entity)
+    | Tagged('WPN_FLAIL', entity)
+    | Tagged('WPN_GLAIVE', entity)
+    | Tagged('WPN_GREATAXE', entity)
+    | Tagged('WPN_GREATSWORD', entity)
+    | Tagged('WPN_HALBERD', entity)
+    | Tagged('WPN_HANDAXE', entity)
+    | Tagged('WPN_JAVELIN', entity)
+    | Tagged('WPN_LIGHT_HAMMER', entity)
+    | Tagged('WPN_LONGSWORD', entity)
+    | Tagged('WPN_MACE', entity)
+    | Tagged('WPN_MAUL', entity)
+    | Tagged('WPN_MORNINGSTAR', entity)
+    | Tagged('WPN_PIKE', entity)
+    | Tagged('WPN_STAVE', entity)
+    | Tagged('WPN_RAPIER', entity)
+    | Tagged('WPN_SCIMITAR', entity)
+    | Tagged('WPN_SHORTSWORD', entity)
+    | Tagged('WPN_SICKLE', entity)
+    | Tagged('WPN_SPEAR', entity)
+    | Tagged('WPN_TRIDENT', entity)
+    | Tagged('WPN_WAR_PICK', entity)
+    | Tagged('WPN_WARHAMMER', entity)
 end
 
 function Goon_IsRangedWeapon(entity)
     entity = entity or context.Source
-    return HasAnyTags({'WPN_HAND_CROSSBOW', 'WPN_HEAVY_CROSSBOW', 'WPN_LIGHT_CROSSBOW', 'WPN_LONGBOW', 'WPN_SHORTBOW', 'WPN_SLING', 'FIREARM_MOD'}, {}, {}, entity)
+    return Tagged('WPN_HAND_CROSSBOW', entity)
+    | Tagged('WPN_HEAVY_CROSSBOW', entity)
+    | Tagged('WPN_LIGHT_CROSSBOW', entity)
+    | Tagged('WPN_LONGBOW', entity)
+    | Tagged('WPN_SHORTBOW', entity)
+    | Tagged('WPN_SLING', entity)
+    | Tagged('FIREARM_MOD', entity)
 end
 
 function Goon_IsThrownWeapon(entity)
@@ -181,22 +212,35 @@ end
 
 function Goon_IsAxe(entity)
     entity = entity or context.Source
-    return HasAnyTags({'WPN_BATTLEAXE', 'WPN_GREATAXE', 'WPN_HANDAXE'}, {}, {}, entity)
+    return Tagged('WPN_BATTLEAXE', entity)
+    | Tagged('WPN_GREATAXE', entity)
+    | Tagged('WPN_HANDAXE', entity)
 end
 
 function Goon_IsPolearm(entity)
     entity = entity or context.Source
-    return HasAnyTags({'WPN_GLAIVE', 'WPN_HALBERD', 'WPN_JAVELIN', 'WPN_PIKE', 'WPN_STAVE', 'WPN_SPEAR'}, {}, {}, entity)
+    return Tagged('WPN_GLAIVE', entity)
+    | Tagged('WPN_HALBERD', entity)
+    | Tagged('WPN_JAVELIN', entity)
+    | Tagged('WPN_PIKE', entity)
+    | Tagged('WPN_STAVE', entity)
+    | Tagged('WPN_SPEAR', entity)
 end
 
 function Goon_IsSword(entity)
     entity = entity or context.Source
-    return HasAnyTags({'WPN_GREATSWORD', 'WPN_LONGSWORD', 'WPN_RAPIER', 'WPN_SCIMITAR', 'WPN_SHORTSWORD'}, {}, {}, entity)
+    return Tagged('WPN_GREATSWORD', entity)
+    | Tagged('WPN_LONGSWORD', entity)
+    | Tagged('WPN_RAPIER', entity)
+    | Tagged('WPN_SCIMITAR', entity)
+    | Tagged('WPN_SHORTSWORD', entity)
 end
 
 function Goon_IsHammer(entity)
     entity = entity or context.Source
-    return HasAnyTags({'WPN_LIGHT_HAMMER', 'WPN_MAUL', 'WPN_WARHAMMER'}, {}, {}, entity)
+    return Tagged('WPN_LIGHT_HAMMER', entity)
+    | Tagged('WPN_MAUL', entity)
+    | Tagged('WPN_WARHAMMER', entity)
 end
 
 -- ==================================== Druid and Polymorph stuff ====================================
@@ -237,7 +281,10 @@ end
 
 function Goon_IsMyrmidonDruidPolymorph(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'SG_Polymorph'}, {}, {}, entity) & HasAnyTags({'MYRMIDON_FIRE', 'MYRMIDON_WATER', 'MYRMIDON_AIR', 'MYRMIDON_EARTH'}, {}, {}, entity)
+    return HasStatus('SG_Polymorph', context.Source) & Tagged('MYRMIDON_AIR', entity) 
+    | HasStatus('SG_Polymorph', context.Source) & Tagged('MYRMIDON_EARTH', entity) 
+    | HasStatus('SG_Polymorph', context.Source) & Tagged('MYRMIDON_FIRE', entity) 
+    | HasStatus('SG_Polymorph', context.Source) & Tagged('MYRMIDON_WATER', entity) 
 end
 
 function Goon_IsHumanoidDruidPolymorph(entity)
@@ -247,5 +294,5 @@ end
 
 function Goon_IsOtherPolymorph(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'SG_Disguise', 'SG_Doppelganger'}, {}, {}, entity) | HasAnyTags({'MINDFLAYER'}, {}, {}, entity)
+    return HasAnyStatus({'SG_Disguise', 'SG_Doppelganger'}, {}, {}, entity) | Tagged('MINDFLAYER', entity)
 end

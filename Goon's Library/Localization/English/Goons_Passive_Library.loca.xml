@@ -403,6 +403,10 @@
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
 
+	<!-- Smite variants TooltipOnMiss -->
+	<!-- "87a38a64-94d2-4aa5-8627-4abb43fea3ae" --> <content contentuid="he8581dfbga41bg466ag8368gc0310456f8fc" version="1">Does not consume a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; or &lt;LSTag Tooltip="SpellSlot"&gt;Spell Slot&lt;/LSTag&gt;.</content>
+	<!-- "8b0c9dc7-cfb4-43ff-9514-9acc807fc663" --> <content contentuid="he169c217g2ad1g4d5ag82dfg1d7a1acc9444" version="1">Does not consume a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt;.</content>
+
 	<!-- Extra descriptions for meta information -->
 	<!-- d193dbf2-c16f-4416-934a-98037bf6a98e --> <content contentuid="haa7d238cg4064g4947ga9c8g3d908d1bd860" version="1">&lt;LSTag Type="Image" Info="SoftWarning"/&gt; This effect is cumulative, &lt;b&gt;not&lt;/b&gt; multiplicative.</content>
 	<!-- "f63b2f2d-b29b-40b8-86ea-9978c782c32e" --> <content contentuid="h32c61940gcc68g4656gaba7g520594efd435" version="1">&lt;LSTag Type="Image" Info="SoftWarning"/&gt; This effect can trigger &lt;b&gt;once&lt;/b&gt; per &lt;LSTag Tooltip="AttackRoll"&gt;Attack&lt;/LSTag&gt;.</content>
