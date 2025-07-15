@@ -225,6 +225,7 @@ function Goon_IsPolearm(entity)
     | Tagged('WPN_PIKE', entity)
     | Tagged('WPN_STAVE', entity)
     | Tagged('WPN_SPEAR', entity)
+    | Tagged('WPN_TRIDENT', entity)
 end
 
 function Goon_IsSword(entity)
