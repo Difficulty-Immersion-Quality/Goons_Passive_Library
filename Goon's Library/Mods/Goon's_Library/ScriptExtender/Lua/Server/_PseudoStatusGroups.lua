@@ -6,9 +6,9 @@
 
     local BurningCondition = {
     "BURNING",
+    "BURNING_AZER",
     "BURNING_HOLY",
     "BURNING_HELLFIRE",
-    "BURNING_AZER",
     "BURNING_LAVA",
     "BURNING_TRAPWALL",
     "FLAMING_SPHERE_AURA",
