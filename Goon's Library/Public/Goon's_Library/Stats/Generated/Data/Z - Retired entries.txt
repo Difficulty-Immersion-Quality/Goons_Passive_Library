@@ -69,3 +69,12 @@ new entry "GOON_CUSTOM_INVISIBILITY_COOLDOWN_3"
 type "StatusData"
 data "StatusType" "BOOST"
 using "GOON_SANCTUARY_AUTO_CAST_COOLDOWN"
+
+// ==================================== Master passive ====================================
+
+new entry "Goon_Psuedo_Status_Groups_Master_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnStatusApplied;OnStatusRemoved"
+data "StatsFunctors" "IF(Goon_HasBleedingCondition() and not HasStatus('SG_Bleeding')):ApplyStatus(SG_Bleeding,100,-1);IF(Goon_HasBurningCondition() and not HasStatus('SG_Burning')):ApplyStatus(SG_Burning,100,-1);IF(Goon_HasDeafenedCondition() and not HasStatus('SG_Deafened')):ApplyStatus(SG_Deafened,100,-1);IF(Goon_HasSilencedCondition() and not HasStatus('SG_Silenced')):ApplyStatus(SG_Silenced,100,-1)"
+
