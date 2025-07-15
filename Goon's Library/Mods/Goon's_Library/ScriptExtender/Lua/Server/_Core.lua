@@ -3,19 +3,18 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
     local assigned = modVars.HasGoonLibraryPassives or {}
     modVars.HasGoonLibraryPassives = assigned
 
-    local passives = {
-        "Goon_Psuedo_Status_Groups_Master_Passive",
+    local MasterPassives = {
         "Goon_DamageReroll_Throwing_Master_Passive",
         "Goon_Advantage_Throwing_Master_Passive",
         "Goon_IgnoreResistance_Throwing_Master_Passive"
     }
 
-    local function ensurePassives(entityID)
+    local function ProcessMasterPassives(entityID)
         if type(entityID) ~= "string" then return end
         if type(assigned[entityID]) ~= "table" then
             assigned[entityID] = {}
         end
-        for _, passive in ipairs(passives) do
+        for _, passive in ipairs(MasterPassives) do
             if not assigned[entityID][passive] then
                 if Osi.HasPassive(entityID, passive) == 0 then
                     Osi.AddPassive(entityID, passive)
@@ -28,18 +27,12 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
 
     -- Unique players from DB_Players
     for _, row in ipairs(Osi.DB_Players:Get(nil) or {}) do
-        ensurePassives(row[1])
+        ProcessMasterPassives(row[1])
     end
 
     -- All ServerCharacters (excluding already assigned)
     for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter") or {}) do
         local charID = entity.Uuid and entity.Uuid.EntityUuid or entity
-        ensurePassives(charID)
-    end
-
-    -- All ServerItems (excluding already assigned)
-    for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerItem") or {}) do
-        local itemID = entity.Uuid and entity.Uuid.EntityUuid or entity
-        ensurePassives(itemID)
+        ProcessMasterPassives(charID)
     end
 end)
