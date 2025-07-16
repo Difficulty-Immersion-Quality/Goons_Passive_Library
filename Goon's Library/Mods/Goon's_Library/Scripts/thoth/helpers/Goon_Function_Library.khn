@@ -105,14 +105,30 @@ end
 -- ==================================== Spell batching ====================================
 -- TODO: Hunt down everything relevant.
 
+function Goon_IsSneakAttack(entity)
+    entity = entity or context.Source
+    return HasUseCosts('SneakAttack_Charge') | Goon_IsUACunningStrikeSneakAttack()
+    | SpellId('Target_SneakAttack') | SpellId('Projectile_SneakAttack') | SpellId('Interrupt_SneakAttack') | SpellId('Interrupt_SneakAttack_Critical')
+    | SpellId('Target_SneakAttack_Rakish') | SpellId('Projectile_SneakAttack_Rakish') | SpellId('Interrupt_SneakAttack_Rakish') | SpellId('Interrupt_SneakAttack_Rakish_Critical') 
+    | SpellId('Target_SneakAttack_Swarm')
+end
+
+function Goon_IsUACunningStrikeSneakAttack(entity)
+    entity = entity or context.Source
+    return SpellId('Interrupt_DWE_SneakAttack') | SpellId('Interrupt_DWE_CunningStrike_Less1') | SpellId('Interrupt_DWE_CunningStrike_Less2') | SpellId('Interrupt_DWE_CunningStrike_Less3') | SpellId('Interrupt_DWE_CunningStrike_Less6') 
+    | SpellId('Interrupt_DWE_CunningStrike_Disarm') | SpellId('Interrupt_DWE_CunningStrike_Poison') | SpellId('Interrupt_DWE_CunningStrike_Trip') | SpellId('Interrupt_DWE_CunningStrike_Withdraw') | SpellId('Interrupt_DWE_CunningStrike_Daze') | SpellId('Interrupt_DWE_CunningStrike_KnockOut') | SpellId('Interrupt_DWE_CunningStrike_Obscure')
+end
+
 function Goon_IsBardicInspirationSpell(entity)
     entity = entity or context.Source
-    return SpellId('Target_BardicInspiration') | SpellId('Target_BardicInspiration_Combat') | SpellId('Target_MantleOfInspiration') | SpellId('Target_MantleOfInspiration_2') | SpellId('Target_MantleOfInspiration_3')
+    return SpellId('Target_BardicInspiration') | SpellId('Target_BardicInspiration_Combat') 
+    | SpellId('Target_MantleOfInspiration') | SpellId('Target_MantleOfInspiration_2') | SpellId('Target_MantleOfInspiration_3')
 end
 
 function Goon_IsDisengageSpell(entity)
     entity = entity or context.Source
-    return SpellId('Shout_Disengage') | SpellId('Shout_Disengage_BonusAction') | SpellId('Shout_Disengage_CunningAction') | SpellId('Shout_Disengage_StepOfTheWind') | SpellId('Shout_BootsOfSpeed') | SpellId('SYR_Shout_Disengage_BonusAction_DruidQoL')
+    return SpellId('Shout_Disengage') | SpellId('Shout_Disengage_BonusAction') | SpellId('Shout_Disengage_CunningAction') | SpellId('Shout_Disengage_StepOfTheWind') | SpellId('Shout_BootsOfSpeed') 
+    | SpellId('SYR_Shout_Disengage_BonusAction_DruidQoL')
 end
 
 function Goon_HasDisengageCondition(entity)
