@@ -4,6 +4,7 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, 
     modVars.HasGoonLibraryPassives = assigned
 
     local MasterPassives = {
+        "Goon_Finesse_Throwing_Master_Passive",
         "Goon_DamageReroll_Throwing_Master_Passive",
         "Goon_Advantage_Throwing_Master_Passive",
         "Goon_IgnoreResistance_Throwing_Master_Passive"
