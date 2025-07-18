@@ -414,4 +414,7 @@
 	<!-- "fd6917c0-a47f-4b75-b2e4-1c60189210b0" --> <content contentuid="h6a8a2178g3ea2g4b02g8917g854512e56734" version="1">&lt;LSTag Type="Image" Info="SoftWarning"/&gt; This effect is &lt;b&gt;also&lt;/b&gt; active while &lt;LSTag Type="Spell" Tooltip="Shout_WildShape"&gt;Wild Shaped&lt;/LSTag&gt;.</content>
 	<!-- "0960bfe9-875f-4b41-8bfc-c8c707e93e1b" --> <content contentuid="hd6719b5ag959eg49d9ga484g4ebe6721b4a7" version="1">&lt;LSTag Type="Image" Info="TutorialYellowWarning"/&gt; This effect is &lt;b&gt;only&lt;/b&gt; active in &lt;LSTag Type="Spell" Tooltip="Shout_WildShape"&gt;Wild Shape&lt;/LSTag&gt;.</content>
 	<!-- "af675b0e-50b9-4451-b006-29bded4a4280" --> <content contentuid="he3f14eecg4233g49fag8b36g49ec015f4f54" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt; This effect is &lt;b&gt;not&lt;/b&gt; active in &lt;LSTag Type="Spell" Tooltip="Shout_WildShape"&gt;Wild Shape&lt;/LSTag&gt;.</content>
+
+	<!-- Error descriptions -->
+	<!-- "Goon_IsNotDippableSurfaceOrEntity" --> <content contentuid="hcdc02744g6b9bg4489gbb8dg5a72131736a5" version="1">Must be a Dippable surface or entity.</content>
 </contentList>

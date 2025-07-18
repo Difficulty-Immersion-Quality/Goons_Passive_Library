@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="3" revision="0" build="0"/>
+    <region id="ConditionErrors">
+        <node id="root">
+            <children>
+                <node id="ConditionErrors">
+                    <!-- Must be a Dippable surface or entity. -->
+                    <attribute id="DisplayName" type="TranslatedString" handle="hcdc02744g6b9bg4489gbb8dg5a72131736a5" version="1"/>
+                    <attribute id="ErrorDescriptionType" type="uint8" value="0"/>
+                    <attribute id="Identifier" type="FixedString" value="Goon_IsNotDippableSurfaceOrEntity"/>
+                    <attribute id="UUID" type="guid" value="f140a315-a39a-4fe1-b7ca-6a0666708cbb"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>
