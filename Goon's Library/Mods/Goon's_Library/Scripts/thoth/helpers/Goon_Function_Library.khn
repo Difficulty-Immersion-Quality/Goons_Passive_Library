@@ -113,70 +113,93 @@ end
 -- ==================================== Spell batching ====================================
 -- TODO: Hunt down everything relevant.
 
-function Goon_IsSneakAttack(entity)
-    entity = entity or context.Source
+function Goon_IsSneakAttackSpell()
+	return SpellId('Target_SneakAttack')
+		 | SpellId('Projectile_SneakAttack')
+		 | SpellId('Target_SneakAttack_Rakish')
+		 | SpellId('Projectile_SneakAttack_Rakish')
+         | SpellId('Target_SneakAttack_Swarm')
+end
+
+function Goon_IsSneakAttack()
     return HasUseCosts('SneakAttack_Charge') | Goon_IsUACunningStrikeSneakAttack()
-    | SpellId('Target_SneakAttack') | SpellId('Projectile_SneakAttack') | SpellId('Interrupt_SneakAttack') | SpellId('Interrupt_SneakAttack_Critical')
-    | SpellId('Target_SneakAttack_Rakish') | SpellId('Projectile_SneakAttack_Rakish') | SpellId('Interrupt_SneakAttack_Rakish') | SpellId('Interrupt_SneakAttack_Rakish_Critical') 
-    | SpellId('Target_SneakAttack_Swarm')
+         | SpellId('Target_SneakAttack') | SpellId('Projectile_SneakAttack') | SpellId('Interrupt_SneakAttack') | SpellId('Interrupt_SneakAttack_Critical')
+         | SpellId('Target_SneakAttack_Rakish') | SpellId('Projectile_SneakAttack_Rakish') | SpellId('Interrupt_SneakAttack_Rakish') | SpellId('Interrupt_SneakAttack_Rakish_Critical') 
+         | SpellId('Target_SneakAttack_Swarm')
 end
 
-function Goon_IsUACunningStrikeSneakAttack(entity)
-    entity = entity or context.Source
-    return SpellId('Interrupt_DWE_SneakAttack') | SpellId('Interrupt_DWE_CunningStrike_Less1') | SpellId('Interrupt_DWE_CunningStrike_Less2') | SpellId('Interrupt_DWE_CunningStrike_Less3') | SpellId('Interrupt_DWE_CunningStrike_Less6') 
-    | SpellId('Interrupt_DWE_CunningStrike_Disarm') | SpellId('Interrupt_DWE_CunningStrike_Poison') | SpellId('Interrupt_DWE_CunningStrike_Trip') | SpellId('Interrupt_DWE_CunningStrike_Withdraw') | SpellId('Interrupt_DWE_CunningStrike_Daze') | SpellId('Interrupt_DWE_CunningStrike_KnockOut') | SpellId('Interrupt_DWE_CunningStrike_Obscure')
+function Goon_IsUACunningStrikeSneakAttack()
+    return SpellId('Interrupt_DWE_SneakAttack')
+         | SpellId('Interrupt_DWE_CunningStrike_Less1') 
+         | SpellId('Interrupt_DWE_CunningStrike_Less2') 
+         | SpellId('Interrupt_DWE_CunningStrike_Less3') 
+         | SpellId('Interrupt_DWE_CunningStrike_Less6') 
+         | SpellId('Interrupt_DWE_CunningStrike_Disarm') 
+         | SpellId('Interrupt_DWE_CunningStrike_Poison') 
+         | SpellId('Interrupt_DWE_CunningStrike_Trip') 
+         | SpellId('Interrupt_DWE_CunningStrike_Withdraw') 
+         | SpellId('Interrupt_DWE_CunningStrike_Daze') 
+         | SpellId('Interrupt_DWE_CunningStrike_KnockOut') 
+         | SpellId('Interrupt_DWE_CunningStrike_Obscure')
 end
 
--- TODO: Fill this out with the custom reactions and stuff!
-function Goon_IsFlourish(entity)
-    entity = entity or context.Source
-    return SpellId('Target_BladeFlourish_Defensive') | SpellId('Projectile_BladeFlourish_Defensive') 
-    | SpellId('Target_BladeFlourish_Mobile') | SpellId('Projectile_BladeFlourish_Mobile') 
-    | SpellId('Zone_BladeFlourish_Slashing') | SpellId('Projectile_BladeFlourish_Slashing') 
+-- TODO: Fill this out with the custom reactions and temporary spells!
+function Goon_IsFlourish()
+    return SpellId('Target_BladeFlourish_Defensive')
+         | SpellId('Projectile_BladeFlourish_Defensive')
+         | SpellId('Goon_Interrupt_BladeFlourish_Defensive')
+         | SpellId('Target_BladeFlourish_Mobile')
+         | SpellId('Projectile_BladeFlourish_Mobile')
+         | SpellId('Goon_Interrupt_BladeFlourish_Mobile')
+         | SpellId('Zone_BladeFlourish_Slashing')
+         | SpellId('Projectile_BladeFlourish_Slashing')
+         | SpellId('Goon_Interrupt_BladeFlourish_Slashing')
 end
 
-function Goon_IsBardicInspirationSpell(entity)
-    entity = entity or context.Source
-    return SpellId('Target_BardicInspiration') | SpellId('Target_BardicInspiration_Combat') 
-    | SpellId('Target_MantleOfInspiration') | SpellId('Target_MantleOfInspiration_2') | SpellId('Target_MantleOfInspiration_3')
+function Goon_IsBardicInspirationSpell()
+    return SpellId('Target_BardicInspiration') 
+         | SpellId('Target_BardicInspiration_Combat') 
+         | SpellId('Target_MantleOfInspiration') 
+         | SpellId('Target_MantleOfInspiration_2') 
+         | SpellId('Target_MantleOfInspiration_3')
 end
 
-function Goon_IsCreateSorceryPoints(entity)
-    entity = entity or context.Source
+function Goon_IsCreateSorceryPoints()
     return SpellId('Shout_CreateSorceryPoints_1') 
-    | SpellId('Shout_CreateSorceryPoints_2') 
-    | SpellId('Shout_CreateSorceryPoints_3') 
-    | SpellId('Shout_CreateSorceryPoints_4') 
-    | SpellId('Shout_CreateSorceryPoints_5') 
-    | SpellId('Shout_CreateSorceryPoints_6') 
-    | SpellId('Shout_CreateSorceryPoints_7') 
-    | SpellId('Shout_CreateSorceryPoints_8') 
-    | SpellId('Shout_CreateSorceryPoints_9') 
-    | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_1') 
-    | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_2') 
-    | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_3') 
-    | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_4') 
-    | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_5') 
-    | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_6') 
-    | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_7') 
-    | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_8') 
-    | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_9') 
+         | SpellId('Shout_CreateSorceryPoints_2') 
+         | SpellId('Shout_CreateSorceryPoints_3') 
+         | SpellId('Shout_CreateSorceryPoints_4') 
+         | SpellId('Shout_CreateSorceryPoints_5') 
+         | SpellId('Shout_CreateSorceryPoints_6') 
+         | SpellId('Shout_CreateSorceryPoints_7') 
+         | SpellId('Shout_CreateSorceryPoints_8') 
+         | SpellId('Shout_CreateSorceryPoints_9') 
+         | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_1') 
+         | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_2') 
+         | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_3') 
+         | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_4') 
+         | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_5') 
+         | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_6') 
+         | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_7') 
+         | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_8') 
+         | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_9') 
 end
 
-function Goon_IsDisengageSpell(entity)
-    entity = entity or context.Source
-    return SpellId('Shout_Disengage') | SpellId('Shout_Disengage_BonusAction') | SpellId('Shout_Disengage_CunningAction') | SpellId('Shout_Disengage_StepOfTheWind') | SpellId('Shout_BootsOfSpeed') 
-    | SpellId('SYR_Shout_Disengage_BonusAction_DruidQoL')
+function Goon_IsDisengageSpell()
+    return SpellId('Shout_Disengage') 
+         | SpellId('Shout_Disengage_BonusAction') 
+         | SpellId('Shout_Disengage_CunningAction') 
+         | SpellId('Shout_Disengage_StepOfTheWind') 
+         | SpellId('Shout_BootsOfSpeed') 
+         | SpellId('SYR_Shout_Disengage_BonusAction_DruidQoL')
 end
 
-function Goon_HasDisengageCondition(entity)
-    entity = entity or context.Source
-    return HasAnyStatus({'SG_Disengage', 'DISENGAGE', 'DRUNKEN_TECHNIQUE', 'CLICK_HEELS'}, {}, {}, entity)
+function Goon_HasDisengageCondition()
+    return HasAnyStatus({'SG_Disengage', 'DISENGAGE', 'DRUNKEN_TECHNIQUE', 'CLICK_HEELS'}, {}, {})
 end
 
-function Goon_HasDashStatus(entity)
-    entity = entity or context.Source
-    return HasAnyStatus({'DASH','DASH_STACKED','DASH_STACKED_2','GOON_DASH_STACKED_3','GOON_DASH_STACKED_4','GOON_DASH_STACKED_5','GOON_DASH_STACKED_6','GOON_DASH_STACKED_7','GOON_DASH_STACKED_8','GOON_DASH_STACKED_9'}, {}, {}, entity)
+function Goon_HasDashStatus()
+    return HasAnyStatus({'DASH','DASH_STACKED','DASH_STACKED_2','GOON_DASH_STACKED_3','GOON_DASH_STACKED_4','GOON_DASH_STACKED_5','GOON_DASH_STACKED_6','GOON_DASH_STACKED_7','GOON_DASH_STACKED_8','GOON_DASH_STACKED_9'}, {}, {})
 end
 
 function Goon_IsJumpSpellCategory()
@@ -190,24 +213,20 @@ end
 -- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsWisdomModifierWeapon(GetAttackWeapon(context.Source)))
 -- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsCharismaModifierWeapon(GetAttackWeapon(context.Source)))
 
-function Goon_IsSpellcastingModifierWeapon(entity)
-    entity = entity or context.Source
-    return HasAnyStatus({'MAG_MELEE_CASTER_BOON', 'LHB_SEL_TASHASOTHERWORLDLYGUISE_MAGICWEAPON'}, {}, {}, entity)
+function Goon_IsSpellcastingModifierWeapon()
+    return HasAnyStatus({'MAG_MELEE_CASTER_BOON', 'LHB_SEL_TASHASOTHERWORLDLYGUISE_MAGICWEAPON'}, {}, {})
 end
 
-function Goon_IsIntelligenceModifierWeapon(entity)
-    entity = entity or context.Source
-    return HasAnyStatus({}, {}, {}, entity)
+function Goon_IsIntelligenceModifierWeapon()
+    return HasAnyStatus({}, {}, {})
 end
 
-function Goon_IsWisdomModifierWeapon(entity)
-    entity = entity or context.Source
-    return HasAnyStatus({'SHILLELAGH', 'FourEle_Attuned'}, {}, {}, entity)
+function Goon_IsWisdomModifierWeapon()
+    return HasAnyStatus({'SHILLELAGH', 'FourEle_Attuned'}, {}, {})
 end
 
-function Goon_IsCharismaModifierWeapon(entity)
-    entity = entity or context.Source
-    return HasAnyStatus({'HEXBLADE_BIND', 'PACT_BLADE'}, {}, {}, entity)
+function Goon_IsCharismaModifierWeapon()
+    return HasAnyStatus({'HEXBLADE_BIND', 'PACT_BLADE'}, {}, {})
 end
 
 -- ==================================== Tag piles ====================================
@@ -216,48 +235,49 @@ end
 -- HasAnyTags only works in stats and not khn, but unlike Tagged it works with context.HitDescription.ThrownObject, despite only having one use case in the whole fucking game.
 
 function Goon_IsWeapon()
-    return Goon_IsMeleeWeapon() | Goon_IsRangedWeapon()
+    return Goon_IsMeleeWeapon() 
+         | Goon_IsRangedWeapon()
 end
 
 -- Just use HasWeaponProperty(WeaponProperties.Melee, context.HitDescription.ThrownObject) instead
 function Goon_IsMeleeWeapon()
     return Tagged('WPN_BATTLEAXE') 
-    | Tagged('WPN_CLUB') 
-    | Tagged('WPN_DAGGER') 
-    | Tagged('WPN_DART') 
-    | Tagged('WPN_FLAIL') 
-    | Tagged('WPN_GLAIVE') 
-    | Tagged('WPN_GREATAXE') 
-    | Tagged('WPN_GREATSWORD') 
-    | Tagged('WPN_HALBERD') 
-    | Tagged('WPN_HANDAXE') 
-    | Tagged('WPN_JAVELIN') 
-    | Tagged('WPN_LIGHT_HAMMER') 
-    | Tagged('WPN_LONGSWORD') 
-    | Tagged('WPN_MACE') 
-    | Tagged('WPN_MAUL') 
-    | Tagged('WPN_MORNINGSTAR') 
-    | Tagged('WPN_PIKE') 
-    | Tagged('WPN_STAVE') 
-    | Tagged('WPN_RAPIER') 
-    | Tagged('WPN_SCIMITAR') 
-    | Tagged('WPN_SHORTSWORD') 
-    | Tagged('WPN_SICKLE') 
-    | Tagged('WPN_SPEAR') 
-    | Tagged('WPN_TRIDENT') 
-    | Tagged('WPN_WAR_PICK') 
-    | Tagged('WPN_WARHAMMER')
+         | Tagged('WPN_CLUB') 
+         | Tagged('WPN_DAGGER') 
+         | Tagged('WPN_DART') 
+         | Tagged('WPN_FLAIL') 
+         | Tagged('WPN_GLAIVE') 
+         | Tagged('WPN_GREATAXE') 
+         | Tagged('WPN_GREATSWORD') 
+         | Tagged('WPN_HALBERD') 
+         | Tagged('WPN_HANDAXE') 
+         | Tagged('WPN_JAVELIN') 
+         | Tagged('WPN_LIGHT_HAMMER') 
+         | Tagged('WPN_LONGSWORD') 
+         | Tagged('WPN_MACE') 
+         | Tagged('WPN_MAUL') 
+         | Tagged('WPN_MORNINGSTAR') 
+         | Tagged('WPN_PIKE') 
+         | Tagged('WPN_STAVE') 
+         | Tagged('WPN_RAPIER') 
+         | Tagged('WPN_SCIMITAR') 
+         | Tagged('WPN_SHORTSWORD') 
+         | Tagged('WPN_SICKLE') 
+         | Tagged('WPN_SPEAR') 
+         | Tagged('WPN_TRIDENT') 
+         | Tagged('WPN_WAR_PICK') 
+         | Tagged('WPN_WARHAMMER')
 end
 
 -- Just use HasWeaponProperty(WeaponProperties.Ammunition, context.HitDescription.ThrownObject) instead
 function Goon_IsRangedWeapon()
     return Tagged('WPN_HAND_CROSSBOW') 
-    | Tagged('WPN_HEAVY_CROSSBOW') 
-    | Tagged('WPN_LIGHT_CROSSBOW') 
-    | Tagged('WPN_LONGBOW') 
-    | Tagged('WPN_SHORTBOW') 
-    | Tagged('WPN_SLING') 
-    | Tagged('FIREARM_MOD')
+         | Tagged('WPN_HEAVY_CROSSBOW') 
+         | Tagged('WPN_LIGHT_CROSSBOW') 
+         | Tagged('WPN_LONGBOW') 
+         | Tagged('WPN_SHORTBOW') 
+         | Tagged('WPN_SLING') 
+         | Tagged('FIREARM_MOD')
 end
 
 function Goon_IsThrownWeapon()
@@ -266,32 +286,32 @@ end
 
 function Goon_IsAxe()
     return Tagged('WPN_BATTLEAXE') 
-    | Tagged('WPN_GREATAXE') 
-    | Tagged('WPN_HANDAXE')
+         | Tagged('WPN_GREATAXE') 
+         | Tagged('WPN_HANDAXE')
 end
 
 function Goon_IsPolearm()
     return Tagged('WPN_GLAIVE') 
-    | Tagged('WPN_HALBERD') 
-    | Tagged('WPN_JAVELIN') 
-    | Tagged('WPN_PIKE') 
-    | Tagged('WPN_STAVE') 
-    | Tagged('WPN_SPEAR') 
-    | Tagged('WPN_TRIDENT')
+         | Tagged('WPN_HALBERD') 
+         | Tagged('WPN_JAVELIN') 
+         | Tagged('WPN_PIKE') 
+         | Tagged('WPN_STAVE') 
+         | Tagged('WPN_SPEAR') 
+         | Tagged('WPN_TRIDENT')
 end
 
 function Goon_IsSword()
     return Tagged('WPN_GREATSWORD') 
-    | Tagged('WPN_LONGSWORD') 
-    | Tagged('WPN_RAPIER') 
-    | Tagged('WPN_SCIMITAR') 
-    | Tagged('WPN_SHORTSWORD')
+         | Tagged('WPN_LONGSWORD') 
+         | Tagged('WPN_RAPIER') 
+         | Tagged('WPN_SCIMITAR') 
+         | Tagged('WPN_SHORTSWORD')
 end
 
 function Goon_IsHammer()
     return Tagged('WPN_LIGHT_HAMMER') 
-    | Tagged('WPN_MAUL') 
-    | Tagged('WPN_WARHAMMER')
+         | Tagged('WPN_MAUL') 
+         | Tagged('WPN_WARHAMMER')
 end
 
 -- ==================================== Druid and Polymorph stuff ====================================
