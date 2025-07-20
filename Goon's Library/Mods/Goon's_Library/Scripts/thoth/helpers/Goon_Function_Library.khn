@@ -212,90 +212,61 @@ end
 
 -- ==================================== Tag piles ====================================
 -- Mod support: FIREARM_MOD = Artificer
+-- NOTE: These will not work for boosts using context.HitDescription.ThrownObject. But maybe declaring that context in the functions themselves will work.
+-- HasAnyTags only works in stats and not khn, but it works with context.HitDescription.ThrownObject, despite only having one use case in the whole fucking game.
 
-function Goon_IsWeapon(entity)
-    entity = entity or context.Source
+function Goon_IsWeapon()
     return Goon_IsMeleeWeapon() | Goon_IsRangedWeapon()
 end
 
-function Goon_IsMeleeWeapon(entity)
-    entity = entity or context.Source
-    return Tagged('WPN_BATTLEAXE', entity)
-    | Tagged('WPN_CLUB', entity)
-    | Tagged('WPN_DAGGER', entity)
-    | Tagged('WPN_DART', entity)
-    | Tagged('WPN_FLAIL', entity)
-    | Tagged('WPN_GLAIVE', entity)
-    | Tagged('WPN_GREATAXE', entity)
-    | Tagged('WPN_GREATSWORD', entity)
-    | Tagged('WPN_HALBERD', entity)
-    | Tagged('WPN_HANDAXE', entity)
-    | Tagged('WPN_JAVELIN', entity)
-    | Tagged('WPN_LIGHT_HAMMER', entity)
-    | Tagged('WPN_LONGSWORD', entity)
-    | Tagged('WPN_MACE', entity)
-    | Tagged('WPN_MAUL', entity)
-    | Tagged('WPN_MORNINGSTAR', entity)
-    | Tagged('WPN_PIKE', entity)
-    | Tagged('WPN_STAVE', entity)
-    | Tagged('WPN_RAPIER', entity)
-    | Tagged('WPN_SCIMITAR', entity)
-    | Tagged('WPN_SHORTSWORD', entity)
-    | Tagged('WPN_SICKLE', entity)
-    | Tagged('WPN_SPEAR', entity)
-    | Tagged('WPN_TRIDENT', entity)
-    | Tagged('WPN_WAR_PICK', entity)
-    | Tagged('WPN_WARHAMMER', entity)
+-- Just use HasWeaponProperty(WeaponProperties.Melee, context.HitDescription.ThrownObject) instead
+function Goon_IsMeleeWeapon()
+    return Tagged('WPN_BATTLEAXE') | Tagged('WPN_CLUB') | Tagged('WPN_DAGGER') | Tagged('WPN_DART') | Tagged('WPN_FLAIL') | Tagged('WPN_GLAIVE') | Tagged('WPN_GREATAXE') | Tagged('WPN_GREATSWORD') | Tagged('WPN_HALBERD') | Tagged('WPN_HANDAXE') | Tagged('WPN_JAVELIN') | Tagged('WPN_LIGHT_HAMMER') | Tagged('WPN_LONGSWORD') | Tagged('WPN_MACE') | Tagged('WPN_MAUL') | Tagged('WPN_MORNINGSTAR') | Tagged('WPN_PIKE') | Tagged('WPN_STAVE') | Tagged('WPN_RAPIER') | Tagged('WPN_SCIMITAR') | Tagged('WPN_SHORTSWORD') | Tagged('WPN_SICKLE') | Tagged('WPN_SPEAR') | Tagged('WPN_TRIDENT') | Tagged('WPN_WAR_PICK') | Tagged('WPN_WARHAMMER')
 end
 
-function Goon_IsRangedWeapon(entity)
-    entity = entity or context.Source
-    return Tagged('WPN_HAND_CROSSBOW', entity)
-    | Tagged('WPN_HEAVY_CROSSBOW', entity)
-    | Tagged('WPN_LIGHT_CROSSBOW', entity)
-    | Tagged('WPN_LONGBOW', entity)
-    | Tagged('WPN_SHORTBOW', entity)
-    | Tagged('WPN_SLING', entity)
-    | Tagged('FIREARM_MOD', entity)
+-- Just use HasWeaponProperty(WeaponProperties.Ammunition, context.HitDescription.ThrownObject) instead
+function Goon_IsRangedWeapon()
+    return Tagged('WPN_HAND_CROSSBOW')
+    | Tagged('WPN_HEAVY_CROSSBOW')
+    | Tagged('WPN_LIGHT_CROSSBOW')
+    | Tagged('WPN_LONGBOW')
+    | Tagged('WPN_SHORTBOW')
+    | Tagged('WPN_SLING')
+    | Tagged('FIREARM_MOD')
 end
 
-function Goon_IsThrownWeapon(entity)
-    entity = entity or context.Source
-    return HasWeaponProperty(WeaponProperties.Thrown, entity)
+function Goon_IsThrownWeapon()
+    return HasWeaponProperty(WeaponProperties.Thrown)
 end
 
-function Goon_IsAxe(entity)
-    entity = entity or context.Source
-    return Tagged('WPN_BATTLEAXE', entity)
-    | Tagged('WPN_GREATAXE', entity)
-    | Tagged('WPN_HANDAXE', entity)
+function Goon_IsAxe()
+    return Tagged('WPN_BATTLEAXE')
+    | Tagged('WPN_GREATAXE')
+    | Tagged('WPN_HANDAXE')
 end
 
-function Goon_IsPolearm(entity)
-    entity = entity or context.Source
-    return Tagged('WPN_GLAIVE', entity)
-    | Tagged('WPN_HALBERD', entity)
-    | Tagged('WPN_JAVELIN', entity)
-    | Tagged('WPN_PIKE', entity)
-    | Tagged('WPN_STAVE', entity)
-    | Tagged('WPN_SPEAR', entity)
-    | Tagged('WPN_TRIDENT', entity)
+function Goon_IsPolearm()
+    return Tagged('WPN_GLAIVE')
+    | Tagged('WPN_HALBERD')
+    | Tagged('WPN_JAVELIN')
+    | Tagged('WPN_PIKE')
+    | Tagged('WPN_STAVE')
+    | Tagged('WPN_SPEAR')
+    | Tagged('WPN_TRIDENT')
 end
 
-function Goon_IsSword(entity)
-    entity = entity or context.Source
-    return Tagged('WPN_GREATSWORD', entity)
-    | Tagged('WPN_LONGSWORD', entity)
-    | Tagged('WPN_RAPIER', entity)
-    | Tagged('WPN_SCIMITAR', entity)
-    | Tagged('WPN_SHORTSWORD', entity)
+function Goon_IsSword()
+    return Tagged('WPN_GREATSWORD')
+    | Tagged('WPN_LONGSWORD')
+    | Tagged('WPN_RAPIER')
+    | Tagged('WPN_SCIMITAR')
+    | Tagged('WPN_SHORTSWORD')
 end
 
-function Goon_IsHammer(entity)
-    entity = entity or context.Source
-    return Tagged('WPN_LIGHT_HAMMER', entity)
-    | Tagged('WPN_MAUL', entity)
-    | Tagged('WPN_WARHAMMER', entity)
+function Goon_IsHammer()
+    return Tagged('WPN_LIGHT_HAMMER')
+    | Tagged('WPN_MAUL')
+    | Tagged('WPN_WARHAMMER')
 end
 
 -- ==================================== Druid and Polymorph stuff ====================================
