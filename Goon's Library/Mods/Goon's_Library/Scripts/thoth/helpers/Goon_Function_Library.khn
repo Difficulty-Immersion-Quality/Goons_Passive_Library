@@ -213,7 +213,7 @@ end
 -- ==================================== Tag piles ====================================
 -- Mod support: FIREARM_MOD = Artificer
 -- NOTE: These will not work for boosts using context.HitDescription.ThrownObject. But maybe declaring that context in the functions themselves will work.
--- HasAnyTags only works in stats and not khn, but it works with context.HitDescription.ThrownObject, despite only having one use case in the whole fucking game.
+-- HasAnyTags only works in stats and not khn, but unlike Tagged it works with context.HitDescription.ThrownObject, despite only having one use case in the whole fucking game.
 
 function Goon_IsWeapon()
     return Goon_IsMeleeWeapon() | Goon_IsRangedWeapon()
