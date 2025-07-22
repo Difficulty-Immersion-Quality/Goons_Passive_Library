@@ -113,6 +113,8 @@ end
 -- ==================================== Spell batching ====================================
 -- TODO: Hunt down everything relevant.
 
+-- ==================================== Sneak Attacks
+
 function Goon_IsSneakAttackSpell()
 	return SpellId('Target_SneakAttack')
 		 | SpellId('Projectile_SneakAttack')
@@ -122,9 +124,16 @@ function Goon_IsSneakAttackSpell()
 end
 
 function Goon_IsSneakAttack()
-    return HasUseCosts('SneakAttack_Charge') | Goon_IsUACunningStrikeSneakAttack()
-         | SpellId('Target_SneakAttack') | SpellId('Projectile_SneakAttack') | SpellId('Interrupt_SneakAttack') | SpellId('Interrupt_SneakAttack_Critical')
-         | SpellId('Target_SneakAttack_Rakish') | SpellId('Projectile_SneakAttack_Rakish') | SpellId('Interrupt_SneakAttack_Rakish') | SpellId('Interrupt_SneakAttack_Rakish_Critical') 
+    return HasUseCosts('SneakAttack_Charge') 
+         | Goon_IsUACunningStrikeSneakAttack()
+         | SpellId('Target_SneakAttack') 
+         | SpellId('Projectile_SneakAttack') 
+         | SpellId('Interrupt_SneakAttack') 
+         | SpellId('Interrupt_SneakAttack_Critical')
+         | SpellId('Target_SneakAttack_Rakish') 
+         | SpellId('Projectile_SneakAttack_Rakish') 
+         | SpellId('Interrupt_SneakAttack_Rakish') 
+         | SpellId('Interrupt_SneakAttack_Rakish_Critical') 
          | SpellId('Target_SneakAttack_Swarm')
 end
 
@@ -143,18 +152,41 @@ function Goon_IsUACunningStrikeSneakAttack()
          | SpellId('Interrupt_DWE_CunningStrike_Obscure')
 end
 
+-- ==================================== Flourishes
+
 -- TODO: Fill this out with the custom reactions and temporary spells!
 function Goon_IsFlourish()
+    return Goon_IsFlourishSpell() 
+         | Goon_IsFlourishTemporarySpell() 
+         | Goon_IsFlourishInterrupt()
+end
+
+function Goon_IsFlourishSpell()
     return SpellId('Target_BladeFlourish_Defensive')
          | SpellId('Projectile_BladeFlourish_Defensive')
-         | SpellId('Goon_Interrupt_BladeFlourish_Defensive')
          | SpellId('Target_BladeFlourish_Mobile')
          | SpellId('Projectile_BladeFlourish_Mobile')
-         | SpellId('Goon_Interrupt_BladeFlourish_Mobile')
          | SpellId('Zone_BladeFlourish_Slashing')
          | SpellId('Projectile_BladeFlourish_Slashing')
+end
+
+function Goon_IsFlourishTemporarySpell()
+    return SpellId('Goon_Target_BladeFlourish_Defensive_Temporary')
+         | SpellId('Goon_Projectile_BladeFlourish_Defensive_Temporary')
+         | SpellId('Goon_Target_BladeFlourish_Mobile_Temporary')
+         | SpellId('Goon_Projectile_BladeFlourish_Mobile_Temporary')
+         | SpellId('Goon_Target_BladeFlourish_Slashing_Temporary')
+         | SpellId('Goon_Projectile_BladeFlourish_Slashing_Temporary')
+         | SpellId('Goon_Throw_BladeFlourish_Slashing_Temporary')
+end
+
+function Goon_IsFlourishInterrupt()
+    return SpellId('Goon_Interrupt_BladeFlourish_Defensive')
+         | SpellId('Goon_Interrupt_BladeFlourish_Mobile')
          | SpellId('Goon_Interrupt_BladeFlourish_Slashing')
 end
+
+-- ==================================== Bardic Inspiration
 
 function Goon_IsBardicInspirationSpell()
     return SpellId('Target_BardicInspiration') 
@@ -163,6 +195,8 @@ function Goon_IsBardicInspirationSpell()
          | SpellId('Target_MantleOfInspiration_2') 
          | SpellId('Target_MantleOfInspiration_3')
 end
+
+-- ==================================== Sorcerer stuff
 
 function Goon_IsCreateSorceryPoints()
     return SpellId('Shout_CreateSorceryPoints_1') 
@@ -184,6 +218,8 @@ function Goon_IsCreateSorceryPoints()
          | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_8') 
          | SpellId('Goon_Shout_CreateSorceryPoints_Warlock_9') 
 end
+
+-- ==================================== Common Actions
 
 function Goon_IsDisengageSpell()
     return SpellId('Shout_Disengage') 
