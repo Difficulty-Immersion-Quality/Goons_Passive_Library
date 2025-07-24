@@ -401,9 +401,9 @@ end
 
 -- ==================================== Surface check stuff ====================================
 
-function Goon_CreateSurfaceCheck(entity)
+function Goon_CreateSurfaceSpellCheck(entity)
     entity = entity or context.Source
-    return HasAnyStatus({'GOON_SURFACE_CHECK', 'GOON_DEADORITEM_CHECK'}, {}, {}, entity)
+    return ~HasStatus('GOON_SURFACE_CHECK', entity) | HasStatus('GOON_DEADORITEM_CHECK', entity)
 end
 
 function Goon_IsItemOrDead(entity)
