@@ -1,0 +1,13 @@
+// ==================================== Surface checks ====================================
+
+new entry "GOON_SURFACE_CHECK"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackId" "GOON_SURFACE_CHECK"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "GOON_DEADORITEM_CHECK"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackId" "GOON_DEAD_ITEM_CHECK"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"

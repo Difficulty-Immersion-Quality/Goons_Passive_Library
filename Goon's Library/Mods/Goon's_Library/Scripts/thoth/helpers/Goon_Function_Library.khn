@@ -398,3 +398,15 @@ function Goon_IsOtherPolymorph(entity)
     entity = entity or context.Source
     return HasAnyStatus({'SG_Disguise', 'SG_Doppelganger'}, {}, {}, entity) | Tagged('MINDFLAYER', entity)
 end
+
+-- ==================================== Surface check stuff ====================================
+
+function Goon_CreateSurfaceCheck(entity)
+    entity = entity or context.Source
+    return HasAnyStatus({'GOON_SURFACE_CHECK', 'GOON_DEADORITEM_CHECK'}, {}, {}, entity)
+end
+
+function Goon_IsItemOrDead(entity)
+    entity = entity or context.Target
+    return Item(entity) | Dead(entity)
+end
