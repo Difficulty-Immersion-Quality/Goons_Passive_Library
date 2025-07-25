@@ -403,7 +403,7 @@ end
 
 function Goon_CreateSurfaceSpellCheck(entity)
     entity = entity or context.Source
-    return ~HasStatus('GOON_SURFACE_CHECK', entity) | HasStatus('GOON_DEADORITEM_CHECK', entity)
+    return ~HasStatus('GOON_SURFACE_CHECK', entity) | HasStatus('GOON_ITEMORDEAD_CHECK', entity)
 end
 
 function Goon_IsItemOrDead(entity)

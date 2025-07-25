@@ -6,7 +6,7 @@ data "StatusType" "BOOST"
 data "StackId" "GOON_SURFACE_CHECK"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
-new entry "GOON_DEADORITEM_CHECK"
+new entry "GOON_ITEMORDEAD_CHECK"
 type "StatusData"
 data "StatusType" "BOOST"
 data "StackId" "GOON_DEADORITEM_CHECK"
