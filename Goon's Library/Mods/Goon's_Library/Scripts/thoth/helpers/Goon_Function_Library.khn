@@ -410,3 +410,42 @@ function Goon_IsItemOrDead(entity)
     entity = entity or context.Target
     return Item(entity) | Dead(entity)
 end
+
+-- ==================================== Junk ====================================
+
+-- TODO: Knife of the Undermountain King and probably others
+function Goon_IsShadowBlade()
+    return HasAnyStatus({'SHADOWBLADE_TECHNICAL', '', 'GOON_JUSTICIARSSCIMITAR_WEAPON_TECHNICAL'}, {}, {})
+end
+
+-- TODO: Yeah this no work
+function Goon_IsPassiveSourceWeapon()
+    local MeleeMainHand = GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand)
+    local MeleeOffHand = GetItemInEquipmentSlot(EquipmentSlot.MeleeOffHand)
+    local RangedMainHand = GetItemInEquipmentSlot(EquipmentSlot.RangedMainHand)
+    local RangedOffHand = GetItemInEquipmentSlot(EquipmentSlot.RangedOffHand)
+
+    local result = false
+
+    if MeleeMainHand.IsValid then
+        result = result | IsPassiveSource(context.Passive, MeleeMainHand, context.Source)
+                        | IsPassiveOwner(context.Passive, MeleeMainHand, context.Source)
+    end
+
+    if MeleeOffHand.IsValid then
+        result = result |IsPassiveSource(context.Passive, MeleeOffHand, context.Source)
+                        | IsPassiveOwner(context.Passive, MeleeOffHand, context.Source)
+    end
+
+    if RangedMainHand.IsValid then
+        result = result | IsPassiveSource(context.Passive, RangedMainHand, context.Source)
+                        | IsPassiveOwner(context.Passive, RangedMainHand, context.Source)
+    end
+
+    if RangedOffHand.IsValid then
+        result = result | IsPassiveSource(context.Passive, RangedOffHand, context.Source)
+                        | IsPassiveOwner(context.Passive, RangedOffHand, context.Source)
+    end
+
+    return result
+end

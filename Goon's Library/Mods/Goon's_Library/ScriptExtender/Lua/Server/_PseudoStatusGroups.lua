@@ -38,7 +38,9 @@
     }
 
     local DeafenedCondition = {
-    "DEAFENED"
+    "DEAFENED",
+    "DEAF",
+    "DEAFNESS"
     }
 
     local SilencedCondition = {

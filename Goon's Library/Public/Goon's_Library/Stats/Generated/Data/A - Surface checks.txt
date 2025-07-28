@@ -9,5 +9,5 @@ data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndi
 new entry "GOON_ITEMORDEAD_CHECK"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StackId" "GOON_DEADORITEM_CHECK"
+data "StackId" "GOON_ITEMORDEAD_CHECK"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
