@@ -4,13 +4,13 @@
     <region id="TooltipExtraTexts">
         <node id="root">
             <children>
-                <!-- Smite TooltipOnMiss -->
+                <!-- Smite TooltipOnMiss - BA+Spell -->
                 <node id="TooltipExtraTexts">
                     <!-- Does not consume a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; or &lt;LSTag Tooltip="SpellSlot"&gt;Spell Slot&lt;/LSTag&gt;. -->
                     <attribute id="Text" type="TranslatedString" handle="he8581dfbga41bg466ag8368gc0310456f8fc" version="1"/>
                     <attribute id="UUID" type="guid" value="87a38a64-94d2-4aa5-8627-4abb43fea3ae"/>
                 </node>
-                <!-- Smite TooltipOnMiss -->
+                <!-- Smite TooltipOnMiss - Only BA -->
                 <node id="TooltipExtraTexts">
                     <!-- Does not consume a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt;. -->
                     <attribute id="Text" type="TranslatedString" handle="he169c217g2ad1g4d5ag82dfg1d7a1acc9444" version="1"/>
