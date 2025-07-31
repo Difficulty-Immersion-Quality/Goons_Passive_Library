@@ -40,7 +40,10 @@
     local DeafenedCondition = {
     "DEAFENED",
     "DEAF",
-    "DEAFNESS"
+    "DEAFNESS",
+    "GOON_DEAFENED",
+    "GOON_REAL_INJURY_GRIT_GLORY_DEAFNESS",
+    "GOON_REAL_INJURY_GRIT_GLORY_PARTIAL_DEAFNESS"
     }
 
     local SilencedCondition = {

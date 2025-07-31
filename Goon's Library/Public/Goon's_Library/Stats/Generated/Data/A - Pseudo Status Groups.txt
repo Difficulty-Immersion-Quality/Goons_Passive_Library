@@ -39,7 +39,7 @@ data "StackPriority" "1"
 data "Boosts" "StatusImmunity(LURING_SONG)"
 data "OnApplyFunctors" "RemoveStatus(LURING_SONG)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
-data "OnRemoveFunctors" "RemoveStatus(DEAFENED);RemoveStatus(DEAF);RemoveStatus(DEAFNESS)"
+data "OnRemoveFunctors" "RemoveStatus(DEAFENED);RemoveStatus(DEAF);RemoveStatus(DEAFNESS);RemoveStatus(GOON_DEAFENED);RemoveStatus(GOON_REAL_INJURY_GRIT_GLORY_DEAFNESS);RemoveStatus(GOON_REAL_INJURY_GRIT_GLORY_PARTIAL_DEAFNESS)"
 data "RemoveEvents" "OnStatusRemoved"
 data "RemoveConditions" "not Goon_HasDeafenedCondition()"
 
