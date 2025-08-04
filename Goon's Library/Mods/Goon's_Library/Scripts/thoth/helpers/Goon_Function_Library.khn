@@ -374,7 +374,7 @@ end
 -- TODO: Need to sort out Immutable Form so it doesn't block non-hostile Polymorphs
 function Goon_IsNonHostilePolymorphStatus(entity)
     entity = entity or context.Source
-    return ~Tagged('POLYMORPHED_UNWILLING', entity) & (Goon_IsWildshapeDruidPolymorph() | Goon_IsMyrmidonDruidPolymorph() | Goon_IsHumanoidDruidPolymorph() | Goon_IsOtherPolymorph())
+    return ~Tagged('POLYMORPHED_UNWILLING', entity) & (Goon_IsWildshapeDruidPolymorph() | Goon_IsMyrmidonDruidPolymorph() | Goon_IsHumanoidDruidPolymorph() | Goon_IsOtherPolymorph() | Tagged('SLAYER', entity))
 end
 
 -- ==================================== Polymorph clusters

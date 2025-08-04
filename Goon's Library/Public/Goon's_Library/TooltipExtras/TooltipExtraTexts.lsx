@@ -6,7 +6,7 @@
             <children>
                 <!-- Arcane Shot tooltips -->
                 <node id="TooltipExtraTexts">
-                    <!-- Does not consume a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; or &lt;LSTag Tooltip="SpellSlot"&gt;Spell Slot&lt;/LSTag&gt;. -->
+                    <!-- Your &lt;LSTag Tooltip="Intelligence"&gt;Intelligence&lt;/LSTag&gt; &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt; increases the &lt;LSTag Tooltip="SpellDifficultyClass"&gt;Spell Save DC&lt;/LSTag&gt; of Arcane Shots. -->
                     <attribute id="Text" type="TranslatedString" handle="h5e337669g3e9ag448fgb5b6g4bb4b67e4152" version="1"/>
                     <attribute id="UUID" type="guid" value="46edbd50-74b9-4e37-9f05-28505b94cf8f"/>
                 </node>
