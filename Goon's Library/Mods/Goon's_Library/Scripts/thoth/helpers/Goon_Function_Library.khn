@@ -351,6 +351,13 @@ function Goon_IsHammer()
 end
 
 -- ==================================== Druid and Polymorph stuff ====================================
+
+function Goon_HasUnbrokenOath()
+    result = ~Tagged('OATHBREAKER', context.Source)
+    return ConditionResult(result.Result, {ConditionError("Goon_HasBrokenOath")})
+end
+
+-- ==================================== Druid and Polymorph stuff ====================================
 -- TODO: Hunt down everything relevant.
 -- Check for any and all druid forms, only druid forms and not stinky disguise self etc. 
 -- Mod support: Circle of Storm Chasers and the custom Circle of Stars.

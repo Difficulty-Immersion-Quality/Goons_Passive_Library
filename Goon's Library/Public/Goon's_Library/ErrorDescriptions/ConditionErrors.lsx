@@ -11,6 +11,13 @@
                     <attribute id="Identifier" type="FixedString" value="Goon_IsNotDippableSurfaceOrEntity"/>
                     <attribute id="UUID" type="guid" value="f140a315-a39a-4fe1-b7ca-6a0666708cbb"/>
                 </node>
+                <node id="ConditionErrors">
+                    <!-- Must uphold an oath. -->
+                    <attribute id="DisplayName" type="TranslatedString" handle="h47d9ad6ag86bbg472bg9933g4d43eedade6b" version="1"/>
+                    <attribute id="ErrorDescriptionType" type="uint8" value="0"/>
+                    <attribute id="Identifier" type="FixedString" value="Goon_HasBrokenOath"/>
+                    <attribute id="UUID" type="guid" value="49f3cb94-36a2-41ce-ac7c-020a7cbfb9a2"/>
+                </node>
             </children>
         </node>
     </region>
