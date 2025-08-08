@@ -418,6 +418,63 @@ function Goon_IsItemOrDead(entity)
     return Item(entity) | Dead(entity)
 end
 
+-- ==================================== Invisibility - DrKekyll ====================================
+-- Expansion edited versions
+
+function Goon_CanSeeInvisible(source, target, sourceObserver, targetObserver)
+    local source = source or context.Source
+    local target = target or context.Target
+    local sourceObserver = sourceObserver or false
+    local targetObserver = targetObserver or false
+
+    local sourcePosition = context.SourcePosition
+    local targetPosition = context.TargetPosition
+
+    if sourceObserver then
+        sourcePosition = context.ObserverPosition
+    end
+
+    if targetObserver then
+        targetPosition = context.ObserverPosition
+    end
+
+    return Tagged('BLINDSIGHT', source) 
+       |  (HasStatus('MIND_SPIKE_OWNER', source) & HasStatus('MIND_SPIKE', target, source))
+       |  (HasStatus('TRUESIGHT', source) & ~DistanceToGreaterThan(sourcePosition, targetPosition, 36.5)) 
+       | ((HasStatus('SEE_INVISIBILITY', source) | HasStatus('MAG_SEE_INVISIBILITY_HIDDEN_IGNORE_RESTING', source) | HasPassive('AllSeeingEye', source)) & ~DistanceToGreaterThan(sourcePosition, targetPosition, 18.5)) 
+       | ((HasPassive('FightingStyle_BlindFighting', source) | (HasPassive('Blindsense', source) & ~(HasPassive('Deafness',source) | HasStatus('SG_Deafened',source)))) & ~DistanceToGreaterThan(sourcePosition, targetPosition, 3))
+end
+
+function Goon_CanSeeSneaking(source, target, from, to)
+	local source = source or context.Source
+	local target = target or context.Target
+	
+	return HasStatus('MIND_SPIKE_OWNER', source) & HasStatus('MIND_SPIKE', target, source)
+end
+
+function Goon_IsInvisibleSeen(entity)
+    local entity = entity or context.Target
+    return HasStatus('GOON_INVISIBLE_SEEN',entity) 
+        |  HasStatus('GOON_INVISIBLE_MAGEHAND_SEEN',entity) 
+        |  HasStatus('GOON_INVISIBILITY_SEEN',entity) 
+        |  HasStatus('GOON_ONE_WITH_SHADOWS_SEEN',entity) 
+        |  HasStatus('GOON_POTION_OF_INVISIBILITY_SEEN',entity) 
+        |  HasStatus('GOON_CLOAK_OF_SHADOWS_SEEN',entity) 
+        |  HasStatus('GOON_CLOAK_OF_SHADOWS_MONK_SEEN',entity) 
+        |  HasStatus('GOON_UMBRAL_CLOAK_SEEN',entity) 
+        |  HasStatus('GOON_GREATER_INVISIBILITY_SEEN',entity) 
+        |  HasStatus('GOON_SHADOWBLEND_SEEN',entity) 
+        |  HasStatus('GOON_INVISIBILITY_SHADARKAI_GLOOMWEAVER_SEEN',entity) 
+        |  HasStatus('GOON_HIDE_IN_PLAIN_SIGHT_SEEN',entity) 
+        |  HasStatus('GOON_MISTY_ESCAPE_INVISIBLE_SEEN',entity) 
+        |  HasStatus('GOON_INVISIBILITY_PANTHER_SEEN',entity) 
+        |  HasStatus('GOON_SHROUD_SELF_SEEN',entity) 
+        |  HasStatus('GOON_SUPREME_SNEAK_SEEN',entity) 
+        |  HasStatus('GOON_MAG_INVISIBLE_WEAPON_SEEN',entity) 
+        |  HasStatus('GOON_LOW_POLTERGEIST_INVISIBLE_SEEN',entity) 
+        |  HasStatus('GOON_SHADOW_WALKER_SEEN',entity)
+end
+
 -- ==================================== Junk ====================================
 
 -- TODO: Knife of the Undermountain King and probably others
