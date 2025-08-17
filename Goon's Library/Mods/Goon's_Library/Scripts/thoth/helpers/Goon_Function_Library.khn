@@ -250,7 +250,7 @@ end
 -- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsCharismaModifierWeapon(GetAttackWeapon(context.Source)))
 
 function Goon_IsSpellcastingModifierWeapon()
-    return HasAnyStatus({'MAG_MELEE_CASTER_BOON', 'LHB_SEL_TASHASOTHERWORLDLYGUISE_MAGICWEAPON'}, {}, {})
+    return HasAnyStatus({'MAG_MELEE_CASTER_BOON', 'LHB_SEL_TASHASOTHERWORLDLYGUISE_MAGICWEAPON', 'MAG_MELEE_CASTER_BOON_SORROW', 'MAG_MELEE_CASTER_BOON_LATHANDER'}, {}, {})
 end
 
 function Goon_IsIntelligenceModifierWeapon()
