@@ -242,6 +242,18 @@ function Goon_IsJumpSpellCategory()
     return SpellCategoryIs(SpellCategory.Jump)
 end
 
+-- ==================================== Do the dawg be Banishing
+
+function Goon_IsBanishSpell()
+    return SpellID('Target_Banishment') 
+         | IsSpellChildOrVariantFromContext('Target_Banishment') 
+         | SpellId('Target_Smite_Banishing') 
+         | IsSpellChildOrVariantFromContext('Target_Smite_Banishing') 
+         | SpellId('Projectile_Smite_Banishing') 
+         | IsSpellChildOrVariantFromContext('Projectile_Smite_Banishing') 
+         | SpellId('Projectile_ArcaneShot_BanishingArrow')
+end
+
 -- ==================================== Weapon enchant checks ====================================
 -- TODO: Hunt down everything relevant.
 -- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)))
