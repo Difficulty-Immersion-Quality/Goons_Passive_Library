@@ -485,6 +485,7 @@ function Goon_IsInvisibleSeen(entity)
         |  HasStatus('GOON_MAG_INVISIBLE_WEAPON_SEEN',entity) 
         |  HasStatus('GOON_LOW_POLTERGEIST_INVISIBLE_SEEN',entity) 
         |  HasStatus('GOON_SHADOW_WALKER_SEEN',entity)
+        |  HasStatus('GOON_EMPTY_BODY_SEEN',entity)
 end
 
 -- ==================================== Junk ====================================
