@@ -368,10 +368,40 @@ function Goon_IsHammer()
 end
 
 -- ==================================== Magical unarmed ====================================
+-- Hunting down everything with the UnarmedMagicalProperty() boost.
+-- Supports Expansion, 5e Spells, Blood Hunter, Veenab stuff, Mystic Expansion, Zephyr, Mizora's Rewards, Book of Druids, Dread Overlord
 
 function Goon_HasMagicalUnarmed(entity)
     entity = entity or context.Source
-    return HasStatus('SG_Polymorph_BeastShape', entity) & HasPassive('PrimalStrike', entity) | HasPassive('KiEmpoweredStrikes', entity)
+    return Goon_IsWildshapeDruidPolymorph() & HasPassive('PrimalStrike', entity) 
+         | HasPassive('KiEmpoweredStrikes', entity) 
+         | Goon_HasMagicalUnarmed_Expansion()
+         | Goon_HasMagicalUnarmed_BloodHunter()
+         | Goon_HasMagicalUnarmed_Veenab()
+         | HasPassive('InvestmentOfTheChainMaster_Familiar', entity)
+         | HasPassive('SVZephyr_TapestryTatteringArms', entity)
+         | HasPassive('Passive_Mystic_FlawlessTechnique', entity)
+         | HasPassive('MightySummonMagicalUnarmed', entity)
+         | HasAnyStatus({'DREADOVERLORD_NECROTICBLADE_UNARMED'}, {}, {}, entity)
+end
+
+function Goon_HasMagicalUnarmed_Expansion(entity)
+    entity = entity or context.Source
+    return HasPassive('ExceptionalTraining_EXP', entity) 
+         | HasAnyStatus({'ALTER_SELF_BLUDGEONING_WEAPON', 'ALTER_SELF_SLASHING_WEAPON', 'ALTER_SELF_PIERCING_WEAPON'}, {}, {}, entity)
+end
+
+function Goon_HasMagicalUnarmed_BloodHunter(entity)
+    entity = entity or context.Source
+    return HasPassive('ImprovedPredatoryStrikes', entity)
+         | HasPassive('ImprovedPredatoryStrikes11', entity)
+end
+
+function Goon_HasMagicalUnarmed_Veenab(entity)
+    entity = entity or context.Source
+    return HasPassive('VBT_ARM_UnarmedProwessWraps_MagicalStrikes_1', entity)
+         | HasPassive('VBT_ARM_UnarmedProwessWraps_MagicalStrikes_2', entity)
+         | HasPassive('VBT_ARM_UnarmedProwessWraps_MagicalStrikes_3', entity)
 end
 
 -- ==================================== Druid and Polymorph stuff ====================================
