@@ -367,6 +367,13 @@ function Goon_IsHammer()
          | Tagged('WPN_WARHAMMER')
 end
 
+-- ==================================== Magical unarmed ====================================
+
+function Goon_HasMagicalUnarmed(entity)
+    entity = entity or context.Source
+    return HasStatus('SG_Polymorph_BeastShape', entity) & HasPassive('PrimalStrike', entity) | HasPassive('KiEmpoweredStrikes', entity)
+end
+
 -- ==================================== Druid and Polymorph stuff ====================================
 
 function Goon_HasUnbrokenOath()
@@ -388,6 +395,11 @@ end
 function Goon_IsDruidWildshape(entity)
     entity = entity or context.Source
     return Goon_IsWildshapeDruidPolymorph() | Goon_IsMyrmidonDruidPolymorph()
+end
+
+function Goon_IsRestrictedPolymorphStatus(entity)
+    entity = entity or context.Source
+    return Goon_IsWildshapeDruidPolymorph() | Goon_IsMyrmidonDruidPolymorph() | Tagged('SLAYER', entity)
 end
 
 function Goon_IsUnrestrictedPolymorphStatus(entity)
