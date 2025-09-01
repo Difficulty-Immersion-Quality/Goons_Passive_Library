@@ -115,26 +115,31 @@ end
 
 -- ==================================== Sneak Attacks
 
+function Goon_IsSneakAttack()
+    return HasUseCosts('SneakAttack_Charge') 
+         | Goon_IsSneakAttackSpell()
+         | Goon_IsSneakAttackInterrupt()
+end
+
 function Goon_IsSneakAttackSpell()
 	return SpellId('Target_SneakAttack')
 		 | SpellId('Projectile_SneakAttack')
 		 | SpellId('Target_SneakAttack_Rakish')
 		 | SpellId('Projectile_SneakAttack_Rakish')
          | SpellId('Target_SneakAttack_Swarm')
+         | SpellId('Target_SneakAttack_Ruffian')
+         | SpellId('Projectile_SneakAttack_Ruffian')
+         | SpellId('Target_LLRuffian_SneakAttack_Unarmed')
 end
 
-function Goon_IsSneakAttack()
-    return HasUseCosts('SneakAttack_Charge') 
-         | Goon_IsUACunningStrikeSneakAttack()
-         | SpellId('Target_SneakAttack') 
-         | SpellId('Projectile_SneakAttack') 
+function Goon_IsSneakAttackInterrupt()
+	return Goon_IsUACunningStrikeSneakAttack()
          | SpellId('Interrupt_SneakAttack') 
          | SpellId('Interrupt_SneakAttack_Critical')
-         | SpellId('Target_SneakAttack_Rakish') 
-         | SpellId('Projectile_SneakAttack_Rakish') 
          | SpellId('Interrupt_SneakAttack_Rakish') 
-         | SpellId('Interrupt_SneakAttack_Rakish_Critical') 
-         | SpellId('Target_SneakAttack_Swarm')
+         | SpellId('Interrupt_SneakAttack_Rakish_Critical')
+         | SpellId('Interrupt_SneakAttack_Ruffian') 
+         | SpellId('Interrupt_SneakAttack_Ruffian_Critical')
 end
 
 function Goon_IsUACunningStrikeSneakAttack()
