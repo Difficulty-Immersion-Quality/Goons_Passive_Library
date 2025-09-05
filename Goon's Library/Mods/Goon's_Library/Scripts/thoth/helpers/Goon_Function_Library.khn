@@ -487,6 +487,21 @@ function Goon_IsItemOrDead(entity)
     return Item(entity) | Dead(entity)
 end
 
+-- ==================================== Blindness, Darkness ====================================
+
+function Goon_CanIgnoreBlindness_Melee(entity)
+    entity = entity or context.Source
+    return IsImmuneToStatus('SG_Blinded', entity)
+         | HasPassive('FightingStyle_BlindFighting', entity) & ~DistanceToGreaterThan(context.SourcePosition, context.TargetPosition, 3)
+         | HasPassive('Blindsense',entity) & ~HasStatus('SG_Deafened',entity)
+end
+
+function Goon_CanIgnoreBlindness_Ranged(entity)
+    entity = entity or context.Source
+    return IsImmuneToStatus('SG_Blinded', entity)
+         | HasPassive('Blindsense',entity) & ~HasStatus('SG_Deafened',entity)
+end
+
 -- ==================================== Invisibility - DrKekyll ====================================
 -- Expansion edited versions
 
