@@ -17,6 +17,14 @@ function IsKillingBlow()
     return HasDamageEffectFlag(DamageFlags.KillingBlow) | HasHPLessThan(1)
 end
 
+-- ==================================== Attack types ====================================
+-- TODO: Ye
+
+function Goon_IsMeleeOffhandAttack()
+    result = context.HitDescription.AttackType == AttackType.RangedWeaponAttack or context.HitDescription.AttackType == AttackType.MeleeWeaponAttack
+	return ConditionResult(result)
+end
+
 -- ==================================== STATUS GROUPINGS ====================================
 
 -- ==================================== Bleeding
@@ -149,7 +157,8 @@ function Goon_IsUACunningStrikeSneakAttack()
          | SpellId('Interrupt_DWE_CunningStrike_Less3') 
          | SpellId('Interrupt_DWE_CunningStrike_Less6') 
          | SpellId('Interrupt_DWE_CunningStrike_Disarm') 
-         | SpellId('Interrupt_DWE_CunningStrike_Poison') 
+         | SpellId('Interrupt_DWE_CunningStrike_Poison')
+         | SpellId('Goon_Interrupt_DWE_CunningStrike_Poison')
          | SpellId('Interrupt_DWE_CunningStrike_Trip') 
          | SpellId('Interrupt_DWE_CunningStrike_Withdraw') 
          | SpellId('Interrupt_DWE_CunningStrike_Daze') 
@@ -438,9 +447,10 @@ function Goon_IsUnrestrictedPolymorphStatus(entity)
 end
 
 -- TODO: Need to sort out Immutable Form so it doesn't block non-hostile Polymorphs
+--  & (Goon_IsWildshapeDruidPolymorph() | Goon_IsMyrmidonDruidPolymorph() | Goon_IsHumanoidDruidPolymorph() | Goon_IsOtherPolymorph() | Tagged('SLAYER', entity))
 function Goon_IsNonHostilePolymorphStatus(entity)
     entity = entity or context.Source
-    return ~Tagged('POLYMORPHED_UNWILLING', entity) & (Goon_IsWildshapeDruidPolymorph() | Goon_IsMyrmidonDruidPolymorph() | Goon_IsHumanoidDruidPolymorph() | Goon_IsOtherPolymorph() | Tagged('SLAYER', entity))
+    return ~Tagged('POLYMORPHED_UNWILLING', entity)
 end
 
 -- ==================================== Polymorph clusters
