@@ -101,12 +101,12 @@ end
 -- ==================================== Fetch character levels ====================================
 
 function GoonCharacterLevelEqualTo(value, entity)
-    entity = entity or context.Target
+    entity = entity or context.Source
     return ConditionResult(entity.Level == value)
 end
 
 function GoonCharacterLevelEqualToOrGreaterThan(value, entity)
-    entity = entity or context.Target
+    entity = entity or context.Source
     return ConditionResult(entity.Level >= value)
 end
 
