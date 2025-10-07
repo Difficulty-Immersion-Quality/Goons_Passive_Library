@@ -124,10 +124,30 @@ local function RunPseudoStatusGroups(charID)
     end
 end
 
+local function StatusIsRelevant(status)
+    for _, PseudoStatusGroupCondition in ipairs(BleedingCondition) do
+        if status == PseudoStatusGroupCondition then return true end
+    end
+    for _, PseudoStatusGroupCondition in ipairs(BurningCondition) do
+        if status == PseudoStatusGroupCondition then return true end
+    end
+    for _, PseudoStatusGroupCondition in ipairs(DeafenedCondition) do
+        if status == PseudoStatusGroupCondition then return true end
+    end
+    for _, PseudoStatusGroupCondition in ipairs(SilencedCondition) do
+        if status == PseudoStatusGroupCondition then return true end
+    end
+    return false
+end
+
 Ext.Osiris.RegisterListener("StatusApplied", 4, "after", function(charID, status, causee, storyActionID)
-    RunPseudoStatusGroups(charID)
+    if StatusIsRelevant(status) then
+        RunPseudoStatusGroups(charID)
+    end
 end)
 
 Ext.Osiris.RegisterListener("StatusRemoved", 4, "after", function(charID, status, causee, storyActionID)
-    RunPseudoStatusGroups(charID)
+    if StatusIsRelevant(status) then
+        RunPseudoStatusGroups(charID)
+    end
 end)
