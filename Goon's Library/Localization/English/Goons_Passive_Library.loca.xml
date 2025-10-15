@@ -310,9 +310,9 @@
 	<content contentuid="hb9e29f08gd0b4g479fg8cf7g7ac3b5936083" version="1">This creature has used a utility ability and must wait to do so again.</content>
 
 	<content contentuid="h66a15410gabfcg45acg9b7bgbeab059e8ae1" version="1">Weave Devouring Aura</content>
-	<content contentuid="h9d620501g1951g4ceegab51gee0020322cbe" version="1">This creature devoures the magical energy of the weave from all around them.</content>
+	<content contentuid="h9d620501g1951g4ceegab51gee0020322cbe" version="1">This creature devoures the magical energy of the weave from all other entities around them.</content>
 	<content contentuid="h02124374g23f7g48b1gb73dgce128b2b83ff" version="1">Devoured Magic</content>
-	<content contentuid="h2900144dg8afdg48d6ga41fgfeac4c706774" version="1">A presence is draining the character of its magical energy, preventing it from casting spells.</content>
+	<content contentuid="h2900144dg8afdg48d6ga41fgfeac4c706774" version="1">A presence is draining the entity of its magical energy, preventing it from casting spells.</content>
 
 	<!-- "NPC_CbD" --> <content contentuid="h8bec4a12g45a3g424ag9fe0g7bd2637635f8" version="1">Favoured by the Divine</content>
 	<!-- "NPC_CbD" --> <content contentuid="h602b3e3dgd4f9g448fgb73bg6113c025e719" version="1">The creature's targets are cursed by transgressed and irritable gods. When it falls unconscious, it immediately dies. Moreover, when it dies, a terrible envoy of the offended deity is conjured from the entity's corpse.</content>

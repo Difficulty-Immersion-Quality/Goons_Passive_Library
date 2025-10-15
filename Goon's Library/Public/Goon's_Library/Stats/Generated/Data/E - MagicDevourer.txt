@@ -4,12 +4,12 @@ new entry "Goon_Weave_Devourer_Unlock"
 type "PassiveData"
 // Weave Devouring Aura
 data "DisplayName" "h66a15410gabfcg45acg9b7bgbeab059e8ae1;1"
-// This creature devoures the magical energy of the weave from all around them.
+// This creature devoures the magical energy of the weave from all other entities around them.
 data "Description" "h9d620501g1951g4ceegab51gee0020322cbe;1"
 data "Properties" "IsHidden"
 data "Icon" "statIcons_SussurBloom"
 //
-data "StatsFunctorContext" "OnCreate;OnStatusRemove;OnStatusApplied;OnCast;OnTurn;OnCombatStarted"
+data "StatsFunctorContext" "OnCreate"
 data "StatsFunctors" "ApplyStatus(GOON_WEAVE_DEVOURING_AURA,100,-1)"
 
 new entry "GOON_WEAVE_DEVOURING_AURA"
@@ -17,7 +17,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 // Weave Devouring Aura
 data "DisplayName" "h66a15410gabfcg45acg9b7bgbeab059e8ae1;1"
-// This creature devoures the magical energy of the weave from all around them.
+// This creature devoures the magical energy of the weave from all other entities around them.
 data "Description" "h9d620501g1951g4ceegab51gee0020322cbe;1"
 data "Icon" "statIcons_SussurBloom"
 data "StatusPropertyFlags" "IgnoreResting;ApplyToDead"
@@ -28,7 +28,7 @@ data "AuraRadius" "3"
 data "AuraStatuses" "TARGET:IF((Character() or Tagged('UND_SUSSUR_SUSCEPTIBLE')) and (not HasStatus('UND_ANCIENTSUSSURTREEANTIMAGIC_AURA'))):ApplyStatus(GOON_WEAVE_DEVOURING_INAURARANGE);TARGET:IF(HasPassive('AntimagicSusceptibility')):ApplyStatus(INCAPACITATED_DND)"
 data "StatusGroups" "SG_RemoveOnRespec"
 data "RemoveEvents" "OnStatusApplied;OnStatusRemoved"
-data "RemoveConditions" "not HasPassive('Goon_Weave_Devourer')"
+data "RemoveConditions" "not HasPassive('Goon_Weave_Devourer_Unlock')"
 //
 data "StatusEffect" "362f2080-b927-4846-8aec-66752dbafd07"
 
@@ -37,7 +37,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 // Devoured Magic
 data "DisplayName" "h02124374g23f7g48b1gb73dgce128b2b83ff;1"
-// A presence is draining the character of its magical energy, preventing it from casting spells.
+// A presence is draining the entity of its magical energy, preventing it from casting spells.
 data "Description" "h2900144dg8afdg48d6ga41fgfeac4c706774;1"
 data "Icon" "statIcons_SussurBloom"
 data "FormatColor" "Purple"
