@@ -270,25 +270,21 @@ end
 
 -- ==================================== Weapon enchant checks ====================================
 -- TODO: Hunt down everything relevant.
--- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)))
--- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsIntelligenceModifierWeapon(GetAttackWeapon(context.Source)))
--- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsWisdomModifierWeapon(GetAttackWeapon(context.Source)))
--- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsCharismaModifierWeapon(GetAttackWeapon(context.Source)))
 
-function Goon_IsSpellcastingModifierWeapon()
-    return HasAnyStatus({'MAG_MELEE_CASTER_BOON', 'LHB_SEL_TASHASOTHERWORLDLYGUISE_MAGICWEAPON', 'MAG_MELEE_CASTER_BOON_SORROW', 'MAG_MELEE_CASTER_BOON_LATHANDER'}, {}, {})
+function Goon_AttackingWithSpellcastingModifierWeapon()
+    return HasStatus('SHILLELAGH',GetAttackWeapon(context.Source)) | HasStatus('MAG_MELEE_CASTER_BOON',GetAttackWeapon(context.Source)) | HasStatus('LHB_SEL_TASHASOTHERWORLDLYGUISE_MAGICWEAPON',GetAttackWeapon(context.Source)) | HasStatus('MAG_MELEE_CASTER_BOON_SORROW',GetAttackWeapon(context.Source)) | HasStatus('MAG_MELEE_CASTER_BOON_LATHANDER',GetAttackWeapon(context.Source))
 end
 
-function Goon_IsIntelligenceModifierWeapon()
-    return HasAnyStatus({}, {}, {})
+-- function Goon_AttackingWithIntelligenceModifierWeapon()
+--     return HasAnyStatus({}, {}, {})
+-- end
+
+function Goon_AttackingWithWisdomModifierWeapon()
+    return HasStatus('FourEle_Attuned',GetAttackWeapon(context.Source))
 end
 
-function Goon_IsWisdomModifierWeapon()
-    return HasAnyStatus({'SHILLELAGH', 'FourEle_Attuned'}, {}, {})
-end
-
-function Goon_IsCharismaModifierWeapon()
-    return HasAnyStatus({'HEXBLADE_BIND', 'PACT_BLADE'}, {}, {})
+function Goon_AttackingWithCharismaModifierWeapon()
+    return HasStatus('HEXBLADE_BIND',GetAttackWeapon(context.Source)) | HasStatus('PACT_BLADE',GetAttackWeapon(context.Source))
 end
 
 -- ==================================== Tag piles ====================================
