@@ -270,6 +270,29 @@ end
 
 -- ==================================== Weapon enchant checks ====================================
 -- TODO: Hunt down everything relevant.
+-- TODO: Use working checks like Cahoot
+-- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)))
+-- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsIntelligenceModifierWeapon(GetAttackWeapon(context.Source)))
+-- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsWisdomModifierWeapon(GetAttackWeapon(context.Source)))
+-- IF(not Goon_IsSpellcastingModifierWeapon(GetAttackWeapon(context.Source)) and Goon_IsCharismaModifierWeapon(GetAttackWeapon(context.Source)))
+
+function Goon_IsSpellcastingModifierWeapon()
+    return HasAnyStatus({'MAG_MELEE_CASTER_BOON', 'LHB_SEL_TASHASOTHERWORLDLYGUISE_MAGICWEAPON', 'MAG_MELEE_CASTER_BOON_SORROW', 'MAG_MELEE_CASTER_BOON_LATHANDER'}, {}, {})
+end
+
+function Goon_IsIntelligenceModifierWeapon()
+    return HasAnyStatus({}, {}, {})
+end
+
+function Goon_IsWisdomModifierWeapon()
+    return HasAnyStatus({'SHILLELAGH', 'FourEle_Attuned'}, {}, {})
+end
+
+function Goon_IsCharismaModifierWeapon()
+    return HasAnyStatus({'HEXBLADE_BIND', 'PACT_BLADE'}, {}, {})
+end
+
+-- ==================================== Cahoot's revision
 
 function Goon_AttackingWithSpellcastingModifierWeapon()
     return HasStatus('SHILLELAGH',GetAttackWeapon(context.Source)) | HasStatus('MAG_MELEE_CASTER_BOON',GetAttackWeapon(context.Source)) | HasStatus('LHB_SEL_TASHASOTHERWORLDLYGUISE_MAGICWEAPON',GetAttackWeapon(context.Source)) | HasStatus('MAG_MELEE_CASTER_BOON_SORROW',GetAttackWeapon(context.Source)) | HasStatus('MAG_MELEE_CASTER_BOON_LATHANDER',GetAttackWeapon(context.Source))
