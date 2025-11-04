@@ -432,11 +432,17 @@ function Goon_HasMagicalUnarmed_Veenab(entity)
          | HasPassive('VBT_ARM_UnarmedProwessWraps_MagicalStrikes_3', entity)
 end
 
--- ==================================== Druid and Polymorph stuff ====================================
+-- ==================================== Condition errors ====================================
 
 function Goon_HasUnbrokenOath()
     result = ~Tagged('OATHBREAKER', context.Source)
     return ConditionResult(result.Result, {ConditionError("Goon_HasBrokenOath")})
+end
+
+-- TODO: Could be set up generic like, have SE apply a status and use it universally.
+function Goon_HasAttackedOrCast_FirstVampireWarlock()
+    result = HasAnyStatus({'GOON_DRAIN_LIFE_TECHNICAL', 'GOON_DRAIN_LIFE_TECHNICAL_ETERNAL_NIGHT'}, {}, {}, context.Source)
+    return ConditionResult(result.Result, {ConditionError("Goon_HasAttackedOrCast")})
 end
 
 -- ==================================== Druid and Polymorph stuff ====================================

@@ -18,6 +18,13 @@
                     <attribute id="Identifier" type="FixedString" value="Goon_HasBrokenOath"/>
                     <attribute id="UUID" type="guid" value="49f3cb94-36a2-41ce-ac7c-020a7cbfb9a2"/>
                 </node>
+                <node id="ConditionErrors">
+                    <!-- Can only be used after attacking or casting a spell. -->
+                    <attribute id="DisplayName" type="TranslatedString" handle="hd0f130e9g8c2cg4a1fgb44fgc48ae968e51e" version="1"/>
+                    <attribute id="ErrorDescriptionType" type="uint8" value="0"/>
+                    <attribute id="Identifier" type="FixedString" value="Goon_HasAttackedOrCast"/>
+                    <attribute id="UUID" type="guid" value="ccc7ac34-90e5-4450-886f-faf81f95f26b"/>
+                </node>
             </children>
         </node>
     </region>
