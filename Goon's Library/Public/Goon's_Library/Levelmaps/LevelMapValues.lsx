@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="9" build="328"/>
+    <region id="LevelMapValues">
+        <node id="root">
+            <children>
+                <node id="LevelMapSeries">
+                    <attribute id="Level8" type="LSString" value="1d8"/>
+                    <attribute id="Level14" type="LSString" value="2d8"/>
+                    <attribute id="Name" type="FixedString" value="Goon_DivineStrikes"/>
+                    <attribute id="PreferredClassUUID" type="guid" value="114e7aee-d1d4-4371-8d90-8a2080592faf"/>
+                    <attribute id="UUID" type="guid" value="5bef022e-6538-4291-a4a7-35caf4b7fa05"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>
